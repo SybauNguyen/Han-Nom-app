@@ -1,0 +1,5497 @@
+[
+  {
+    "char_traditional": "一",
+    "char_simplified": "一",
+    "char_shinjitai": "一",
+    "meaning_vi": "một",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nhất"
+    ],
+    "readings_pinyin": [
+      "yī"
+    ],
+    "readings_onyomi": [
+      "イチ",
+      "イツ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 1
+  },
+  {
+    "char_traditional": "二",
+    "char_simplified": "二",
+    "char_shinjitai": "二",
+    "meaning_vi": "hai",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nhị"
+    ],
+    "readings_pinyin": [
+      "èr"
+    ],
+    "readings_onyomi": [
+      "ニ",
+      "ジ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 2
+  },
+  {
+    "char_traditional": "三",
+    "char_simplified": "三",
+    "char_shinjitai": "三",
+    "meaning_vi": "ba",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tam"
+    ],
+    "readings_pinyin": [
+      "sān"
+    ],
+    "readings_onyomi": [
+      "サン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 3
+  },
+  {
+    "char_traditional": "人",
+    "char_simplified": "人",
+    "char_shinjitai": "人",
+    "meaning_vi": "người",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nhân"
+    ],
+    "readings_pinyin": [
+      "rén"
+    ],
+    "readings_onyomi": [
+      "ジン",
+      "ニン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 4
+  },
+  {
+    "char_traditional": "大",
+    "char_simplified": "大",
+    "char_shinjitai": "大",
+    "meaning_vi": "to lớn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đại"
+    ],
+    "readings_pinyin": [
+      "dà"
+    ],
+    "readings_onyomi": [
+      "ダイ",
+      "タイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 5
+  },
+  {
+    "char_traditional": "小",
+    "char_simplified": "小",
+    "char_shinjitai": "小",
+    "meaning_vi": "nhỏ bé",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tiểu"
+    ],
+    "readings_pinyin": [
+      "xiǎo"
+    ],
+    "readings_onyomi": [
+      "ショウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 6
+  },
+  {
+    "char_traditional": "中",
+    "char_simplified": "中",
+    "char_shinjitai": "中",
+    "meaning_vi": "ở giữa, bên trong",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "trung"
+    ],
+    "readings_pinyin": [
+      "zhōng",
+      "zhòng"
+    ],
+    "readings_onyomi": [
+      "チュウ",
+      "ジュウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 7
+  },
+  {
+    "char_traditional": "日",
+    "char_simplified": "日",
+    "char_shinjitai": "日",
+    "meaning_vi": "mặt trời, ngày",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nhật"
+    ],
+    "readings_pinyin": [
+      "rì"
+    ],
+    "readings_onyomi": [
+      "ニチ",
+      "ジツ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 8
+  },
+  {
+    "char_traditional": "月",
+    "char_simplified": "月",
+    "char_shinjitai": "月",
+    "meaning_vi": "mặt trăng, tháng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nguyệt"
+    ],
+    "readings_pinyin": [
+      "yuè"
+    ],
+    "readings_onyomi": [
+      "ゲツ",
+      "ガツ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 9
+  },
+  {
+    "char_traditional": "山",
+    "char_simplified": "山",
+    "char_shinjitai": "山",
+    "meaning_vi": "núi",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "sơn"
+    ],
+    "readings_pinyin": [
+      "shān"
+    ],
+    "readings_onyomi": [
+      "サン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 10
+  },
+  {
+    "char_traditional": "水",
+    "char_simplified": "水",
+    "char_shinjitai": "水",
+    "meaning_vi": "nước",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thủy"
+    ],
+    "readings_pinyin": [
+      "shuǐ"
+    ],
+    "readings_onyomi": [
+      "スイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 11
+  },
+  {
+    "char_traditional": "木",
+    "char_simplified": "木",
+    "char_shinjitai": "木",
+    "meaning_vi": "cây, gỗ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "mộc"
+    ],
+    "readings_pinyin": [
+      "mù"
+    ],
+    "readings_onyomi": [
+      "モク",
+      "ボク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 12
+  },
+  {
+    "char_traditional": "火",
+    "char_simplified": "火",
+    "char_shinjitai": "火",
+    "meaning_vi": "lửa",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hỏa"
+    ],
+    "readings_pinyin": [
+      "huǒ"
+    ],
+    "readings_onyomi": [
+      "カ",
+      "コ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 13
+  },
+  {
+    "char_traditional": "心",
+    "char_simplified": "心",
+    "char_shinjitai": "心",
+    "meaning_vi": "trái tim, tâm trí",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tâm"
+    ],
+    "readings_pinyin": [
+      "xīn"
+    ],
+    "readings_onyomi": [
+      "シン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 14
+  },
+  {
+    "char_traditional": "學",
+    "char_simplified": "学",
+    "char_shinjitai": "学",
+    "meaning_vi": "học tập",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "học"
+    ],
+    "readings_pinyin": [
+      "xué"
+    ],
+    "readings_onyomi": [
+      "ガク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 15
+  },
+  {
+    "char_traditional": "生",
+    "char_simplified": "生",
+    "char_shinjitai": "生",
+    "meaning_vi": "sinh ra, sống",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "sinh"
+    ],
+    "readings_pinyin": [
+      "shēng"
+    ],
+    "readings_onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 16
+  },
+  {
+    "char_traditional": "忠",
+    "char_simplified": "忠",
+    "char_shinjitai": "忠",
+    "meaning_vi": "trung thành",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "trung"
+    ],
+    "readings_pinyin": [
+      "zhōng"
+    ],
+    "readings_onyomi": [
+      "チュウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 17
+  },
+  {
+    "char_traditional": "休",
+    "char_simplified": "休",
+    "char_shinjitai": "休",
+    "meaning_vi": "nghỉ ngơi",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hưu"
+    ],
+    "readings_pinyin": [
+      "xiū"
+    ],
+    "readings_onyomi": [
+      "キュウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 18
+  },
+  {
+    "char_traditional": "明",
+    "char_simplified": "明",
+    "char_shinjitai": "明",
+    "meaning_vi": "sáng, rõ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "minh"
+    ],
+    "readings_pinyin": [
+      "míng"
+    ],
+    "readings_onyomi": [
+      "メイ",
+      "ミョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 19
+  },
+  {
+    "char_traditional": "林",
+    "char_simplified": "林",
+    "char_shinjitai": "林",
+    "meaning_vi": "rừng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "lâm"
+    ],
+    "readings_pinyin": [
+      "lín"
+    ],
+    "readings_onyomi": [
+      "リン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 20
+  },
+  {
+    "char_traditional": "好",
+    "char_simplified": "好",
+    "char_shinjitai": "好",
+    "meaning_vi": "tốt, đẹp",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hảo"
+    ],
+    "readings_pinyin": [
+      "hǎo",
+      "hào"
+    ],
+    "readings_onyomi": [
+      "コウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 21
+  },
+  {
+    "char_traditional": "語",
+    "char_simplified": "语",
+    "char_shinjitai": "語",
+    "meaning_vi": "lời nói, ngôn ngữ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ngữ"
+    ],
+    "readings_pinyin": [
+      "yǔ"
+    ],
+    "readings_onyomi": [
+      "ゴ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 22
+  },
+  {
+    "char_traditional": "國",
+    "char_simplified": "国",
+    "char_shinjitai": "国",
+    "meaning_vi": "nước, quốc gia",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "quốc"
+    ],
+    "readings_pinyin": [
+      "guó"
+    ],
+    "readings_onyomi": [
+      "コク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 23
+  },
+  {
+    "char_traditional": "愛",
+    "char_simplified": "爱",
+    "char_shinjitai": "愛",
+    "meaning_vi": "yêu thương",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ái"
+    ],
+    "readings_pinyin": [
+      "ài"
+    ],
+    "readings_onyomi": [
+      "アイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 24
+  },
+  {
+    "char_traditional": "家",
+    "char_simplified": "家",
+    "char_shinjitai": "家",
+    "meaning_vi": "nhà, gia đình",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "gia"
+    ],
+    "readings_pinyin": [
+      "jiā"
+    ],
+    "readings_onyomi": [
+      "カ",
+      "ケ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 25
+  },
+  {
+    "char_traditional": "四",
+    "char_simplified": "四",
+    "char_shinjitai": "四",
+    "meaning_vi": "bốn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tứ"
+    ],
+    "readings_pinyin": [
+      "sì"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 26
+  },
+  {
+    "char_traditional": "五",
+    "char_simplified": "五",
+    "char_shinjitai": "五",
+    "meaning_vi": "năm",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ngũ"
+    ],
+    "readings_pinyin": [
+      "wǔ"
+    ],
+    "readings_onyomi": [
+      "ゴ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 27
+  },
+  {
+    "char_traditional": "六",
+    "char_simplified": "六",
+    "char_shinjitai": "六",
+    "meaning_vi": "sáu",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "lục"
+    ],
+    "readings_pinyin": [
+      "liù"
+    ],
+    "readings_onyomi": [
+      "ロク",
+      "リク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 28
+  },
+  {
+    "char_traditional": "七",
+    "char_simplified": "七",
+    "char_shinjitai": "七",
+    "meaning_vi": "bảy",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thất"
+    ],
+    "readings_pinyin": [
+      "qī"
+    ],
+    "readings_onyomi": [
+      "シチ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 29
+  },
+  {
+    "char_traditional": "八",
+    "char_simplified": "八",
+    "char_shinjitai": "八",
+    "meaning_vi": "tám",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "bát"
+    ],
+    "readings_pinyin": [
+      "bā"
+    ],
+    "readings_onyomi": [
+      "ハチ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 30
+  },
+  {
+    "char_traditional": "九",
+    "char_simplified": "九",
+    "char_shinjitai": "九",
+    "meaning_vi": "chín",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "cửu"
+    ],
+    "readings_pinyin": [
+      "jiǔ"
+    ],
+    "readings_onyomi": [
+      "キュウ",
+      "ク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 31
+  },
+  {
+    "char_traditional": "十",
+    "char_simplified": "十",
+    "char_shinjitai": "十",
+    "meaning_vi": "mười",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thập"
+    ],
+    "readings_pinyin": [
+      "shí"
+    ],
+    "readings_onyomi": [
+      "ジュウ",
+      "ジッ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 32
+  },
+  {
+    "char_traditional": "百",
+    "char_simplified": "百",
+    "char_shinjitai": "百",
+    "meaning_vi": "trăm",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "bách"
+    ],
+    "readings_pinyin": [
+      "bǎi"
+    ],
+    "readings_onyomi": [
+      "ヒャク",
+      "ビャク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 33
+  },
+  {
+    "char_traditional": "千",
+    "char_simplified": "千",
+    "char_shinjitai": "千",
+    "meaning_vi": "nghìn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thiên"
+    ],
+    "readings_pinyin": [
+      "qiān"
+    ],
+    "readings_onyomi": [
+      "セン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 34
+  },
+  {
+    "char_traditional": "萬",
+    "char_simplified": "万",
+    "char_shinjitai": "万",
+    "meaning_vi": "mười nghìn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "vạn"
+    ],
+    "readings_pinyin": [
+      "wàn"
+    ],
+    "readings_onyomi": [
+      "マン",
+      "バン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 35
+  },
+  {
+    "char_traditional": "東",
+    "char_simplified": "东",
+    "char_shinjitai": "東",
+    "meaning_vi": "phía đông",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đông"
+    ],
+    "readings_pinyin": [
+      "dōng"
+    ],
+    "readings_onyomi": [
+      "トウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 36
+  },
+  {
+    "char_traditional": "西",
+    "char_simplified": "西",
+    "char_shinjitai": "西",
+    "meaning_vi": "phía tây",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tây"
+    ],
+    "readings_pinyin": [
+      "xī"
+    ],
+    "readings_onyomi": [
+      "セイ",
+      "サイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 37
+  },
+  {
+    "char_traditional": "南",
+    "char_simplified": "南",
+    "char_shinjitai": "南",
+    "meaning_vi": "phía nam",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nam"
+    ],
+    "readings_pinyin": [
+      "nán"
+    ],
+    "readings_onyomi": [
+      "ナン",
+      "ナ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 38
+  },
+  {
+    "char_traditional": "北",
+    "char_simplified": "北",
+    "char_shinjitai": "北",
+    "meaning_vi": "phía bắc",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "bắc"
+    ],
+    "readings_pinyin": [
+      "běi"
+    ],
+    "readings_onyomi": [
+      "ホク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 39
+  },
+  {
+    "char_traditional": "左",
+    "char_simplified": "左",
+    "char_shinjitai": "左",
+    "meaning_vi": "bên trái",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tả"
+    ],
+    "readings_pinyin": [
+      "zuǒ"
+    ],
+    "readings_onyomi": [
+      "サ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 40
+  },
+  {
+    "char_traditional": "右",
+    "char_simplified": "右",
+    "char_shinjitai": "右",
+    "meaning_vi": "bên phải",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hữu"
+    ],
+    "readings_pinyin": [
+      "yòu"
+    ],
+    "readings_onyomi": [
+      "ウ",
+      "ユウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 41
+  },
+  {
+    "char_traditional": "前",
+    "char_simplified": "前",
+    "char_shinjitai": "前",
+    "meaning_vi": "phía trước",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tiền"
+    ],
+    "readings_pinyin": [
+      "qián"
+    ],
+    "readings_onyomi": [
+      "ゼン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 42
+  },
+  {
+    "char_traditional": "後",
+    "char_simplified": "后",
+    "char_shinjitai": "後",
+    "meaning_vi": "phía sau",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hậu"
+    ],
+    "readings_pinyin": [
+      "hòu"
+    ],
+    "readings_onyomi": [
+      "ゴ",
+      "コウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 43
+  },
+  {
+    "char_traditional": "上",
+    "char_simplified": "上",
+    "char_shinjitai": "上",
+    "meaning_vi": "bên trên",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thượng"
+    ],
+    "readings_pinyin": [
+      "shàng",
+      "shǎng"
+    ],
+    "readings_onyomi": [
+      "ジョウ",
+      "ショウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 44
+  },
+  {
+    "char_traditional": "下",
+    "char_simplified": "下",
+    "char_shinjitai": "下",
+    "meaning_vi": "bên dưới",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hạ"
+    ],
+    "readings_pinyin": [
+      "xià"
+    ],
+    "readings_onyomi": [
+      "カ",
+      "ゲ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 45
+  },
+  {
+    "char_traditional": "內",
+    "char_simplified": "内",
+    "char_shinjitai": "内",
+    "meaning_vi": "bên trong",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nội"
+    ],
+    "readings_pinyin": [
+      "nèi"
+    ],
+    "readings_onyomi": [
+      "ナイ",
+      "ダイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 46
+  },
+  {
+    "char_traditional": "外",
+    "char_simplified": "外",
+    "char_shinjitai": "外",
+    "meaning_vi": "bên ngoài",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ngoại"
+    ],
+    "readings_pinyin": [
+      "wài"
+    ],
+    "readings_onyomi": [
+      "ガイ",
+      "ゲ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 47
+  },
+  {
+    "char_traditional": "天",
+    "char_simplified": "天",
+    "char_shinjitai": "天",
+    "meaning_vi": "trời",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thiên"
+    ],
+    "readings_pinyin": [
+      "tiān"
+    ],
+    "readings_onyomi": [
+      "テン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 48
+  },
+  {
+    "char_traditional": "地",
+    "char_simplified": "地",
+    "char_shinjitai": "地",
+    "meaning_vi": "đất",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "địa"
+    ],
+    "readings_pinyin": [
+      "dì",
+      "de"
+    ],
+    "readings_onyomi": [
+      "チ",
+      "ジ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 49
+  },
+  {
+    "char_traditional": "風",
+    "char_simplified": "风",
+    "char_shinjitai": "風",
+    "meaning_vi": "gió",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "phong"
+    ],
+    "readings_pinyin": [
+      "fēng"
+    ],
+    "readings_onyomi": [
+      "フウ",
+      "フ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 50
+  },
+  {
+    "char_traditional": "雨",
+    "char_simplified": "雨",
+    "char_shinjitai": "雨",
+    "meaning_vi": "mưa",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "vũ"
+    ],
+    "readings_pinyin": [
+      "yǔ"
+    ],
+    "readings_onyomi": [
+      "ウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 51
+  },
+  {
+    "char_traditional": "雲",
+    "char_simplified": "云",
+    "char_shinjitai": "雲",
+    "meaning_vi": "mây",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "vân"
+    ],
+    "readings_pinyin": [
+      "yún"
+    ],
+    "readings_onyomi": [
+      "ウン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 52
+  },
+  {
+    "char_traditional": "雪",
+    "char_simplified": "雪",
+    "char_shinjitai": "雪",
+    "meaning_vi": "tuyết",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tuyết"
+    ],
+    "readings_pinyin": [
+      "xuě"
+    ],
+    "readings_onyomi": [
+      "セツ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 53
+  },
+  {
+    "char_traditional": "電",
+    "char_simplified": "电",
+    "char_shinjitai": "電",
+    "meaning_vi": "điện, sấm chớp",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "điện"
+    ],
+    "readings_pinyin": [
+      "diàn"
+    ],
+    "readings_onyomi": [
+      "デン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 54
+  },
+  {
+    "char_traditional": "星",
+    "char_simplified": "星",
+    "char_shinjitai": "星",
+    "meaning_vi": "ngôi sao",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tinh"
+    ],
+    "readings_pinyin": [
+      "xīng"
+    ],
+    "readings_onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 55
+  },
+  {
+    "char_traditional": "草",
+    "char_simplified": "草",
+    "char_shinjitai": "草",
+    "meaning_vi": "cỏ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thảo"
+    ],
+    "readings_pinyin": [
+      "cǎo"
+    ],
+    "readings_onyomi": [
+      "ソウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 56
+  },
+  {
+    "char_traditional": "花",
+    "char_simplified": "花",
+    "char_shinjitai": "花",
+    "meaning_vi": "bông hoa",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hoa"
+    ],
+    "readings_pinyin": [
+      "huā"
+    ],
+    "readings_onyomi": [
+      "カ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 57
+  },
+  {
+    "char_traditional": "男",
+    "char_simplified": "男",
+    "char_shinjitai": "男",
+    "meaning_vi": "đàn ông, con trai",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nam"
+    ],
+    "readings_pinyin": [
+      "nán"
+    ],
+    "readings_onyomi": [
+      "ダン",
+      "ナン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 58
+  },
+  {
+    "char_traditional": "女",
+    "char_simplified": "女",
+    "char_shinjitai": "女",
+    "meaning_vi": "phụ nữ, con gái",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nữ"
+    ],
+    "readings_pinyin": [
+      "nǚ"
+    ],
+    "readings_onyomi": [
+      "ジョ",
+      "ニョ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 59
+  },
+  {
+    "char_traditional": "父",
+    "char_simplified": "父",
+    "char_shinjitai": "父",
+    "meaning_vi": "cha, bố",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "phụ"
+    ],
+    "readings_pinyin": [
+      "fù"
+    ],
+    "readings_onyomi": [
+      "フ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 60
+  },
+  {
+    "char_traditional": "母",
+    "char_simplified": "母",
+    "char_shinjitai": "母",
+    "meaning_vi": "mẹ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "mẫu"
+    ],
+    "readings_pinyin": [
+      "mǔ"
+    ],
+    "readings_onyomi": [
+      "ボ",
+      "モ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 61
+  },
+  {
+    "char_traditional": "子",
+    "char_simplified": "子",
+    "char_shinjitai": "子",
+    "meaning_vi": "con cái",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tử"
+    ],
+    "readings_pinyin": [
+      "zǐ"
+    ],
+    "readings_onyomi": [
+      "シ",
+      "ス"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 62
+  },
+  {
+    "char_traditional": "兄",
+    "char_simplified": "兄",
+    "char_shinjitai": "兄",
+    "meaning_vi": "anh trai",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "huynh"
+    ],
+    "readings_pinyin": [
+      "xiōng"
+    ],
+    "readings_onyomi": [
+      "ケイ",
+      "キョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 63
+  },
+  {
+    "char_traditional": "弟",
+    "char_simplified": "弟",
+    "char_shinjitai": "弟",
+    "meaning_vi": "em trai",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đệ"
+    ],
+    "readings_pinyin": [
+      "dì"
+    ],
+    "readings_onyomi": [
+      "テイ",
+      "ダイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 64
+  },
+  {
+    "char_traditional": "目",
+    "char_simplified": "目",
+    "char_shinjitai": "目",
+    "meaning_vi": "con mắt",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "mục"
+    ],
+    "readings_pinyin": [
+      "mù"
+    ],
+    "readings_onyomi": [
+      "モク",
+      "ボク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 65
+  },
+  {
+    "char_traditional": "耳",
+    "char_simplified": "耳",
+    "char_shinjitai": "耳",
+    "meaning_vi": "lỗ tai",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nhĩ"
+    ],
+    "readings_pinyin": [
+      "ěr"
+    ],
+    "readings_onyomi": [
+      "ジ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 66
+  },
+  {
+    "char_traditional": "口",
+    "char_simplified": "口",
+    "char_shinjitai": "口",
+    "meaning_vi": "cái miệng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "khẩu"
+    ],
+    "readings_pinyin": [
+      "kǒu"
+    ],
+    "readings_onyomi": [
+      "コウ",
+      "ク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 67
+  },
+  {
+    "char_traditional": "手",
+    "char_simplified": "手",
+    "char_shinjitai": "手",
+    "meaning_vi": "bàn tay",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thủ"
+    ],
+    "readings_pinyin": [
+      "shǒu"
+    ],
+    "readings_onyomi": [
+      "シュ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 68
+  },
+  {
+    "char_traditional": "足",
+    "char_simplified": "足",
+    "char_shinjitai": "足",
+    "meaning_vi": "cái chân",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "túc"
+    ],
+    "readings_pinyin": [
+      "zú"
+    ],
+    "readings_onyomi": [
+      "ソク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 69
+  },
+  {
+    "char_traditional": "頭",
+    "char_simplified": "頭",
+    "char_shinjitai": "頭",
+    "meaning_vi": "cái đầu",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đầu"
+    ],
+    "readings_pinyin": [
+      "tóu"
+    ],
+    "readings_onyomi": [
+      "トウ",
+      "ズ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 70
+  },
+  {
+    "char_traditional": "來",
+    "char_simplified": "来",
+    "char_shinjitai": "来",
+    "meaning_vi": "đến, lại",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "lai"
+    ],
+    "readings_pinyin": [
+      "lái"
+    ],
+    "readings_onyomi": [
+      "ライ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 71
+  },
+  {
+    "char_traditional": "去",
+    "char_simplified": "去",
+    "char_shinjitai": "去",
+    "meaning_vi": "đi",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "khứ"
+    ],
+    "readings_pinyin": [
+      "qù"
+    ],
+    "readings_onyomi": [
+      "キョ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 72
+  },
+  {
+    "char_traditional": "出",
+    "char_simplified": "出",
+    "char_shinjitai": "出",
+    "meaning_vi": "đi ra",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "xuất"
+    ],
+    "readings_pinyin": [
+      "chū"
+    ],
+    "readings_onyomi": [
+      "シュツ",
+      "スイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 73
+  },
+  {
+    "char_traditional": "入",
+    "char_simplified": "入",
+    "char_shinjitai": "入",
+    "meaning_vi": "đi vào",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nhập"
+    ],
+    "readings_pinyin": [
+      "rù"
+    ],
+    "readings_onyomi": [
+      "ニュウ",
+      "ジュ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 74
+  },
+  {
+    "char_traditional": "多",
+    "char_simplified": "多",
+    "char_shinjitai": "多",
+    "meaning_vi": "nhiều",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đa"
+    ],
+    "readings_pinyin": [
+      "duō"
+    ],
+    "readings_onyomi": [
+      "タ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 75
+  },
+  {
+    "char_traditional": "少",
+    "char_simplified": "少",
+    "char_shinjitai": "少",
+    "meaning_vi": "ít",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thiểu"
+    ],
+    "readings_pinyin": [
+      "shǎo",
+      "shào"
+    ],
+    "readings_onyomi": [
+      "ショウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 76
+  },
+  {
+    "char_traditional": "新",
+    "char_simplified": "新",
+    "char_shinjitai": "新",
+    "meaning_vi": "mới",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tân"
+    ],
+    "readings_pinyin": [
+      "xīn"
+    ],
+    "readings_onyomi": [
+      "シン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 77
+  },
+  {
+    "char_traditional": "古",
+    "char_simplified": "古",
+    "char_shinjitai": "古",
+    "meaning_vi": "cũ, xưa",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "cổ"
+    ],
+    "readings_pinyin": [
+      "gǔ"
+    ],
+    "readings_onyomi": [
+      "コ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 78
+  },
+  {
+    "char_traditional": "白",
+    "char_simplified": "白",
+    "char_shinjitai": "白",
+    "meaning_vi": "màu trắng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "bạch"
+    ],
+    "readings_pinyin": [
+      "bái"
+    ],
+    "readings_onyomi": [
+      "ハク",
+      "ビャク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 79
+  },
+  {
+    "char_traditional": "黑",
+    "char_simplified": "黑",
+    "char_shinjitai": "黒",
+    "meaning_vi": "màu đen",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hắc"
+    ],
+    "readings_pinyin": [
+      "hēi"
+    ],
+    "readings_onyomi": [
+      "コク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 80
+  },
+  {
+    "char_traditional": "犬",
+    "char_simplified": "犬",
+    "char_shinjitai": "犬",
+    "meaning_vi": "con chó",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "khuyển"
+    ],
+    "readings_pinyin": [
+      "quǎn"
+    ],
+    "readings_onyomi": [
+      "ケン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 81
+  },
+  {
+    "char_traditional": "貓",
+    "char_simplified": "猫",
+    "char_shinjitai": "猫",
+    "meaning_vi": "con mèo",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "miêu"
+    ],
+    "readings_pinyin": [
+      "māo"
+    ],
+    "readings_onyomi": [
+      "ビョウ",
+      "ミョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 82
+  },
+  {
+    "char_traditional": "馬",
+    "char_simplified": "马",
+    "char_shinjitai": "馬",
+    "meaning_vi": "con ngựa",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "mã"
+    ],
+    "readings_pinyin": [
+      "mǎ"
+    ],
+    "readings_onyomi": [
+      "バ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 83
+  },
+  {
+    "char_traditional": "牛",
+    "char_simplified": "牛",
+    "char_shinjitai": "牛",
+    "meaning_vi": "con trâu, con bò",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ngưu"
+    ],
+    "readings_pinyin": [
+      "niú"
+    ],
+    "readings_onyomi": [
+      "ギュウ",
+      "ゴ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 84
+  },
+  {
+    "char_traditional": "羊",
+    "char_simplified": "羊",
+    "char_shinjitai": "羊",
+    "meaning_vi": "con dê, cừu",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "dương"
+    ],
+    "readings_pinyin": [
+      "yáng"
+    ],
+    "readings_onyomi": [
+      "ヨウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 85
+  },
+  {
+    "char_traditional": "鳥",
+    "char_simplified": "鸟",
+    "char_shinjitai": "鳥",
+    "meaning_vi": "con chim",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "điểu"
+    ],
+    "readings_pinyin": [
+      "niǎo"
+    ],
+    "readings_onyomi": [
+      "チョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 86
+  },
+  {
+    "char_traditional": "魚",
+    "char_simplified": "鱼",
+    "char_shinjitai": "魚",
+    "meaning_vi": "con cá",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ngư"
+    ],
+    "readings_pinyin": [
+      "yú"
+    ],
+    "readings_onyomi": [
+      "ギョ",
+      "ゴ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 87
+  },
+  {
+    "char_traditional": "蟲",
+    "char_simplified": "虫",
+    "char_shinjitai": "虫",
+    "meaning_vi": "côn trùng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "trùng"
+    ],
+    "readings_pinyin": [
+      "chóng"
+    ],
+    "readings_onyomi": [
+      "チュウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 88
+  },
+  {
+    "char_traditional": "龍",
+    "char_simplified": "龙",
+    "char_shinjitai": "竜",
+    "meaning_vi": "con rồng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "long"
+    ],
+    "readings_pinyin": [
+      "lóng"
+    ],
+    "readings_onyomi": [
+      "リュウ",
+      "リョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 89
+  },
+  {
+    "char_traditional": "青",
+    "char_simplified": "青",
+    "char_shinjitai": "青",
+    "meaning_vi": "màu xanh",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thanh"
+    ],
+    "readings_pinyin": [
+      "qīng"
+    ],
+    "readings_onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 90
+  },
+  {
+    "char_traditional": "黃",
+    "char_simplified": "黄",
+    "char_shinjitai": "黄",
+    "meaning_vi": "màu vàng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hoàng"
+    ],
+    "readings_pinyin": [
+      "huáng"
+    ],
+    "readings_onyomi": [
+      "コウ",
+      "オウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 91
+  },
+  {
+    "char_traditional": "赤",
+    "char_simplified": "赤",
+    "char_shinjitai": "赤",
+    "meaning_vi": "màu đỏ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "xích"
+    ],
+    "readings_pinyin": [
+      "chì"
+    ],
+    "readings_onyomi": [
+      "セキ",
+      "シャク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 92
+  },
+  {
+    "char_traditional": "綠",
+    "char_simplified": "绿",
+    "char_shinjitai": "緑",
+    "meaning_vi": "màu xanh lá",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "lục"
+    ],
+    "readings_pinyin": [
+      "lǜ"
+    ],
+    "readings_onyomi": [
+      "リョク",
+      "ロク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 93
+  },
+  {
+    "char_traditional": "藍",
+    "char_simplified": "蓝",
+    "char_shinjitai": "藍",
+    "meaning_vi": "màu xanh lam",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "lam"
+    ],
+    "readings_pinyin": [
+      "lán"
+    ],
+    "readings_onyomi": [
+      "ラン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 94
+  },
+  {
+    "char_traditional": "紫",
+    "char_simplified": "紫",
+    "char_shinjitai": "紫",
+    "meaning_vi": "màu tím",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tử"
+    ],
+    "readings_pinyin": [
+      "zǐ"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 95
+  },
+  {
+    "char_traditional": "走",
+    "char_simplified": "走",
+    "char_shinjitai": "走",
+    "meaning_vi": "chạy, đi bộ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tẩu"
+    ],
+    "readings_pinyin": [
+      "zǒu"
+    ],
+    "readings_onyomi": [
+      "ソウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 96
+  },
+  {
+    "char_traditional": "飛",
+    "char_simplified": "飞",
+    "char_shinjitai": "飛",
+    "meaning_vi": "bay",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "phi"
+    ],
+    "readings_pinyin": [
+      "fēi"
+    ],
+    "readings_onyomi": [
+      "ヒ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 97
+  },
+  {
+    "char_traditional": "游",
+    "char_simplified": "游",
+    "char_shinjitai": "游",
+    "meaning_vi": "bơi lội, đi chơi",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "du"
+    ],
+    "readings_pinyin": [
+      "yóu"
+    ],
+    "readings_onyomi": [
+      "ユウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 98
+  },
+  {
+    "char_traditional": "看",
+    "char_simplified": "看",
+    "char_shinjitai": "看",
+    "meaning_vi": "nhìn, xem",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "khán"
+    ],
+    "readings_pinyin": [
+      "kàn",
+      "kān"
+    ],
+    "readings_onyomi": [
+      "カン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 99
+  },
+  {
+    "char_traditional": "聽",
+    "char_simplified": "听",
+    "char_shinjitai": "聴",
+    "meaning_vi": "nghe",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thính"
+    ],
+    "readings_pinyin": [
+      "tīng"
+    ],
+    "readings_onyomi": [
+      "チョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 100
+  },
+  {
+    "char_traditional": "說",
+    "char_simplified": "说",
+    "char_shinjitai": "説",
+    "meaning_vi": "nói",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thuyết"
+    ],
+    "readings_pinyin": [
+      "shuō",
+      "shuì"
+    ],
+    "readings_onyomi": [
+      "セツ",
+      "ゼイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 101
+  },
+  {
+    "char_traditional": "讀",
+    "char_simplified": "读",
+    "char_shinjitai": "読",
+    "meaning_vi": "đọc",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "độc"
+    ],
+    "readings_pinyin": [
+      "dú",
+      "dòu"
+    ],
+    "readings_onyomi": [
+      "ドク",
+      "トク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 102
+  },
+  {
+    "char_traditional": "寫",
+    "char_simplified": "写",
+    "char_shinjitai": "写",
+    "meaning_vi": "viết",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tả"
+    ],
+    "readings_pinyin": [
+      "xiě"
+    ],
+    "readings_onyomi": [
+      "シャ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 103
+  },
+  {
+    "char_traditional": "食",
+    "char_simplified": "食",
+    "char_shinjitai": "食",
+    "meaning_vi": "ăn, thức ăn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thực"
+    ],
+    "readings_pinyin": [
+      "shí",
+      "sì"
+    ],
+    "readings_onyomi": [
+      "ショク",
+      "ジキ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 104
+  },
+  {
+    "char_traditional": "飲",
+    "char_simplified": "饮",
+    "char_shinjitai": "飲",
+    "meaning_vi": "uống",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ẩm"
+    ],
+    "readings_pinyin": [
+      "yǐn",
+      "yìn"
+    ],
+    "readings_onyomi": [
+      "イン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 105
+  },
+  {
+    "char_traditional": "恨",
+    "char_simplified": "恨",
+    "char_shinjitai": "恨",
+    "meaning_vi": "ghét, hận",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hận"
+    ],
+    "readings_pinyin": [
+      "hèn"
+    ],
+    "readings_onyomi": [
+      "コン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 106
+  },
+  {
+    "char_traditional": "喜",
+    "char_simplified": "喜",
+    "char_shinjitai": "喜",
+    "meaning_vi": "vui vẻ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hỷ"
+    ],
+    "readings_pinyin": [
+      "xǐ"
+    ],
+    "readings_onyomi": [
+      "キ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 107
+  },
+  {
+    "char_traditional": "怒",
+    "char_simplified": "怒",
+    "char_shinjitai": "怒",
+    "meaning_vi": "tức giận",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nộ"
+    ],
+    "readings_pinyin": [
+      "nù"
+    ],
+    "readings_onyomi": [
+      "ド"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 108
+  },
+  {
+    "char_traditional": "哀",
+    "char_simplified": "哀",
+    "char_shinjitai": "哀",
+    "meaning_vi": "đau buồn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ai"
+    ],
+    "readings_pinyin": [
+      "āi"
+    ],
+    "readings_onyomi": [
+      "アイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 109
+  },
+  {
+    "char_traditional": "樂",
+    "char_simplified": "乐",
+    "char_shinjitai": "楽",
+    "meaning_vi": "vui thú, âm nhạc",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "lạc"
+    ],
+    "readings_pinyin": [
+      "lè",
+      "yuè"
+    ],
+    "readings_onyomi": [
+      "ガク",
+      "ラク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 110
+  },
+  {
+    "char_traditional": "苦",
+    "char_simplified": "苦",
+    "char_shinjitai": "苦",
+    "meaning_vi": "đắng, khổ cực",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "khổ"
+    ],
+    "readings_pinyin": [
+      "kǔ"
+    ],
+    "readings_onyomi": [
+      "ク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 111
+  },
+  {
+    "char_traditional": "甜",
+    "char_simplified": "甜",
+    "char_shinjitai": "甜",
+    "meaning_vi": "ngọt",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "điềm"
+    ],
+    "readings_pinyin": [
+      "tián"
+    ],
+    "readings_onyomi": [
+      "テン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 112
+  },
+  {
+    "char_traditional": "年",
+    "char_simplified": "年",
+    "char_shinjitai": "年",
+    "meaning_vi": "năm",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "niên"
+    ],
+    "readings_pinyin": [
+      "nián"
+    ],
+    "readings_onyomi": [
+      "ネン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 113
+  },
+  {
+    "char_traditional": "時",
+    "char_simplified": "时",
+    "char_shinjitai": "時",
+    "meaning_vi": "thời gian, giờ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thời"
+    ],
+    "readings_pinyin": [
+      "shí"
+    ],
+    "readings_onyomi": [
+      "ジ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 114
+  },
+  {
+    "char_traditional": "分",
+    "char_simplified": "分",
+    "char_shinjitai": "分",
+    "meaning_vi": "phút, chia ra",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "phân"
+    ],
+    "readings_pinyin": [
+      "fēn",
+      "fèn"
+    ],
+    "readings_onyomi": [
+      "ブン",
+      "フン",
+      "ブ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 115
+  },
+  {
+    "char_traditional": "秒",
+    "char_simplified": "秒",
+    "char_shinjitai": "秒",
+    "meaning_vi": "giây",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "miểu"
+    ],
+    "readings_pinyin": [
+      "miǎo"
+    ],
+    "readings_onyomi": [
+      "ビョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 116
+  },
+  {
+    "char_traditional": "今",
+    "char_simplified": "今",
+    "char_shinjitai": "今",
+    "meaning_vi": "hiện tại, nay",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "kim"
+    ],
+    "readings_pinyin": [
+      "jīn"
+    ],
+    "readings_onyomi": [
+      "コン",
+      "キン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 117
+  },
+  {
+    "char_traditional": "昔",
+    "char_simplified": "昔",
+    "char_shinjitai": "昔",
+    "meaning_vi": "ngày xưa",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tích"
+    ],
+    "readings_pinyin": [
+      "xī"
+    ],
+    "readings_onyomi": [
+      "セキ",
+      "シャク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 118
+  },
+  {
+    "char_traditional": "門",
+    "char_simplified": "门",
+    "char_shinjitai": "門",
+    "meaning_vi": "cửa",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "môn"
+    ],
+    "readings_pinyin": [
+      "mén"
+    ],
+    "readings_onyomi": [
+      "モン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 119
+  },
+  {
+    "char_traditional": "車",
+    "char_simplified": "车",
+    "char_shinjitai": "車",
+    "meaning_vi": "xe cộ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "xa"
+    ],
+    "readings_pinyin": [
+      "chē"
+    ],
+    "readings_onyomi": [
+      "シャ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 120
+  },
+  {
+    "char_traditional": "金",
+    "char_simplified": "金",
+    "char_shinjitai": "金",
+    "meaning_vi": "vàng, kim loại",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "kim"
+    ],
+    "readings_pinyin": [
+      "jīn"
+    ],
+    "readings_onyomi": [
+      "キン",
+      "コン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 121
+  },
+  {
+    "char_traditional": "石",
+    "char_simplified": "石",
+    "char_shinjitai": "石",
+    "meaning_vi": "đá",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thạch"
+    ],
+    "readings_pinyin": [
+      "shí"
+    ],
+    "readings_onyomi": [
+      "セキ",
+      "シャク",
+      "コク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 122
+  },
+  {
+    "char_traditional": "田",
+    "char_simplified": "田",
+    "char_shinjitai": "田",
+    "meaning_vi": "ruộng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "điền"
+    ],
+    "readings_pinyin": [
+      "tián"
+    ],
+    "readings_onyomi": [
+      "デン",
+      "デ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 123
+  },
+  {
+    "char_traditional": "竹",
+    "char_simplified": "竹",
+    "char_shinjitai": "竹",
+    "meaning_vi": "tre",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "trúc"
+    ],
+    "readings_pinyin": [
+      "zhú"
+    ],
+    "readings_onyomi": [
+      "チク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 124
+  },
+  {
+    "char_traditional": "米",
+    "char_simplified": "米",
+    "char_shinjitai": "米",
+    "meaning_vi": "gạo",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "mễ"
+    ],
+    "readings_pinyin": [
+      "mǐ"
+    ],
+    "readings_onyomi": [
+      "ベイ",
+      "マイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 125
+  },
+  {
+    "char_traditional": "春",
+    "char_simplified": "春",
+    "char_shinjitai": "春",
+    "meaning_vi": "mùa xuân",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "xuân"
+    ],
+    "readings_pinyin": [
+      "chūn"
+    ],
+    "readings_onyomi": [
+      "シュン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 126
+  },
+  {
+    "char_traditional": "夏",
+    "char_simplified": "夏",
+    "char_shinjitai": "夏",
+    "meaning_vi": "mùa hè",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hạ"
+    ],
+    "readings_pinyin": [
+      "xià"
+    ],
+    "readings_onyomi": [
+      "カ",
+      "ゲ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 127
+  },
+  {
+    "char_traditional": "秋",
+    "char_simplified": "秋",
+    "char_shinjitai": "秋",
+    "meaning_vi": "mùa thu",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thu"
+    ],
+    "readings_pinyin": [
+      "qiū"
+    ],
+    "readings_onyomi": [
+      "シュウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 128
+  },
+  {
+    "char_traditional": "冬",
+    "char_simplified": "冬",
+    "char_shinjitai": "冬",
+    "meaning_vi": "mùa đông",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đông"
+    ],
+    "readings_pinyin": [
+      "dōng"
+    ],
+    "readings_onyomi": [
+      "トウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 129
+  },
+  {
+    "char_traditional": "朝",
+    "char_simplified": "朝",
+    "char_shinjitai": "朝",
+    "meaning_vi": "buổi sáng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "triêu"
+    ],
+    "readings_pinyin": [
+      "zhāo",
+      "cháo"
+    ],
+    "readings_onyomi": [
+      "チョウ",
+      "ジョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 130
+  },
+  {
+    "char_traditional": "夕",
+    "char_simplified": "夕",
+    "char_shinjitai": "夕",
+    "meaning_vi": "buổi chiều tối",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tịch"
+    ],
+    "readings_pinyin": [
+      "xī"
+    ],
+    "readings_onyomi": [
+      "セキ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 131
+  },
+  {
+    "char_traditional": "夜",
+    "char_simplified": "夜",
+    "char_shinjitai": "夜",
+    "meaning_vi": "ban đêm",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "dạ"
+    ],
+    "readings_pinyin": [
+      "yè"
+    ],
+    "readings_onyomi": [
+      "ヤ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 132
+  },
+  {
+    "char_traditional": "江",
+    "char_simplified": "江",
+    "char_shinjitai": "江",
+    "meaning_vi": "sông lớn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "giang"
+    ],
+    "readings_pinyin": [
+      "jiāng"
+    ],
+    "readings_onyomi": [
+      "コウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 133
+  },
+  {
+    "char_traditional": "河",
+    "char_simplified": "河",
+    "char_shinjitai": "河",
+    "meaning_vi": "sông",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hà"
+    ],
+    "readings_pinyin": [
+      "hé"
+    ],
+    "readings_onyomi": [
+      "カ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 134
+  },
+  {
+    "char_traditional": "海",
+    "char_simplified": "海",
+    "char_shinjitai": "海",
+    "meaning_vi": "biển",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hải"
+    ],
+    "readings_pinyin": [
+      "hǎi"
+    ],
+    "readings_onyomi": [
+      "カイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 135
+  },
+  {
+    "char_traditional": "湖",
+    "char_simplified": "湖",
+    "char_shinjitai": "湖",
+    "meaning_vi": "cái hồ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hồ"
+    ],
+    "readings_pinyin": [
+      "hú"
+    ],
+    "readings_onyomi": [
+      "コ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 136
+  },
+  {
+    "char_traditional": "土",
+    "char_simplified": "土",
+    "char_shinjitai": "土",
+    "meaning_vi": "đất đai",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thổ"
+    ],
+    "readings_pinyin": [
+      "tǔ"
+    ],
+    "readings_onyomi": [
+      "ド",
+      "ト"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 137
+  },
+  {
+    "char_traditional": "氣",
+    "char_simplified": "气",
+    "char_shinjitai": "気",
+    "meaning_vi": "không khí, hơi thở",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "khí"
+    ],
+    "readings_pinyin": [
+      "qì"
+    ],
+    "readings_onyomi": [
+      "キ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 138
+  },
+  {
+    "char_traditional": "空",
+    "char_simplified": "空",
+    "char_shinjitai": "空",
+    "meaning_vi": "bầu trời, trống rỗng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "không"
+    ],
+    "readings_pinyin": [
+      "kōng",
+      "kòng"
+    ],
+    "readings_onyomi": [
+      "クウ",
+      "コウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 139
+  },
+  {
+    "char_traditional": "光",
+    "char_simplified": "光",
+    "char_shinjitai": "光",
+    "meaning_vi": "ánh sáng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "quang"
+    ],
+    "readings_pinyin": [
+      "guāng"
+    ],
+    "readings_onyomi": [
+      "コウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 140
+  },
+  {
+    "char_traditional": "暗",
+    "char_simplified": "暗",
+    "char_shinjitai": "暗",
+    "meaning_vi": "tối tăm",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ám"
+    ],
+    "readings_pinyin": [
+      "àn"
+    ],
+    "readings_onyomi": [
+      "アン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 141
+  },
+  {
+    "char_traditional": "銀",
+    "char_simplified": "銀",
+    "char_shinjitai": "銀",
+    "meaning_vi": "bạc",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ngân"
+    ],
+    "readings_pinyin": [
+      "yín"
+    ],
+    "readings_onyomi": [
+      "ギン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 142
+  },
+  {
+    "char_traditional": "鐵",
+    "char_simplified": "铁",
+    "char_shinjitai": "鉄",
+    "meaning_vi": "sắt",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thiết"
+    ],
+    "readings_pinyin": [
+      "tiě"
+    ],
+    "readings_onyomi": [
+      "テツ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 143
+  },
+  {
+    "char_traditional": "血",
+    "char_simplified": "血",
+    "char_shinjitai": "血",
+    "meaning_vi": "máu",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "huyết"
+    ],
+    "readings_pinyin": [
+      "xuè",
+      "xiě"
+    ],
+    "readings_onyomi": [
+      "ケツ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 144
+  },
+  {
+    "char_traditional": "肉",
+    "char_simplified": "肉",
+    "char_shinjitai": "肉",
+    "meaning_vi": "thịt",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nhục"
+    ],
+    "readings_pinyin": [
+      "ròu"
+    ],
+    "readings_onyomi": [
+      "ニク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 145
+  },
+  {
+    "char_traditional": "骨",
+    "char_simplified": "骨",
+    "char_shinjitai": "骨",
+    "meaning_vi": "xương",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "cốt"
+    ],
+    "readings_pinyin": [
+      "gǔ"
+    ],
+    "readings_onyomi": [
+      "コツ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 146
+  },
+  {
+    "char_traditional": "皮",
+    "char_simplified": "皮",
+    "char_shinjitai": "皮",
+    "meaning_vi": "da",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "bì"
+    ],
+    "readings_pinyin": [
+      "pí"
+    ],
+    "readings_onyomi": [
+      "ヒ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 147
+  },
+  {
+    "char_traditional": "毛",
+    "char_simplified": "毛",
+    "char_shinjitai": "毛",
+    "meaning_vi": "lông, tóc",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "mao"
+    ],
+    "readings_pinyin": [
+      "máo"
+    ],
+    "readings_onyomi": [
+      "モウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 148
+  },
+  {
+    "char_traditional": "肝",
+    "char_simplified": "肝",
+    "char_shinjitai": "肝",
+    "meaning_vi": "gan",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "can"
+    ],
+    "readings_pinyin": [
+      "gān"
+    ],
+    "readings_onyomi": [
+      "カン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 149
+  },
+  {
+    "char_traditional": "肺",
+    "char_simplified": "肺",
+    "char_shinjitai": "肺",
+    "meaning_vi": "phổi",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "phế"
+    ],
+    "readings_pinyin": [
+      "fèi"
+    ],
+    "readings_onyomi": [
+      "ハイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 150
+  },
+  {
+    "char_traditional": "胃",
+    "char_simplified": "胃",
+    "char_shinjitai": "胃",
+    "meaning_vi": "dạ dày",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "vị"
+    ],
+    "readings_pinyin": [
+      "wèi"
+    ],
+    "readings_onyomi": [
+      "イ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 151
+  },
+  {
+    "char_traditional": "腸",
+    "char_simplified": "腸",
+    "char_shinjitai": "腸",
+    "meaning_vi": "ruột",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tràng"
+    ],
+    "readings_pinyin": [
+      "cháng"
+    ],
+    "readings_onyomi": [
+      "チョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 152
+  },
+  {
+    "char_traditional": "面",
+    "char_simplified": "面",
+    "char_shinjitai": "面",
+    "meaning_vi": "khuôn mặt, bề mặt",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "diện"
+    ],
+    "readings_pinyin": [
+      "miàn"
+    ],
+    "readings_onyomi": [
+      "メン",
+      "ベン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 153
+  },
+  {
+    "char_traditional": "齒",
+    "char_simplified": "齿",
+    "char_shinjitai": "歯",
+    "meaning_vi": "răng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "xỉ"
+    ],
+    "readings_pinyin": [
+      "chǐ"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 154
+  },
+  {
+    "char_traditional": "立",
+    "char_simplified": "立",
+    "char_shinjitai": "立",
+    "meaning_vi": "đứng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "lập"
+    ],
+    "readings_pinyin": [
+      "lì"
+    ],
+    "readings_onyomi": [
+      "リツ",
+      "リュウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 155
+  },
+  {
+    "char_traditional": "坐",
+    "char_simplified": "坐",
+    "char_shinjitai": "坐",
+    "meaning_vi": "ngồi",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tọa"
+    ],
+    "readings_pinyin": [
+      "zuò"
+    ],
+    "readings_onyomi": [
+      "ザ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 156
+  },
+  {
+    "char_traditional": "步",
+    "char_simplified": "步",
+    "char_shinjitai": "歩",
+    "meaning_vi": "bước đi",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "bộ"
+    ],
+    "readings_pinyin": [
+      "bù"
+    ],
+    "readings_onyomi": [
+      "ホ",
+      "ブ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 157
+  },
+  {
+    "char_traditional": "居",
+    "char_simplified": "居",
+    "char_shinjitai": "居",
+    "meaning_vi": "cư trú, ở",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "cư"
+    ],
+    "readings_pinyin": [
+      "jū"
+    ],
+    "readings_onyomi": [
+      "キョ",
+      "コ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 158
+  },
+  {
+    "char_traditional": "眠",
+    "char_simplified": "眠",
+    "char_shinjitai": "眠",
+    "meaning_vi": "ngủ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "miên"
+    ],
+    "readings_pinyin": [
+      "mián"
+    ],
+    "readings_onyomi": [
+      "ミン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 159
+  },
+  {
+    "char_traditional": "夢",
+    "char_simplified": "梦",
+    "char_shinjitai": "夢",
+    "meaning_vi": "giấc mơ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "mộng"
+    ],
+    "readings_pinyin": [
+      "mèng"
+    ],
+    "readings_onyomi": [
+      "ム"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 160
+  },
+  {
+    "char_traditional": "覺",
+    "char_simplified": "觉",
+    "char_shinjitai": "覚",
+    "meaning_vi": "tỉnh ngộ, cảm thấy",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "giác"
+    ],
+    "readings_pinyin": [
+      "jué",
+      "jiào"
+    ],
+    "readings_onyomi": [
+      "カク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 161
+  },
+  {
+    "char_traditional": "買",
+    "char_simplified": "买",
+    "char_shinjitai": "買",
+    "meaning_vi": "mua",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "mãi"
+    ],
+    "readings_pinyin": [
+      "mǎi"
+    ],
+    "readings_onyomi": [
+      "バイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 162
+  },
+  {
+    "char_traditional": "賣",
+    "char_simplified": "卖",
+    "char_shinjitai": "売",
+    "meaning_vi": "bán",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "mại"
+    ],
+    "readings_pinyin": [
+      "mài"
+    ],
+    "readings_onyomi": [
+      "バイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 163
+  },
+  {
+    "char_traditional": "給",
+    "char_simplified": "給",
+    "char_shinjitai": "給",
+    "meaning_vi": "cho, cung cấp",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "cấp"
+    ],
+    "readings_pinyin": [
+      "gěi",
+      "jǐ"
+    ],
+    "readings_onyomi": [
+      "キュウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 164
+  },
+  {
+    "char_traditional": "受",
+    "char_simplified": "受",
+    "char_shinjitai": "受",
+    "meaning_vi": "nhận lấy",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thụ"
+    ],
+    "readings_pinyin": [
+      "shòu"
+    ],
+    "readings_onyomi": [
+      "ジュ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 165
+  },
+  {
+    "char_traditional": "問",
+    "char_simplified": "問",
+    "char_shinjitai": "問",
+    "meaning_vi": "hỏi",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "vấn"
+    ],
+    "readings_pinyin": [
+      "wèn"
+    ],
+    "readings_onyomi": [
+      "モン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 166
+  },
+  {
+    "char_traditional": "答",
+    "char_simplified": "答",
+    "char_shinjitai": "答",
+    "meaning_vi": "trả lời",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đáp"
+    ],
+    "readings_pinyin": [
+      "dá"
+    ],
+    "readings_onyomi": [
+      "トウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 167
+  },
+  {
+    "char_traditional": "長",
+    "char_simplified": "长",
+    "char_shinjitai": "長",
+    "meaning_vi": "dài",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "trường"
+    ],
+    "readings_pinyin": [
+      "cháng",
+      "zhǎng"
+    ],
+    "readings_onyomi": [
+      "チョウ",
+      "ジョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 168
+  },
+  {
+    "char_traditional": "短",
+    "char_simplified": "短",
+    "char_shinjitai": "短",
+    "meaning_vi": "ngắn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đoản"
+    ],
+    "readings_pinyin": [
+      "duǎn"
+    ],
+    "readings_onyomi": [
+      "タン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 169
+  },
+  {
+    "char_traditional": "高",
+    "char_simplified": "高",
+    "char_shinjitai": "高",
+    "meaning_vi": "cao",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "cao"
+    ],
+    "readings_pinyin": [
+      "gāo"
+    ],
+    "readings_onyomi": [
+      "コウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 170
+  },
+  {
+    "char_traditional": "低",
+    "char_simplified": "低",
+    "char_shinjitai": "低",
+    "meaning_vi": "thấp",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đê"
+    ],
+    "readings_pinyin": [
+      "dī"
+    ],
+    "readings_onyomi": [
+      "テイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 171
+  },
+  {
+    "char_traditional": "重",
+    "char_simplified": "重",
+    "char_shinjitai": "重",
+    "meaning_vi": "nặng, quan trọng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "trọng"
+    ],
+    "readings_pinyin": [
+      "zhòng",
+      "chóng"
+    ],
+    "readings_onyomi": [
+      "ジュウ",
+      "チョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 172
+  },
+  {
+    "char_traditional": "輕",
+    "char_simplified": "轻",
+    "char_shinjitai": "軽",
+    "meaning_vi": "nhẹ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "khinh"
+    ],
+    "readings_pinyin": [
+      "qīng"
+    ],
+    "readings_onyomi": [
+      "ケイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 173
+  },
+  {
+    "char_traditional": "快",
+    "char_simplified": "快",
+    "char_shinjitai": "快",
+    "meaning_vi": "nhanh, vui vẻ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "khoái"
+    ],
+    "readings_pinyin": [
+      "kuài"
+    ],
+    "readings_onyomi": [
+      "カイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 174
+  },
+  {
+    "char_traditional": "慢",
+    "char_simplified": "慢",
+    "char_shinjitai": "慢",
+    "meaning_vi": "chậm chạp",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "mạn"
+    ],
+    "readings_pinyin": [
+      "màn"
+    ],
+    "readings_onyomi": [
+      "マン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 175
+  },
+  {
+    "char_traditional": "寒",
+    "char_simplified": "寒",
+    "char_shinjitai": "寒",
+    "meaning_vi": "lạnh lẽo",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hàn"
+    ],
+    "readings_pinyin": [
+      "hán"
+    ],
+    "readings_onyomi": [
+      "カン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 176
+  },
+  {
+    "char_traditional": "熱",
+    "char_simplified": "熱",
+    "char_shinjitai": "熱",
+    "meaning_vi": "nóng bức",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "nhiệt"
+    ],
+    "readings_pinyin": [
+      "rè"
+    ],
+    "readings_onyomi": [
+      "ネツ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 177
+  },
+  {
+    "char_traditional": "冷",
+    "char_simplified": "冷",
+    "char_shinjitai": "冷",
+    "meaning_vi": "lạnh, buốt",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "lãnh"
+    ],
+    "readings_pinyin": [
+      "lěng"
+    ],
+    "readings_onyomi": [
+      "レイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 178
+  },
+  {
+    "char_traditional": "溫",
+    "char_simplified": "温",
+    "char_shinjitai": "温",
+    "meaning_vi": "ấm áp",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ôn"
+    ],
+    "readings_pinyin": [
+      "wēn"
+    ],
+    "readings_onyomi": [
+      "オン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 179
+  },
+  {
+    "char_traditional": "厚",
+    "char_simplified": "厚",
+    "char_shinjitai": "厚",
+    "meaning_vi": "dày",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hậu"
+    ],
+    "readings_pinyin": [
+      "hòu"
+    ],
+    "readings_onyomi": [
+      "コウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 180
+  },
+  {
+    "char_traditional": "薄",
+    "char_simplified": "薄",
+    "char_shinjitai": "薄",
+    "meaning_vi": "mỏng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "bạc"
+    ],
+    "readings_pinyin": [
+      "báo",
+      "bó",
+      "bò"
+    ],
+    "readings_onyomi": [
+      "ハク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 181
+  },
+  {
+    "char_traditional": "君",
+    "char_simplified": "君",
+    "char_shinjitai": "君",
+    "meaning_vi": "vua, người quân tử",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "quân"
+    ],
+    "readings_pinyin": [
+      "jūn"
+    ],
+    "readings_onyomi": [
+      "クン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 182
+  },
+  {
+    "char_traditional": "臣",
+    "char_simplified": "臣",
+    "char_shinjitai": "臣",
+    "meaning_vi": "bề tôi",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thần"
+    ],
+    "readings_pinyin": [
+      "chén"
+    ],
+    "readings_onyomi": [
+      "シン",
+      "ジン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 183
+  },
+  {
+    "char_traditional": "主",
+    "char_simplified": "主",
+    "char_shinjitai": "主",
+    "meaning_vi": "chủ, người chủ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "chủ"
+    ],
+    "readings_pinyin": [
+      "zhǔ"
+    ],
+    "readings_onyomi": [
+      "シュ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 184
+  },
+  {
+    "char_traditional": "客",
+    "char_simplified": "客",
+    "char_shinjitai": "客",
+    "meaning_vi": "người khách",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "khách"
+    ],
+    "readings_pinyin": [
+      "kè"
+    ],
+    "readings_onyomi": [
+      "キャク",
+      "カク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 185
+  },
+  {
+    "char_traditional": "朋",
+    "char_simplified": "朋",
+    "char_shinjitai": "朋",
+    "meaning_vi": "bạn bè",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "bằng"
+    ],
+    "readings_pinyin": [
+      "péng"
+    ],
+    "readings_onyomi": [
+      "ホウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 186
+  },
+  {
+    "char_traditional": "友",
+    "char_simplified": "友",
+    "char_shinjitai": "友",
+    "meaning_vi": "bạn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hữu"
+    ],
+    "readings_pinyin": [
+      "yǒu"
+    ],
+    "readings_onyomi": [
+      "ユウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 187
+  },
+  {
+    "char_traditional": "敵",
+    "char_simplified": "敵",
+    "char_shinjitai": "敵",
+    "meaning_vi": "kẻ thù",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "địch"
+    ],
+    "readings_pinyin": [
+      "dí"
+    ],
+    "readings_onyomi": [
+      "テキ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 188
+  },
+  {
+    "char_traditional": "民",
+    "char_simplified": "民",
+    "char_shinjitai": "民",
+    "meaning_vi": "người dân",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "dân"
+    ],
+    "readings_pinyin": [
+      "mín"
+    ],
+    "readings_onyomi": [
+      "ミン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 189
+  },
+  {
+    "char_traditional": "兵",
+    "char_simplified": "兵",
+    "char_shinjitai": "兵",
+    "meaning_vi": "người lính",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "binh"
+    ],
+    "readings_pinyin": [
+      "bīng"
+    ],
+    "readings_onyomi": [
+      "ヘイ",
+      "ヒョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 190
+  },
+  {
+    "char_traditional": "將",
+    "char_simplified": "将",
+    "char_shinjitai": "将",
+    "meaning_vi": "vị tướng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tướng"
+    ],
+    "readings_pinyin": [
+      "jiāng",
+      "jiàng"
+    ],
+    "readings_onyomi": [
+      "ショウ",
+      "ソウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 191
+  },
+  {
+    "char_traditional": "理",
+    "char_simplified": "理",
+    "char_shinjitai": "理",
+    "meaning_vi": "lý lẽ, đạo lý",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "lý"
+    ],
+    "readings_pinyin": [
+      "lǐ"
+    ],
+    "readings_onyomi": [
+      "リ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 192
+  },
+  {
+    "char_traditional": "法",
+    "char_simplified": "法",
+    "char_shinjitai": "法",
+    "meaning_vi": "pháp luật, cách thức",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "pháp"
+    ],
+    "readings_pinyin": [
+      "fǎ"
+    ],
+    "readings_onyomi": [
+      "ホウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 193
+  },
+  {
+    "char_traditional": "道",
+    "char_simplified": "道",
+    "char_shinjitai": "道",
+    "meaning_vi": "con đường, đạo đức",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đạo"
+    ],
+    "readings_pinyin": [
+      "dào"
+    ],
+    "readings_onyomi": [
+      "ドウ",
+      "トウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 194
+  },
+  {
+    "char_traditional": "德",
+    "char_simplified": "德",
+    "char_shinjitai": "徳",
+    "meaning_vi": "đạo đức, ân đức",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đức"
+    ],
+    "readings_pinyin": [
+      "dé"
+    ],
+    "readings_onyomi": [
+      "トク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 195
+  },
+  {
+    "char_traditional": "智",
+    "char_simplified": "智",
+    "char_shinjitai": "智",
+    "meaning_vi": "trí tuệ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "trí"
+    ],
+    "readings_pinyin": [
+      "zhì"
+    ],
+    "readings_onyomi": [
+      "チ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 196
+  },
+  {
+    "char_traditional": "愚",
+    "char_simplified": "愚",
+    "char_shinjitai": "愚",
+    "meaning_vi": "ngu ngốc",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ngu"
+    ],
+    "readings_pinyin": [
+      "yú"
+    ],
+    "readings_onyomi": [
+      "グ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 197
+  },
+  {
+    "char_traditional": "才",
+    "char_simplified": "才",
+    "char_shinjitai": "才",
+    "meaning_vi": "tài năng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tài"
+    ],
+    "readings_pinyin": [
+      "cái"
+    ],
+    "readings_onyomi": [
+      "サイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 198
+  },
+  {
+    "char_traditional": "能",
+    "char_simplified": "能",
+    "char_shinjitai": "能",
+    "meaning_vi": "khả năng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "năng"
+    ],
+    "readings_pinyin": [
+      "néng"
+    ],
+    "readings_onyomi": [
+      "ノウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 199
+  },
+  {
+    "char_traditional": "思",
+    "char_simplified": "思",
+    "char_shinjitai": "思",
+    "meaning_vi": "suy nghĩ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tư"
+    ],
+    "readings_pinyin": [
+      "sī"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 200
+  },
+  {
+    "char_traditional": "想",
+    "char_simplified": "想",
+    "char_shinjitai": "想",
+    "meaning_vi": "tưởng tượng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tưởng"
+    ],
+    "readings_pinyin": [
+      "xiǎng"
+    ],
+    "readings_onyomi": [
+      "ソウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 201
+  },
+  {
+    "char_traditional": "意",
+    "char_simplified": "意",
+    "char_shinjitai": "意",
+    "meaning_vi": "ý nghĩa, ý nghĩ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ý"
+    ],
+    "readings_pinyin": [
+      "yì"
+    ],
+    "readings_onyomi": [
+      "イ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 202
+  },
+  {
+    "char_traditional": "也",
+    "char_simplified": "也",
+    "char_shinjitai": "也",
+    "meaning_vi": "cũng, vậy (trợ từ)",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "dã"
+    ],
+    "readings_pinyin": [
+      "yě"
+    ],
+    "readings_onyomi": [
+      "ヤ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 203
+  },
+  {
+    "char_traditional": "之",
+    "char_simplified": "之",
+    "char_shinjitai": "之",
+    "meaning_vi": "của, đi đến",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "chi"
+    ],
+    "readings_pinyin": [
+      "zhī"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 204
+  },
+  {
+    "char_traditional": "乎",
+    "char_simplified": "乎",
+    "char_shinjitai": "乎",
+    "meaning_vi": "trợ từ nghi vấn, cảm thán",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hồ"
+    ],
+    "readings_pinyin": [
+      "hū"
+    ],
+    "readings_onyomi": [
+      "コ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 205
+  },
+  {
+    "char_traditional": "者",
+    "char_simplified": "者",
+    "char_shinjitai": "者",
+    "meaning_vi": "kẻ, người (hậu tố)",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "giả"
+    ],
+    "readings_pinyin": [
+      "zhě"
+    ],
+    "readings_onyomi": [
+      "シャ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 206
+  },
+  {
+    "char_traditional": "以",
+    "char_simplified": "以",
+    "char_shinjitai": "以",
+    "meaning_vi": "lấy, dùng để",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "dĩ"
+    ],
+    "readings_pinyin": [
+      "yǐ"
+    ],
+    "readings_onyomi": [
+      "イ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 207
+  },
+  {
+    "char_traditional": "可",
+    "char_simplified": "可",
+    "char_shinjitai": "可",
+    "meaning_vi": "có thể",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "khả"
+    ],
+    "readings_pinyin": [
+      "kě"
+    ],
+    "readings_onyomi": [
+      "カ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 208
+  },
+  {
+    "char_traditional": "必",
+    "char_simplified": "必",
+    "char_shinjitai": "必",
+    "meaning_vi": "chắc chắn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tất"
+    ],
+    "readings_pinyin": [
+      "bì"
+    ],
+    "readings_onyomi": [
+      "ヒツ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 209
+  },
+  {
+    "char_traditional": "定",
+    "char_simplified": "定",
+    "char_shinjitai": "定",
+    "meaning_vi": "quyết định, cố định",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "định"
+    ],
+    "readings_pinyin": [
+      "dìng"
+    ],
+    "readings_onyomi": [
+      "テイ",
+      "ジョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 210
+  },
+  {
+    "char_traditional": "真",
+    "char_simplified": "真",
+    "char_shinjitai": "真",
+    "meaning_vi": "sự thật, thật sự",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "chân"
+    ],
+    "readings_pinyin": [
+      "zhēn"
+    ],
+    "readings_onyomi": [
+      "シン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 211
+  },
+  {
+    "char_traditional": "假",
+    "char_simplified": "假",
+    "char_shinjitai": "仮",
+    "meaning_vi": "giả dối, không thật",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "giả"
+    ],
+    "readings_pinyin": [
+      "jiǎ",
+      "jià"
+    ],
+    "readings_onyomi": [
+      "カ",
+      "ケ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 212
+  },
+  {
+    "char_traditional": "茶",
+    "char_simplified": "茶",
+    "char_shinjitai": "茶",
+    "meaning_vi": "nước trà",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "trà"
+    ],
+    "readings_pinyin": [
+      "chá"
+    ],
+    "readings_onyomi": [
+      "チャ",
+      "サ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 213
+  },
+  {
+    "char_traditional": "酒",
+    "char_simplified": "酒",
+    "char_shinjitai": "酒",
+    "meaning_vi": "rượu",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tửu"
+    ],
+    "readings_pinyin": [
+      "jiǔ"
+    ],
+    "readings_onyomi": [
+      "シュ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 214
+  },
+  {
+    "char_traditional": "餅",
+    "char_simplified": "饼",
+    "char_shinjitai": "餅",
+    "meaning_vi": "bánh",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "bính"
+    ],
+    "readings_pinyin": [
+      "bǐng"
+    ],
+    "readings_onyomi": [
+      "ヘイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 215
+  },
+  {
+    "char_traditional": "船",
+    "char_simplified": "船",
+    "char_shinjitai": "船",
+    "meaning_vi": "con thuyền",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thuyền"
+    ],
+    "readings_pinyin": [
+      "chuán"
+    ],
+    "readings_onyomi": [
+      "セン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 216
+  },
+  {
+    "char_traditional": "衣",
+    "char_simplified": "衣",
+    "char_shinjitai": "衣",
+    "meaning_vi": "quần áo",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "y"
+    ],
+    "readings_pinyin": [
+      "yī"
+    ],
+    "readings_onyomi": [
+      "イ",
+      "エ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 217
+  },
+  {
+    "char_traditional": "帽",
+    "char_simplified": "帽",
+    "char_shinjitai": "帽",
+    "meaning_vi": "cái mũ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "mạo"
+    ],
+    "readings_pinyin": [
+      "mào"
+    ],
+    "readings_onyomi": [
+      "ボウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 218
+  },
+  {
+    "char_traditional": "書",
+    "char_simplified": "书",
+    "char_shinjitai": "書",
+    "meaning_vi": "sách, viết",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thư"
+    ],
+    "readings_pinyin": [
+      "shū"
+    ],
+    "readings_onyomi": [
+      "ショ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 219
+  },
+  {
+    "char_traditional": "筆",
+    "char_simplified": "筆",
+    "char_shinjitai": "筆",
+    "meaning_vi": "cây bút",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "bút"
+    ],
+    "readings_pinyin": [
+      "bǐ"
+    ],
+    "readings_onyomi": [
+      "ヒツ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 220
+  },
+  {
+    "char_traditional": "央",
+    "char_simplified": "央",
+    "char_shinjitai": "央",
+    "meaning_vi": "chính giữa",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ương"
+    ],
+    "readings_pinyin": [
+      "yāng"
+    ],
+    "readings_onyomi": [
+      "オウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 221
+  },
+  {
+    "char_traditional": "旁",
+    "char_simplified": "旁",
+    "char_shinjitai": "旁",
+    "meaning_vi": "bên cạnh",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "bàng"
+    ],
+    "readings_pinyin": [
+      "páng"
+    ],
+    "readings_onyomi": [
+      "ボウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 222
+  },
+  {
+    "char_traditional": "側",
+    "char_simplified": "侧",
+    "char_shinjitai": "側",
+    "meaning_vi": "phía bên",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "trắc"
+    ],
+    "readings_pinyin": [
+      "cè"
+    ],
+    "readings_onyomi": [
+      "ソク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 223
+  },
+  {
+    "char_traditional": "頂",
+    "char_simplified": "顶",
+    "char_shinjitai": "頂",
+    "meaning_vi": "trên cùng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đỉnh"
+    ],
+    "readings_pinyin": [
+      "dǐng"
+    ],
+    "readings_onyomi": [
+      "チョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 224
+  },
+  {
+    "char_traditional": "底",
+    "char_simplified": "底",
+    "char_shinjitai": "底",
+    "meaning_vi": "đáy, dưới cùng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "để"
+    ],
+    "readings_pinyin": [
+      "dǐ"
+    ],
+    "readings_onyomi": [
+      "テイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 225
+  },
+  {
+    "char_traditional": "森",
+    "char_simplified": "森",
+    "char_shinjitai": "森",
+    "meaning_vi": "rừng rậm",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "sâm"
+    ],
+    "readings_pinyin": [
+      "sēn"
+    ],
+    "readings_onyomi": [
+      "シン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 226
+  },
+  {
+    "char_traditional": "淚",
+    "char_simplified": "泪",
+    "char_shinjitai": "涙",
+    "meaning_vi": "nước mắt",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "lệ"
+    ],
+    "readings_pinyin": [
+      "lèi"
+    ],
+    "readings_onyomi": [
+      "ルイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 227
+  },
+  {
+    "char_traditional": "仙",
+    "char_simplified": "仙",
+    "char_shinjitai": "仙",
+    "meaning_vi": "tiên nhân",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tiên"
+    ],
+    "readings_pinyin": [
+      "xiān"
+    ],
+    "readings_onyomi": [
+      "セン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 228
+  },
+  {
+    "char_traditional": "尖",
+    "char_simplified": "尖",
+    "char_shinjitai": "尖",
+    "meaning_vi": "mũi nhọn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tiêm"
+    ],
+    "readings_pinyin": [
+      "jiān"
+    ],
+    "readings_onyomi": [
+      "セン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 229
+  },
+  {
+    "char_traditional": "信",
+    "char_simplified": "信",
+    "char_shinjitai": "信",
+    "meaning_vi": "niềm tin, thư từ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tín"
+    ],
+    "readings_pinyin": [
+      "xìn"
+    ],
+    "readings_onyomi": [
+      "シン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 230
+  },
+  {
+    "char_traditional": "雞",
+    "char_simplified": "鸡",
+    "char_shinjitai": "鶏",
+    "meaning_vi": "con gà",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "kê"
+    ],
+    "readings_pinyin": [
+      "jī"
+    ],
+    "readings_onyomi": [
+      "ケイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 231
+  },
+  {
+    "char_traditional": "鴨",
+    "char_simplified": "鸭",
+    "char_shinjitai": "鴨",
+    "meaning_vi": "con vịt",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "áp"
+    ],
+    "readings_pinyin": [
+      "yā"
+    ],
+    "readings_onyomi": [
+      "オウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 232
+  },
+  {
+    "char_traditional": "虎",
+    "char_simplified": "虎",
+    "char_shinjitai": "虎",
+    "meaning_vi": "con hổ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hổ"
+    ],
+    "readings_pinyin": [
+      "hǔ"
+    ],
+    "readings_onyomi": [
+      "コ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 233
+  },
+  {
+    "char_traditional": "兔",
+    "char_simplified": "兔",
+    "char_shinjitai": "兎",
+    "meaning_vi": "con thỏ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thố"
+    ],
+    "readings_pinyin": [
+      "tù"
+    ],
+    "readings_onyomi": [
+      "ト"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 234
+  },
+  {
+    "char_traditional": "蛇",
+    "char_simplified": "蛇",
+    "char_shinjitai": "蛇",
+    "meaning_vi": "con rắn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "xà"
+    ],
+    "readings_pinyin": [
+      "shé"
+    ],
+    "readings_onyomi": [
+      "ジャ",
+      "ダ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 235
+  },
+  {
+    "char_traditional": "鼠",
+    "char_simplified": "鼠",
+    "char_shinjitai": "鼠",
+    "meaning_vi": "con chuột",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thử"
+    ],
+    "readings_pinyin": [
+      "shǔ"
+    ],
+    "readings_onyomi": [
+      "ソ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 236
+  },
+  {
+    "char_traditional": "龜",
+    "char_simplified": "龟",
+    "char_shinjitai": "亀",
+    "meaning_vi": "con rùa",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "quy"
+    ],
+    "readings_pinyin": [
+      "guī"
+    ],
+    "readings_onyomi": [
+      "キ",
+      "キュウ",
+      "キン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 237
+  },
+  {
+    "char_traditional": "蛙",
+    "char_simplified": "蛙",
+    "char_shinjitai": "蛙",
+    "meaning_vi": "con ếch",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "oa"
+    ],
+    "readings_pinyin": [
+      "wā"
+    ],
+    "readings_onyomi": [
+      "ア"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 238
+  },
+  {
+    "char_traditional": "豬",
+    "char_simplified": "猪",
+    "char_shinjitai": "猪",
+    "meaning_vi": "con lợn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "trư"
+    ],
+    "readings_pinyin": [
+      "zhū"
+    ],
+    "readings_onyomi": [
+      "チョ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 239
+  },
+  {
+    "char_traditional": "象",
+    "char_simplified": "象",
+    "char_shinjitai": "象",
+    "meaning_vi": "con voi",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tượng"
+    ],
+    "readings_pinyin": [
+      "xiàng"
+    ],
+    "readings_onyomi": [
+      "ショウ",
+      "ゾウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 240
+  },
+  {
+    "char_traditional": "開",
+    "char_simplified": "开",
+    "char_shinjitai": "開",
+    "meaning_vi": "mở",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "khai"
+    ],
+    "readings_pinyin": [
+      "kāi"
+    ],
+    "readings_onyomi": [
+      "カイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 241
+  },
+  {
+    "char_traditional": "關",
+    "char_simplified": "关",
+    "char_shinjitai": "関",
+    "meaning_vi": "đóng, cửa ải",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "quan"
+    ],
+    "readings_pinyin": [
+      "guān"
+    ],
+    "readings_onyomi": [
+      "カン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 242
+  },
+  {
+    "char_traditional": "灰",
+    "char_simplified": "灰",
+    "char_shinjitai": "灰",
+    "meaning_vi": "tro, màu xám",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "hôi"
+    ],
+    "readings_pinyin": [
+      "huī"
+    ],
+    "readings_onyomi": [
+      "カイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 243
+  },
+  {
+    "char_traditional": "褐",
+    "char_simplified": "褐",
+    "char_shinjitai": "褐",
+    "meaning_vi": "màu nâu",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "cát"
+    ],
+    "readings_pinyin": [
+      "hè"
+    ],
+    "readings_onyomi": [
+      "カツ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 244
+  },
+  {
+    "char_traditional": "圓",
+    "char_simplified": "圆",
+    "char_shinjitai": "円",
+    "meaning_vi": "tròn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "viên"
+    ],
+    "readings_pinyin": [
+      "yuán"
+    ],
+    "readings_onyomi": [
+      "エン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 245
+  },
+  {
+    "char_traditional": "方",
+    "char_simplified": "方",
+    "char_shinjitai": "方",
+    "meaning_vi": "phương hướng, vuông",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "phương"
+    ],
+    "readings_pinyin": [
+      "fāng"
+    ],
+    "readings_onyomi": [
+      "ホウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 246
+  },
+  {
+    "char_traditional": "正",
+    "char_simplified": "正",
+    "char_shinjitai": "正",
+    "meaning_vi": "đúng, ngay thẳng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "chính"
+    ],
+    "readings_pinyin": [
+      "zhèng"
+    ],
+    "readings_onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 247
+  },
+  {
+    "char_traditional": "美",
+    "char_simplified": "美",
+    "char_shinjitai": "美",
+    "meaning_vi": "đẹp",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "mỹ"
+    ],
+    "readings_pinyin": [
+      "měi"
+    ],
+    "readings_onyomi": [
+      "ビ",
+      "ミ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 248
+  },
+  {
+    "char_traditional": "安",
+    "char_simplified": "安",
+    "char_shinjitai": "安",
+    "meaning_vi": "an toàn, bình an",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "an"
+    ],
+    "readings_pinyin": [
+      "ān"
+    ],
+    "readings_onyomi": [
+      "アン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 249
+  },
+  {
+    "char_traditional": "病",
+    "char_simplified": "病",
+    "char_shinjitai": "病",
+    "meaning_vi": "bệnh tật",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "bệnh"
+    ],
+    "readings_pinyin": [
+      "bìng"
+    ],
+    "readings_onyomi": [
+      "ビョウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 250
+  },
+  {
+    "char_traditional": "文",
+    "char_simplified": "文",
+    "char_shinjitai": "文",
+    "meaning_vi": "chữ viết; văn chương; văn bản",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "văn"
+    ],
+    "readings_pinyin": [
+      "wén"
+    ],
+    "readings_onyomi": [
+      "ブン",
+      "モン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 251
+  },
+  {
+    "char_traditional": "言",
+    "char_simplified": "言",
+    "char_shinjitai": "言",
+    "meaning_vi": "lời nói; ngôn ngữ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ngôn"
+    ],
+    "readings_pinyin": [
+      "yán"
+    ],
+    "readings_onyomi": [
+      "ゲン",
+      "ゴン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 252
+  },
+  {
+    "char_traditional": "見",
+    "char_simplified": "见",
+    "char_shinjitai": "見",
+    "meaning_vi": "thấy; nhìn thấy; ý kiến",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "kiến"
+    ],
+    "readings_pinyin": [
+      "jiàn"
+    ],
+    "readings_onyomi": [
+      "ケン",
+      "ゲン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 253
+  },
+  {
+    "char_traditional": "早",
+    "char_simplified": "早",
+    "char_shinjitai": "早",
+    "meaning_vi": "sớm; buổi sớm",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "tảo"
+    ],
+    "readings_pinyin": [
+      "zǎo"
+    ],
+    "readings_onyomi": [
+      "ソウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 254
+  },
+  {
+    "char_traditional": "晚",
+    "char_simplified": "晚",
+    "char_shinjitai": "晚",
+    "meaning_vi": "muộn; buổi tối",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "vãn"
+    ],
+    "readings_pinyin": [
+      "wǎn"
+    ],
+    "readings_onyomi": [
+      "バン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 255
+  },
+  {
+    "char_traditional": "計",
+    "char_simplified": "计",
+    "char_shinjitai": "計",
+    "meaning_vi": "tính toán; kế hoạch",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "kế"
+    ],
+    "readings_pinyin": [
+      "jì"
+    ],
+    "readings_onyomi": [
+      "ケイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 256
+  },
+  {
+    "char_traditional": "清",
+    "char_simplified": "清",
+    "char_shinjitai": "清",
+    "meaning_vi": "trong; trong sạch; thanh khiết",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "thanh"
+    ],
+    "readings_pinyin": [
+      "qīng"
+    ],
+    "readings_onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 257
+  },
+  {
+    "char_traditional": "力",
+    "char_simplified": "力",
+    "char_shinjitai": "力",
+    "meaning_vi": "sức; sức lực; năng lực",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "lực"
+    ],
+    "readings_pinyin": [
+      "lì"
+    ],
+    "readings_onyomi": [
+      "リョク",
+      "リキ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 258
+  },
+  {
+    "char_traditional": "工",
+    "char_simplified": "工",
+    "char_shinjitai": "工",
+    "meaning_vi": "công việc; thợ; kỹ nghệ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "công"
+    ],
+    "readings_pinyin": [
+      "gōng"
+    ],
+    "readings_onyomi": [
+      "コウ",
+      "ク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 259
+  },
+  {
+    "char_traditional": "弓",
+    "char_simplified": "弓",
+    "char_shinjitai": "弓",
+    "meaning_vi": "cây cung",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "cung"
+    ],
+    "readings_pinyin": [
+      "gōng"
+    ],
+    "readings_onyomi": [
+      "キュウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 260
+  },
+  {
+    "char_traditional": "刀",
+    "char_simplified": "刀",
+    "char_shinjitai": "刀",
+    "meaning_vi": "dao; vũ khí dạng lưỡi",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "đao"
+    ],
+    "readings_pinyin": [
+      "dāo"
+    ],
+    "readings_onyomi": [
+      "トウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 261
+  },
+  {
+    "char_traditional": "王",
+    "char_simplified": "王",
+    "char_shinjitai": "王",
+    "meaning_vi": "vua; bậc đứng đầu",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "vương"
+    ],
+    "readings_pinyin": [
+      "wáng"
+    ],
+    "readings_onyomi": [
+      "オウ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 262
+  },
+  {
+    "char_traditional": "玉",
+    "char_simplified": "玉",
+    "char_shinjitai": "玉",
+    "meaning_vi": "ngọc; đá quý",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "ngọc"
+    ],
+    "readings_pinyin": [
+      "yù"
+    ],
+    "readings_onyomi": [
+      "ギョク"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 263
+  },
+  {
+    "char_traditional": "永",
+    "char_simplified": "永",
+    "char_shinjitai": "永",
+    "meaning_vi": "lâu dài; vĩnh viễn",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "vĩnh"
+    ],
+    "readings_pinyin": [
+      "yǒng"
+    ],
+    "readings_onyomi": [
+      "エイ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 264
+  },
+  {
+    "char_traditional": "玄",
+    "char_simplified": "玄",
+    "char_shinjitai": "玄",
+    "meaning_vi": "sâu xa; huyền bí; màu đen sẫm",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "huyền"
+    ],
+    "readings_pinyin": [
+      "xuán"
+    ],
+    "readings_onyomi": [
+      "ゲン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 265
+  },
+  {
+    "char_traditional": "至",
+    "char_simplified": "至",
+    "char_shinjitai": "至",
+    "meaning_vi": "đến; đạt tới; hết sức",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "chí"
+    ],
+    "readings_pinyin": [
+      "zhì"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 266
+  },
+  {
+    "char_traditional": "志",
+    "char_simplified": "志",
+    "char_shinjitai": "志",
+    "meaning_vi": "ý chí; chí hướng; ghi nhớ",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "chí"
+    ],
+    "readings_pinyin": [
+      "zhì"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 267
+  },
+  {
+    "char_traditional": "品",
+    "char_simplified": "品",
+    "char_shinjitai": "品",
+    "meaning_vi": "phẩm chất; phẩm loại; món hàng",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "phẩm"
+    ],
+    "readings_pinyin": [
+      "pǐn"
+    ],
+    "readings_onyomi": [
+      "ヒン"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 268
+  },
+  {
+    "char_traditional": "初",
+    "char_simplified": "初",
+    "char_shinjitai": "初",
+    "meaning_vi": "ban đầu; lúc đầu; sơ khai",
+    "meaning_en": "",
+    "readings_hanviet": [
+      "sơ"
+    ],
+    "readings_pinyin": [
+      "chū"
+    ],
+    "readings_onyomi": [
+      "ショ"
+    ],
+    "readings_kunyomi": [],
+    "readings_hanja": [],
+    "readings_jyutping": [],
+    "id": 269
+  }
+]

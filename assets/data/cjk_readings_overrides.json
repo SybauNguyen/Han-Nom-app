@@ -1,0 +1,2375 @@
+{
+  "一": {
+    "readings_pinyin": [
+      "yī"
+    ],
+    "readings_onyomi": [
+      "イチ",
+      "イツ"
+    ]
+  },
+  "二": {
+    "readings_pinyin": [
+      "èr"
+    ],
+    "readings_onyomi": [
+      "ニ",
+      "ジ"
+    ]
+  },
+  "三": {
+    "readings_pinyin": [
+      "sān"
+    ],
+    "readings_onyomi": [
+      "サン"
+    ]
+  },
+  "四": {
+    "readings_pinyin": [
+      "sì"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ]
+  },
+  "五": {
+    "readings_pinyin": [
+      "wǔ"
+    ],
+    "readings_onyomi": [
+      "ゴ"
+    ]
+  },
+  "六": {
+    "readings_pinyin": [
+      "liù"
+    ],
+    "readings_onyomi": [
+      "ロク",
+      "リク"
+    ]
+  },
+  "七": {
+    "readings_pinyin": [
+      "qī"
+    ],
+    "readings_onyomi": [
+      "シチ"
+    ]
+  },
+  "八": {
+    "readings_pinyin": [
+      "bā"
+    ],
+    "readings_onyomi": [
+      "ハチ"
+    ]
+  },
+  "九": {
+    "readings_pinyin": [
+      "jiǔ"
+    ],
+    "readings_onyomi": [
+      "キュウ",
+      "ク"
+    ]
+  },
+  "十": {
+    "readings_pinyin": [
+      "shí"
+    ],
+    "readings_onyomi": [
+      "ジュウ",
+      "ジッ"
+    ]
+  },
+  "人": {
+    "readings_pinyin": [
+      "rén"
+    ],
+    "readings_onyomi": [
+      "ジン",
+      "ニン"
+    ]
+  },
+  "大": {
+    "readings_pinyin": [
+      "dà"
+    ],
+    "readings_onyomi": [
+      "ダイ",
+      "タイ"
+    ]
+  },
+  "小": {
+    "readings_pinyin": [
+      "xiǎo"
+    ],
+    "readings_onyomi": [
+      "ショウ"
+    ]
+  },
+  "中": {
+    "readings_pinyin": [
+      "zhōng",
+      "zhòng"
+    ],
+    "readings_onyomi": [
+      "チュウ",
+      "ジュウ"
+    ]
+  },
+  "日": {
+    "readings_pinyin": [
+      "rì"
+    ],
+    "readings_onyomi": [
+      "ニチ",
+      "ジツ"
+    ]
+  },
+  "月": {
+    "readings_pinyin": [
+      "yuè"
+    ],
+    "readings_onyomi": [
+      "ゲツ",
+      "ガツ"
+    ]
+  },
+  "山": {
+    "readings_pinyin": [
+      "shān"
+    ],
+    "readings_onyomi": [
+      "サン"
+    ]
+  },
+  "水": {
+    "readings_pinyin": [
+      "shuǐ"
+    ],
+    "readings_onyomi": [
+      "スイ"
+    ]
+  },
+  "木": {
+    "readings_pinyin": [
+      "mù"
+    ],
+    "readings_onyomi": [
+      "モク",
+      "ボク"
+    ]
+  },
+  "火": {
+    "readings_pinyin": [
+      "huǒ"
+    ],
+    "readings_onyomi": [
+      "カ",
+      "コ"
+    ]
+  },
+  "心": {
+    "readings_pinyin": [
+      "xīn"
+    ],
+    "readings_onyomi": [
+      "シン"
+    ]
+  },
+  "學": {
+    "char_simplified": "学",
+    "char_shinjitai": "学",
+    "readings_pinyin": [
+      "xué"
+    ],
+    "readings_onyomi": [
+      "ガク"
+    ]
+  },
+  "生": {
+    "readings_pinyin": [
+      "shēng"
+    ],
+    "readings_onyomi": [
+      "セイ",
+      "ショウ"
+    ]
+  },
+  "國": {
+    "char_simplified": "国",
+    "char_shinjitai": "国",
+    "readings_pinyin": [
+      "guó"
+    ],
+    "readings_onyomi": [
+      "コク"
+    ]
+  },
+  "愛": {
+    "char_simplified": "爱",
+    "char_shinjitai": "愛",
+    "readings_pinyin": [
+      "ài"
+    ],
+    "readings_onyomi": [
+      "アイ"
+    ]
+  },
+  "家": {
+    "readings_pinyin": [
+      "jiā"
+    ],
+    "readings_onyomi": [
+      "カ",
+      "ケ"
+    ]
+  },
+  "語": {
+    "char_simplified": "语",
+    "char_shinjitai": "語",
+    "readings_pinyin": [
+      "yǔ"
+    ],
+    "readings_onyomi": [
+      "ゴ"
+    ]
+  },
+  "文": {
+    "readings_pinyin": [
+      "wén"
+    ],
+    "readings_onyomi": [
+      "ブン",
+      "モン"
+    ]
+  },
+  "言": {
+    "readings_pinyin": [
+      "yán"
+    ],
+    "readings_onyomi": [
+      "ゲン",
+      "ゴン"
+    ]
+  },
+  "見": {
+    "char_simplified": "见",
+    "char_shinjitai": "見",
+    "readings_pinyin": [
+      "jiàn"
+    ],
+    "readings_onyomi": [
+      "ケン",
+      "ゲン"
+    ]
+  },
+  "早": {
+    "readings_pinyin": [
+      "zǎo"
+    ],
+    "readings_onyomi": [
+      "ソウ"
+    ]
+  },
+  "晚": {
+    "readings_pinyin": [
+      "wǎn"
+    ],
+    "readings_onyomi": [
+      "バン"
+    ]
+  },
+  "計": {
+    "char_simplified": "计",
+    "char_shinjitai": "計",
+    "readings_pinyin": [
+      "jì"
+    ],
+    "readings_onyomi": [
+      "ケイ"
+    ]
+  },
+  "清": {
+    "readings_pinyin": [
+      "qīng"
+    ],
+    "readings_onyomi": [
+      "セイ",
+      "ショウ"
+    ]
+  },
+  "力": {
+    "readings_pinyin": [
+      "lì"
+    ],
+    "readings_onyomi": [
+      "リョク",
+      "リキ"
+    ]
+  },
+  "工": {
+    "readings_pinyin": [
+      "gōng"
+    ],
+    "readings_onyomi": [
+      "コウ",
+      "ク"
+    ]
+  },
+  "弓": {
+    "readings_pinyin": [
+      "gōng"
+    ],
+    "readings_onyomi": [
+      "キュウ"
+    ]
+  },
+  "刀": {
+    "readings_pinyin": [
+      "dāo"
+    ],
+    "readings_onyomi": [
+      "トウ"
+    ]
+  },
+  "王": {
+    "readings_pinyin": [
+      "wáng"
+    ],
+    "readings_onyomi": [
+      "オウ"
+    ]
+  },
+  "玉": {
+    "readings_pinyin": [
+      "yù"
+    ],
+    "readings_onyomi": [
+      "ギョク"
+    ]
+  },
+  "永": {
+    "readings_pinyin": [
+      "yǒng"
+    ],
+    "readings_onyomi": [
+      "エイ"
+    ]
+  },
+  "玄": {
+    "readings_pinyin": [
+      "xuán"
+    ],
+    "readings_onyomi": [
+      "ゲン"
+    ]
+  },
+  "至": {
+    "readings_pinyin": [
+      "zhì"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ]
+  },
+  "志": {
+    "readings_pinyin": [
+      "zhì"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ]
+  },
+  "品": {
+    "readings_pinyin": [
+      "pǐn"
+    ],
+    "readings_onyomi": [
+      "ヒン"
+    ]
+  },
+  "初": {
+    "readings_pinyin": [
+      "chū"
+    ],
+    "readings_onyomi": [
+      "ショ"
+    ]
+  },
+  "上": {
+    "readings_pinyin": [
+      "shàng",
+      "shǎng"
+    ],
+    "readings_onyomi": [
+      "ジョウ",
+      "ショウ"
+    ]
+  },
+  "下": {
+    "readings_pinyin": [
+      "xià"
+    ],
+    "readings_onyomi": [
+      "カ",
+      "ゲ"
+    ]
+  },
+  "天": {
+    "readings_pinyin": [
+      "tiān"
+    ],
+    "readings_onyomi": [
+      "テン"
+    ]
+  },
+  "地": {
+    "readings_pinyin": [
+      "dì",
+      "de"
+    ],
+    "readings_onyomi": [
+      "チ",
+      "ジ"
+    ]
+  },
+  "父": {
+    "readings_pinyin": [
+      "fù"
+    ],
+    "readings_onyomi": [
+      "フ"
+    ]
+  },
+  "母": {
+    "readings_pinyin": [
+      "mǔ"
+    ],
+    "readings_onyomi": [
+      "ボ",
+      "モ"
+    ]
+  },
+  "子": {
+    "readings_pinyin": [
+      "zǐ"
+    ],
+    "readings_onyomi": [
+      "シ",
+      "ス"
+    ]
+  },
+  "東": {
+    "char_simplified": "东",
+    "char_shinjitai": "東",
+    "readings_pinyin": [
+      "dōng"
+    ],
+    "readings_onyomi": [
+      "トウ"
+    ]
+  },
+  "西": {
+    "readings_pinyin": [
+      "xī"
+    ],
+    "readings_onyomi": [
+      "セイ",
+      "サイ"
+    ]
+  },
+  "南": {
+    "readings_pinyin": [
+      "nán"
+    ],
+    "readings_onyomi": [
+      "ナン",
+      "ナ"
+    ]
+  },
+  "北": {
+    "readings_pinyin": [
+      "běi"
+    ],
+    "readings_onyomi": [
+      "ホク"
+    ]
+  },
+  "左": {
+    "readings_pinyin": [
+      "zuǒ"
+    ],
+    "readings_onyomi": [
+      "サ"
+    ]
+  },
+  "右": {
+    "readings_pinyin": [
+      "yòu"
+    ],
+    "readings_onyomi": [
+      "ウ",
+      "ユウ"
+    ]
+  },
+  "前": {
+    "readings_pinyin": [
+      "qián"
+    ],
+    "readings_onyomi": [
+      "ゼン"
+    ]
+  },
+  "後": {
+    "char_simplified": "后",
+    "char_shinjitai": "後",
+    "readings_pinyin": [
+      "hòu"
+    ],
+    "readings_onyomi": [
+      "ゴ",
+      "コウ"
+    ]
+  },
+  "內": {
+    "char_simplified": "内",
+    "char_shinjitai": "内",
+    "readings_pinyin": [
+      "nèi"
+    ],
+    "readings_onyomi": [
+      "ナイ",
+      "ダイ"
+    ]
+  },
+  "外": {
+    "readings_pinyin": [
+      "wài"
+    ],
+    "readings_onyomi": [
+      "ガイ",
+      "ゲ"
+    ]
+  },
+  "門": {
+    "char_simplified": "门",
+    "char_shinjitai": "門",
+    "readings_pinyin": [
+      "mén"
+    ],
+    "readings_onyomi": [
+      "モン"
+    ]
+  },
+  "車": {
+    "char_simplified": "车",
+    "char_shinjitai": "車",
+    "readings_pinyin": [
+      "chē"
+    ],
+    "readings_onyomi": [
+      "シャ"
+    ]
+  },
+  "金": {
+    "readings_pinyin": [
+      "jīn"
+    ],
+    "readings_onyomi": [
+      "キン",
+      "コン"
+    ]
+  },
+  "石": {
+    "readings_pinyin": [
+      "shí"
+    ],
+    "readings_onyomi": [
+      "セキ",
+      "シャク",
+      "コク"
+    ]
+  },
+  "田": {
+    "readings_pinyin": [
+      "tián"
+    ],
+    "readings_onyomi": [
+      "デン",
+      "デ"
+    ]
+  },
+  "竹": {
+    "readings_pinyin": [
+      "zhú"
+    ],
+    "readings_onyomi": [
+      "チク"
+    ]
+  },
+  "米": {
+    "readings_pinyin": [
+      "mǐ"
+    ],
+    "readings_onyomi": [
+      "ベイ",
+      "マイ"
+    ]
+  },
+  "鳥": {
+    "char_simplified": "鸟",
+    "char_shinjitai": "鳥",
+    "readings_pinyin": [
+      "niǎo"
+    ],
+    "readings_onyomi": [
+      "チョウ"
+    ]
+  },
+  "魚": {
+    "char_simplified": "鱼",
+    "char_shinjitai": "魚",
+    "readings_pinyin": [
+      "yú"
+    ],
+    "readings_onyomi": [
+      "ギョ",
+      "ゴ"
+    ]
+  },
+  "馬": {
+    "char_simplified": "马",
+    "char_shinjitai": "馬",
+    "readings_pinyin": [
+      "mǎ"
+    ],
+    "readings_onyomi": [
+      "バ"
+    ]
+  },
+  "牛": {
+    "readings_pinyin": [
+      "niú"
+    ],
+    "readings_onyomi": [
+      "ギュウ",
+      "ゴ"
+    ]
+  },
+  "羊": {
+    "readings_pinyin": [
+      "yáng"
+    ],
+    "readings_onyomi": [
+      "ヨウ"
+    ]
+  },
+  "犬": {
+    "readings_pinyin": [
+      "quǎn"
+    ],
+    "readings_onyomi": [
+      "ケン"
+    ]
+  },
+  "貓": {
+    "char_simplified": "猫",
+    "char_shinjitai": "猫",
+    "readings_pinyin": [
+      "māo"
+    ],
+    "readings_onyomi": [
+      "ビョウ",
+      "ミョウ"
+    ]
+  },
+  "龍": {
+    "char_simplified": "龙",
+    "char_shinjitai": "竜",
+    "readings_pinyin": [
+      "lóng"
+    ],
+    "readings_onyomi": [
+      "リュウ",
+      "リョウ"
+    ]
+  },
+  "青": {
+    "readings_pinyin": [
+      "qīng"
+    ],
+    "readings_onyomi": [
+      "セイ",
+      "ショウ"
+    ]
+  },
+  "黃": {
+    "char_simplified": "黄",
+    "char_shinjitai": "黄",
+    "readings_pinyin": [
+      "huáng"
+    ],
+    "readings_onyomi": [
+      "コウ",
+      "オウ"
+    ]
+  },
+  "赤": {
+    "readings_pinyin": [
+      "chì"
+    ],
+    "readings_onyomi": [
+      "セキ",
+      "シャク"
+    ]
+  },
+  "綠": {
+    "char_simplified": "绿",
+    "char_shinjitai": "緑",
+    "readings_pinyin": [
+      "lǜ"
+    ],
+    "readings_onyomi": [
+      "リョク",
+      "ロク"
+    ]
+  },
+  "藍": {
+    "char_simplified": "蓝",
+    "char_shinjitai": "藍",
+    "readings_pinyin": [
+      "lán"
+    ],
+    "readings_onyomi": [
+      "ラン"
+    ]
+  },
+  "紫": {
+    "readings_pinyin": [
+      "zǐ"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ]
+  },
+  "走": {
+    "readings_pinyin": [
+      "zǒu"
+    ],
+    "readings_onyomi": [
+      "ソウ"
+    ]
+  },
+  "飛": {
+    "char_simplified": "飞",
+    "char_shinjitai": "飛",
+    "readings_pinyin": [
+      "fēi"
+    ],
+    "readings_onyomi": [
+      "ヒ"
+    ]
+  },
+  "游": {
+    "readings_pinyin": [
+      "yóu"
+    ],
+    "readings_onyomi": [
+      "ユウ"
+    ]
+  },
+  "看": {
+    "readings_pinyin": [
+      "kàn",
+      "kān"
+    ],
+    "readings_onyomi": [
+      "カン"
+    ]
+  },
+  "聽": {
+    "char_simplified": "听",
+    "char_shinjitai": "聴",
+    "readings_pinyin": [
+      "tīng"
+    ],
+    "readings_onyomi": [
+      "チョウ"
+    ]
+  },
+  "說": {
+    "char_simplified": "说",
+    "char_shinjitai": "説",
+    "readings_pinyin": [
+      "shuō",
+      "shuì"
+    ],
+    "readings_onyomi": [
+      "セツ",
+      "ゼイ"
+    ]
+  },
+  "讀": {
+    "char_simplified": "读",
+    "char_shinjitai": "読",
+    "readings_pinyin": [
+      "dú",
+      "dòu"
+    ],
+    "readings_onyomi": [
+      "ドク",
+      "トク"
+    ]
+  },
+  "寫": {
+    "char_simplified": "写",
+    "char_shinjitai": "写",
+    "readings_pinyin": [
+      "xiě"
+    ],
+    "readings_onyomi": [
+      "シャ"
+    ]
+  },
+  "食": {
+    "readings_pinyin": [
+      "shí",
+      "sì"
+    ],
+    "readings_onyomi": [
+      "ショク",
+      "ジキ"
+    ]
+  },
+  "飲": {
+    "char_simplified": "饮",
+    "char_shinjitai": "飲",
+    "readings_pinyin": [
+      "yǐn",
+      "yìn"
+    ],
+    "readings_onyomi": [
+      "イン"
+    ]
+  },
+  "恨": {
+    "readings_pinyin": [
+      "hèn"
+    ],
+    "readings_onyomi": [
+      "コン"
+    ]
+  },
+  "喜": {
+    "readings_pinyin": [
+      "xǐ"
+    ],
+    "readings_onyomi": [
+      "キ"
+    ]
+  },
+  "怒": {
+    "readings_pinyin": [
+      "nù"
+    ],
+    "readings_onyomi": [
+      "ド"
+    ]
+  },
+  "哀": {
+    "readings_pinyin": [
+      "āi"
+    ],
+    "readings_onyomi": [
+      "アイ"
+    ]
+  },
+  "樂": {
+    "char_simplified": "乐",
+    "char_shinjitai": "楽",
+    "readings_pinyin": [
+      "lè",
+      "yuè"
+    ],
+    "readings_onyomi": [
+      "ガク",
+      "ラク"
+    ]
+  },
+  "苦": {
+    "readings_pinyin": [
+      "kǔ"
+    ],
+    "readings_onyomi": [
+      "ク"
+    ]
+  },
+  "甜": {
+    "readings_pinyin": [
+      "tián"
+    ],
+    "readings_onyomi": [
+      "テン"
+    ]
+  },
+  "年": {
+    "readings_pinyin": [
+      "nián"
+    ],
+    "readings_onyomi": [
+      "ネン"
+    ]
+  },
+  "時": {
+    "char_simplified": "时",
+    "char_shinjitai": "時",
+    "readings_pinyin": [
+      "shí"
+    ],
+    "readings_onyomi": [
+      "ジ"
+    ]
+  },
+  "分": {
+    "readings_pinyin": [
+      "fēn",
+      "fèn"
+    ],
+    "readings_onyomi": [
+      "ブン",
+      "フン",
+      "ブ"
+    ]
+  },
+  "秒": {
+    "readings_pinyin": [
+      "miǎo"
+    ],
+    "readings_onyomi": [
+      "ビョウ"
+    ]
+  },
+  "今": {
+    "readings_pinyin": [
+      "jīn"
+    ],
+    "readings_onyomi": [
+      "コン",
+      "キン"
+    ]
+  },
+  "昔": {
+    "readings_pinyin": [
+      "xī"
+    ],
+    "readings_onyomi": [
+      "セキ",
+      "シャク"
+    ]
+  },
+  "開": {
+    "char_simplified": "开",
+    "char_shinjitai": "開",
+    "readings_pinyin": [
+      "kāi"
+    ],
+    "readings_onyomi": [
+      "カイ"
+    ]
+  },
+  "關": {
+    "char_simplified": "关",
+    "char_shinjitai": "関",
+    "readings_pinyin": [
+      "guān"
+    ],
+    "readings_onyomi": [
+      "カン"
+    ]
+  },
+  "圓": {
+    "char_simplified": "圆",
+    "char_shinjitai": "円",
+    "readings_pinyin": [
+      "yuán"
+    ],
+    "readings_onyomi": [
+      "エン"
+    ]
+  },
+  "方": {
+    "readings_pinyin": [
+      "fāng"
+    ],
+    "readings_onyomi": [
+      "ホウ"
+    ]
+  },
+  "正": {
+    "readings_pinyin": [
+      "zhèng"
+    ],
+    "readings_onyomi": [
+      "セイ",
+      "ショウ"
+    ]
+  },
+  "美": {
+    "readings_pinyin": [
+      "měi"
+    ],
+    "readings_onyomi": [
+      "ビ",
+      "ミ"
+    ]
+  },
+  "安": {
+    "readings_pinyin": [
+      "ān"
+    ],
+    "readings_onyomi": [
+      "アン"
+    ]
+  },
+  "病": {
+    "readings_pinyin": [
+      "bìng"
+    ],
+    "readings_onyomi": [
+      "ビョウ"
+    ]
+  },
+  "灰": {
+    "readings_pinyin": [
+      "huī"
+    ],
+    "readings_onyomi": [
+      "カイ"
+    ]
+  },
+  "褐": {
+    "readings_pinyin": [
+      "hè"
+    ],
+    "readings_onyomi": [
+      "カツ"
+    ]
+  },
+  "重": {
+    "readings_pinyin": [
+      "zhòng",
+      "chóng"
+    ],
+    "readings_onyomi": [
+      "ジュウ",
+      "チョウ"
+    ]
+  },
+  "慢": {
+    "readings_pinyin": [
+      "màn"
+    ],
+    "readings_onyomi": [
+      "マン"
+    ]
+  },
+  "忠": {
+    "readings_pinyin": [
+      "zhōng"
+    ],
+    "readings_onyomi": [
+      "チュウ"
+    ]
+  },
+  "湖": {
+    "readings_pinyin": [
+      "hú"
+    ],
+    "readings_onyomi": [
+      "コ"
+    ]
+  },
+  "百": {
+    "readings_pinyin": [
+      "bǎi"
+    ],
+    "readings_onyomi": [
+      "ヒャク",
+      "ビャク"
+    ]
+  },
+  "肉": {
+    "readings_pinyin": [
+      "ròu"
+    ],
+    "readings_onyomi": [
+      "ニク"
+    ]
+  },
+  "夢": {
+    "readings_pinyin": [
+      "mèng"
+    ],
+    "readings_onyomi": [
+      "ム"
+    ],
+    "char_simplified": "梦"
+  },
+  "朋": {
+    "readings_pinyin": [
+      "péng"
+    ],
+    "readings_onyomi": [
+      "ホウ"
+    ]
+  },
+  "智": {
+    "readings_pinyin": [
+      "zhì"
+    ],
+    "readings_onyomi": [
+      "チ"
+    ]
+  },
+  "眠": {
+    "readings_pinyin": [
+      "mián"
+    ],
+    "readings_onyomi": [
+      "ミン"
+    ]
+  },
+  "龜": {
+    "readings_pinyin": [
+      "guī"
+    ],
+    "readings_onyomi": [
+      "キ",
+      "キュウ",
+      "キン"
+    ],
+    "char_simplified": "龟",
+    "char_shinjitai": "亀"
+  },
+  "淚": {
+    "readings_pinyin": [
+      "lèi"
+    ],
+    "readings_onyomi": [
+      "ルイ"
+    ],
+    "char_simplified": "泪",
+    "char_shinjitai": "涙"
+  },
+  "兵": {
+    "readings_pinyin": [
+      "bīng"
+    ],
+    "readings_onyomi": [
+      "ヘイ",
+      "ヒョウ"
+    ]
+  },
+  "少": {
+    "readings_pinyin": [
+      "shǎo",
+      "shào"
+    ],
+    "readings_onyomi": [
+      "ショウ"
+    ]
+  },
+  "才": {
+    "readings_pinyin": [
+      "cái"
+    ],
+    "readings_onyomi": [
+      "サイ"
+    ]
+  },
+  "秋": {
+    "readings_pinyin": [
+      "qiū"
+    ],
+    "readings_onyomi": [
+      "シュウ"
+    ]
+  },
+  "答": {
+    "readings_pinyin": [
+      "dá"
+    ],
+    "readings_onyomi": [
+      "トウ"
+    ]
+  },
+  "立": {
+    "readings_pinyin": [
+      "lì"
+    ],
+    "readings_onyomi": [
+      "リツ",
+      "リュウ"
+    ]
+  },
+  "快": {
+    "readings_pinyin": [
+      "kuài"
+    ],
+    "readings_onyomi": [
+      "カイ"
+    ]
+  },
+  "雞": {
+    "readings_pinyin": [
+      "jī"
+    ],
+    "readings_onyomi": [
+      "ケイ"
+    ],
+    "char_simplified": "鸡",
+    "char_shinjitai": "鶏"
+  },
+  "厚": {
+    "readings_pinyin": [
+      "hòu"
+    ],
+    "readings_onyomi": [
+      "コウ"
+    ]
+  },
+  "定": {
+    "readings_pinyin": [
+      "dìng"
+    ],
+    "readings_onyomi": [
+      "テイ",
+      "ジョウ"
+    ]
+  },
+  "君": {
+    "readings_pinyin": [
+      "jūn"
+    ],
+    "readings_onyomi": [
+      "クン"
+    ]
+  },
+  "給": {
+    "readings_pinyin": [
+      "gěi",
+      "jǐ"
+    ],
+    "readings_onyomi": [
+      "キュウ"
+    ]
+  },
+  "想": {
+    "readings_pinyin": [
+      "xiǎng"
+    ],
+    "readings_onyomi": [
+      "ソウ"
+    ]
+  },
+  "冷": {
+    "readings_pinyin": [
+      "lěng"
+    ],
+    "readings_onyomi": [
+      "レイ"
+    ]
+  },
+  "口": {
+    "readings_pinyin": [
+      "kǒu"
+    ],
+    "readings_onyomi": [
+      "コウ",
+      "ク"
+    ]
+  },
+  "蛇": {
+    "readings_pinyin": [
+      "shé"
+    ],
+    "readings_onyomi": [
+      "ジャ",
+      "ダ"
+    ]
+  },
+  "好": {
+    "readings_pinyin": [
+      "hǎo",
+      "hào"
+    ],
+    "readings_onyomi": [
+      "コウ"
+    ]
+  },
+  "坐": {
+    "readings_pinyin": [
+      "zuò"
+    ],
+    "readings_onyomi": [
+      "ザ"
+    ]
+  },
+  "筆": {
+    "readings_pinyin": [
+      "bǐ"
+    ],
+    "readings_onyomi": [
+      "ヒツ"
+    ]
+  },
+  "海": {
+    "readings_pinyin": [
+      "hǎi"
+    ],
+    "readings_onyomi": [
+      "カイ"
+    ]
+  },
+  "春": {
+    "readings_pinyin": [
+      "chūn"
+    ],
+    "readings_onyomi": [
+      "シュン"
+    ]
+  },
+  "兔": {
+    "readings_pinyin": [
+      "tù"
+    ],
+    "readings_onyomi": [
+      "ト"
+    ],
+    "char_shinjitai": "兎"
+  },
+  "賣": {
+    "readings_pinyin": [
+      "mài"
+    ],
+    "readings_onyomi": [
+      "バイ"
+    ],
+    "char_simplified": "卖",
+    "char_shinjitai": "売"
+  },
+  "耳": {
+    "readings_pinyin": [
+      "ěr"
+    ],
+    "readings_onyomi": [
+      "ジ"
+    ]
+  },
+  "短": {
+    "readings_pinyin": [
+      "duǎn"
+    ],
+    "readings_onyomi": [
+      "タン"
+    ]
+  },
+  "去": {
+    "readings_pinyin": [
+      "qù"
+    ],
+    "readings_onyomi": [
+      "キョ"
+    ]
+  },
+  "臣": {
+    "readings_pinyin": [
+      "chén"
+    ],
+    "readings_onyomi": [
+      "シン",
+      "ジン"
+    ]
+  },
+  "也": {
+    "readings_pinyin": [
+      "yě"
+    ],
+    "readings_onyomi": [
+      "ヤ"
+    ]
+  },
+  "央": {
+    "readings_pinyin": [
+      "yāng"
+    ],
+    "readings_onyomi": [
+      "オウ"
+    ]
+  },
+  "頭": {
+    "readings_pinyin": [
+      "tóu"
+    ],
+    "readings_onyomi": [
+      "トウ",
+      "ズ"
+    ]
+  },
+  "千": {
+    "readings_pinyin": [
+      "qiān"
+    ],
+    "readings_onyomi": [
+      "セン"
+    ]
+  },
+  "女": {
+    "readings_pinyin": [
+      "nǚ"
+    ],
+    "readings_onyomi": [
+      "ジョ",
+      "ニョ"
+    ]
+  },
+  "思": {
+    "readings_pinyin": [
+      "sī"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ]
+  },
+  "能": {
+    "readings_pinyin": [
+      "néng"
+    ],
+    "readings_onyomi": [
+      "ノウ"
+    ]
+  },
+  "齒": {
+    "readings_pinyin": [
+      "chǐ"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ],
+    "char_simplified": "齿",
+    "char_shinjitai": "歯"
+  },
+  "江": {
+    "readings_pinyin": [
+      "jiāng"
+    ],
+    "readings_onyomi": [
+      "コウ"
+    ]
+  },
+  "腸": {
+    "readings_pinyin": [
+      "cháng"
+    ],
+    "readings_onyomi": [
+      "チョウ"
+    ]
+  },
+  "胃": {
+    "readings_pinyin": [
+      "wèi"
+    ],
+    "readings_onyomi": [
+      "イ"
+    ]
+  },
+  "熱": {
+    "readings_pinyin": [
+      "rè"
+    ],
+    "readings_onyomi": [
+      "ネツ"
+    ]
+  },
+  "乎": {
+    "readings_pinyin": [
+      "hū"
+    ],
+    "readings_onyomi": [
+      "コ"
+    ]
+  },
+  "道": {
+    "readings_pinyin": [
+      "dào"
+    ],
+    "readings_onyomi": [
+      "ドウ",
+      "トウ"
+    ]
+  },
+  "德": {
+    "readings_pinyin": [
+      "dé"
+    ],
+    "readings_onyomi": [
+      "トク"
+    ],
+    "char_shinjitai": "徳"
+  },
+  "側": {
+    "readings_pinyin": [
+      "cè"
+    ],
+    "readings_onyomi": [
+      "ソク"
+    ],
+    "char_simplified": "侧"
+  },
+  "高": {
+    "readings_pinyin": [
+      "gāo"
+    ],
+    "readings_onyomi": [
+      "コウ"
+    ]
+  },
+  "入": {
+    "readings_pinyin": [
+      "rù"
+    ],
+    "readings_onyomi": [
+      "ニュウ",
+      "ジュ"
+    ]
+  },
+  "電": {
+    "readings_pinyin": [
+      "diàn"
+    ],
+    "readings_onyomi": [
+      "デン"
+    ],
+    "char_simplified": "电"
+  },
+  "骨": {
+    "readings_pinyin": [
+      "gǔ"
+    ],
+    "readings_onyomi": [
+      "コツ"
+    ]
+  },
+  "蛙": {
+    "readings_pinyin": [
+      "wā"
+    ],
+    "readings_onyomi": [
+      "ア"
+    ]
+  },
+  "雪": {
+    "readings_pinyin": [
+      "xuě"
+    ],
+    "readings_onyomi": [
+      "セツ"
+    ]
+  },
+  "河": {
+    "readings_pinyin": [
+      "hé"
+    ],
+    "readings_onyomi": [
+      "カ"
+    ]
+  },
+  "主": {
+    "readings_pinyin": [
+      "zhǔ"
+    ],
+    "readings_onyomi": [
+      "シュ"
+    ]
+  },
+  "底": {
+    "readings_pinyin": [
+      "dǐ"
+    ],
+    "readings_onyomi": [
+      "テイ"
+    ]
+  },
+  "風": {
+    "readings_pinyin": [
+      "fēng"
+    ],
+    "readings_onyomi": [
+      "フウ",
+      "フ"
+    ],
+    "char_simplified": "风"
+  },
+  "酒": {
+    "readings_pinyin": [
+      "jiǔ"
+    ],
+    "readings_onyomi": [
+      "シュ"
+    ]
+  },
+  "肝": {
+    "readings_pinyin": [
+      "gān"
+    ],
+    "readings_onyomi": [
+      "カン"
+    ]
+  },
+  "森": {
+    "readings_pinyin": [
+      "sēn"
+    ],
+    "readings_onyomi": [
+      "シン"
+    ]
+  },
+  "草": {
+    "readings_pinyin": [
+      "cǎo"
+    ],
+    "readings_onyomi": [
+      "ソウ"
+    ]
+  },
+  "之": {
+    "readings_pinyin": [
+      "zhī"
+    ],
+    "readings_onyomi": [
+      "シ"
+    ]
+  },
+  "夏": {
+    "readings_pinyin": [
+      "xià"
+    ],
+    "readings_onyomi": [
+      "カ",
+      "ゲ"
+    ]
+  },
+  "真": {
+    "readings_pinyin": [
+      "zhēn"
+    ],
+    "readings_onyomi": [
+      "シン"
+    ]
+  },
+  "帽": {
+    "readings_pinyin": [
+      "mào"
+    ],
+    "readings_onyomi": [
+      "ボウ"
+    ]
+  },
+  "假": {
+    "readings_pinyin": [
+      "jiǎ",
+      "jià"
+    ],
+    "readings_onyomi": [
+      "カ",
+      "ケ"
+    ],
+    "char_shinjitai": "仮"
+  },
+  "餅": {
+    "readings_pinyin": [
+      "bǐng"
+    ],
+    "readings_onyomi": [
+      "ヘイ"
+    ],
+    "char_simplified": "饼"
+  },
+  "手": {
+    "readings_pinyin": [
+      "shǒu"
+    ],
+    "readings_onyomi": [
+      "シュ"
+    ]
+  },
+  "者": {
+    "readings_pinyin": [
+      "zhě"
+    ],
+    "readings_onyomi": [
+      "シャ"
+    ]
+  },
+  "意": {
+    "readings_pinyin": [
+      "yì"
+    ],
+    "readings_onyomi": [
+      "イ"
+    ]
+  },
+  "雨": {
+    "readings_pinyin": [
+      "yǔ"
+    ],
+    "readings_onyomi": [
+      "ウ"
+    ]
+  },
+  "明": {
+    "readings_pinyin": [
+      "míng"
+    ],
+    "readings_onyomi": [
+      "メイ",
+      "ミョウ"
+    ]
+  },
+  "可": {
+    "readings_pinyin": [
+      "kě"
+    ],
+    "readings_onyomi": [
+      "カ"
+    ]
+  },
+  "出": {
+    "readings_pinyin": [
+      "chū"
+    ],
+    "readings_onyomi": [
+      "シュツ",
+      "スイ"
+    ]
+  },
+  "星": {
+    "readings_pinyin": [
+      "xīng"
+    ],
+    "readings_onyomi": [
+      "セイ",
+      "ショウ"
+    ]
+  },
+  "衣": {
+    "readings_pinyin": [
+      "yī"
+    ],
+    "readings_onyomi": [
+      "イ",
+      "エ"
+    ]
+  },
+  "空": {
+    "readings_pinyin": [
+      "kōng",
+      "kòng"
+    ],
+    "readings_onyomi": [
+      "クウ",
+      "コウ"
+    ]
+  },
+  "來": {
+    "readings_pinyin": [
+      "lái"
+    ],
+    "readings_onyomi": [
+      "ライ"
+    ],
+    "char_simplified": "来",
+    "char_shinjitai": "来"
+  },
+  "以": {
+    "readings_pinyin": [
+      "yǐ"
+    ],
+    "readings_onyomi": [
+      "イ"
+    ]
+  },
+  "鐵": {
+    "readings_pinyin": [
+      "tiě"
+    ],
+    "readings_onyomi": [
+      "テツ"
+    ],
+    "char_simplified": "铁",
+    "char_shinjitai": "鉄"
+  },
+  "長": {
+    "readings_pinyin": [
+      "cháng",
+      "zhǎng"
+    ],
+    "readings_onyomi": [
+      "チョウ",
+      "ジョウ"
+    ],
+    "char_simplified": "长"
+  },
+  "民": {
+    "readings_pinyin": [
+      "mín"
+    ],
+    "readings_onyomi": [
+      "ミン"
+    ]
+  },
+  "頂": {
+    "readings_pinyin": [
+      "dǐng"
+    ],
+    "readings_onyomi": [
+      "チョウ"
+    ],
+    "char_simplified": "顶"
+  },
+  "兄": {
+    "readings_pinyin": [
+      "xiōng"
+    ],
+    "readings_onyomi": [
+      "ケイ",
+      "キョウ"
+    ]
+  },
+  "目": {
+    "readings_pinyin": [
+      "mù"
+    ],
+    "readings_onyomi": [
+      "モク",
+      "ボク"
+    ]
+  },
+  "萬": {
+    "readings_pinyin": [
+      "wàn"
+    ],
+    "readings_onyomi": [
+      "マン",
+      "バン"
+    ],
+    "char_simplified": "万",
+    "char_shinjitai": "万"
+  },
+  "居": {
+    "readings_pinyin": [
+      "jū"
+    ],
+    "readings_onyomi": [
+      "キョ",
+      "コ"
+    ]
+  },
+  "花": {
+    "readings_pinyin": [
+      "huā"
+    ],
+    "readings_onyomi": [
+      "カ"
+    ]
+  },
+  "林": {
+    "readings_pinyin": [
+      "lín"
+    ],
+    "readings_onyomi": [
+      "リン"
+    ]
+  },
+  "愚": {
+    "readings_pinyin": [
+      "yú"
+    ],
+    "readings_onyomi": [
+      "グ"
+    ]
+  },
+  "多": {
+    "readings_pinyin": [
+      "duō"
+    ],
+    "readings_onyomi": [
+      "タ"
+    ]
+  },
+  "肺": {
+    "readings_pinyin": [
+      "fèi"
+    ],
+    "readings_onyomi": [
+      "ハイ"
+    ]
+  },
+  "書": {
+    "readings_pinyin": [
+      "shū"
+    ],
+    "readings_onyomi": [
+      "ショ"
+    ],
+    "char_simplified": "书"
+  },
+  "豬": {
+    "readings_pinyin": [
+      "zhū"
+    ],
+    "readings_onyomi": [
+      "チョ"
+    ],
+    "char_simplified": "猪",
+    "char_shinjitai": "猪"
+  },
+  "法": {
+    "readings_pinyin": [
+      "fǎ"
+    ],
+    "readings_onyomi": [
+      "ホウ"
+    ]
+  },
+  "血": {
+    "readings_pinyin": [
+      "xuè",
+      "xiě"
+    ],
+    "readings_onyomi": [
+      "ケツ"
+    ]
+  },
+  "白": {
+    "readings_pinyin": [
+      "bái"
+    ],
+    "readings_onyomi": [
+      "ハク",
+      "ビャク"
+    ]
+  },
+  "夜": {
+    "readings_pinyin": [
+      "yè"
+    ],
+    "readings_onyomi": [
+      "ヤ"
+    ]
+  },
+  "面": {
+    "readings_pinyin": [
+      "miàn"
+    ],
+    "readings_onyomi": [
+      "メン",
+      "ベン"
+    ]
+  },
+  "溫": {
+    "readings_pinyin": [
+      "wēn"
+    ],
+    "readings_onyomi": [
+      "オン"
+    ],
+    "char_simplified": "温",
+    "char_shinjitai": "温"
+  },
+  "受": {
+    "readings_pinyin": [
+      "shòu"
+    ],
+    "readings_onyomi": [
+      "ジュ"
+    ]
+  },
+  "古": {
+    "readings_pinyin": [
+      "gǔ"
+    ],
+    "readings_onyomi": [
+      "コ"
+    ]
+  },
+  "尖": {
+    "readings_pinyin": [
+      "jiān"
+    ],
+    "readings_onyomi": [
+      "セン"
+    ]
+  },
+  "銀": {
+    "readings_pinyin": [
+      "yín"
+    ],
+    "readings_onyomi": [
+      "ギン"
+    ]
+  },
+  "氣": {
+    "readings_pinyin": [
+      "qì"
+    ],
+    "readings_onyomi": [
+      "キ"
+    ],
+    "char_simplified": "气",
+    "char_shinjitai": "気"
+  },
+  "茶": {
+    "readings_pinyin": [
+      "chá"
+    ],
+    "readings_onyomi": [
+      "チャ",
+      "サ"
+    ]
+  },
+  "必": {
+    "readings_pinyin": [
+      "bì"
+    ],
+    "readings_onyomi": [
+      "ヒツ"
+    ]
+  },
+  "毛": {
+    "readings_pinyin": [
+      "máo"
+    ],
+    "readings_onyomi": [
+      "モウ"
+    ]
+  },
+  "男": {
+    "readings_pinyin": [
+      "nán"
+    ],
+    "readings_onyomi": [
+      "ダン",
+      "ナン"
+    ]
+  },
+  "覺": {
+    "readings_pinyin": [
+      "jué",
+      "jiào"
+    ],
+    "readings_onyomi": [
+      "カク"
+    ],
+    "char_simplified": "觉",
+    "char_shinjitai": "覚"
+  },
+  "友": {
+    "readings_pinyin": [
+      "yǒu"
+    ],
+    "readings_onyomi": [
+      "ユウ"
+    ]
+  },
+  "客": {
+    "readings_pinyin": [
+      "kè"
+    ],
+    "readings_onyomi": [
+      "キャク",
+      "カク"
+    ]
+  },
+  "問": {
+    "readings_pinyin": [
+      "wèn"
+    ],
+    "readings_onyomi": [
+      "モン"
+    ]
+  },
+  "暗": {
+    "readings_pinyin": [
+      "àn"
+    ],
+    "readings_onyomi": [
+      "アン"
+    ]
+  },
+  "土": {
+    "readings_pinyin": [
+      "tǔ"
+    ],
+    "readings_onyomi": [
+      "ド",
+      "ト"
+    ]
+  },
+  "信": {
+    "readings_pinyin": [
+      "xìn"
+    ],
+    "readings_onyomi": [
+      "シン"
+    ]
+  },
+  "蟲": {
+    "readings_pinyin": [
+      "chóng"
+    ],
+    "readings_onyomi": [
+      "チュウ"
+    ],
+    "char_simplified": "虫",
+    "char_shinjitai": "虫"
+  },
+  "朝": {
+    "readings_pinyin": [
+      "zhāo",
+      "cháo"
+    ],
+    "readings_onyomi": [
+      "チョウ",
+      "ジョウ"
+    ]
+  },
+  "雲": {
+    "readings_pinyin": [
+      "yún"
+    ],
+    "readings_onyomi": [
+      "ウン"
+    ],
+    "char_simplified": "云"
+  },
+  "低": {
+    "readings_pinyin": [
+      "dī"
+    ],
+    "readings_onyomi": [
+      "テイ"
+    ]
+  },
+  "冬": {
+    "readings_pinyin": [
+      "dōng"
+    ],
+    "readings_onyomi": [
+      "トウ"
+    ]
+  },
+  "光": {
+    "readings_pinyin": [
+      "guāng"
+    ],
+    "readings_onyomi": [
+      "コウ"
+    ]
+  },
+  "買": {
+    "readings_pinyin": [
+      "mǎi"
+    ],
+    "readings_onyomi": [
+      "バイ"
+    ],
+    "char_simplified": "买"
+  },
+  "理": {
+    "readings_pinyin": [
+      "lǐ"
+    ],
+    "readings_onyomi": [
+      "リ"
+    ]
+  },
+  "足": {
+    "readings_pinyin": [
+      "zú"
+    ],
+    "readings_onyomi": [
+      "ソク"
+    ]
+  },
+  "新": {
+    "readings_pinyin": [
+      "xīn"
+    ],
+    "readings_onyomi": [
+      "シン"
+    ]
+  },
+  "黑": {
+    "readings_pinyin": [
+      "hēi"
+    ],
+    "readings_onyomi": [
+      "コク"
+    ],
+    "char_shinjitai": "黒"
+  },
+  "鴨": {
+    "readings_pinyin": [
+      "yā"
+    ],
+    "readings_onyomi": [
+      "オウ"
+    ],
+    "char_simplified": "鸭"
+  },
+  "輕": {
+    "readings_pinyin": [
+      "qīng"
+    ],
+    "readings_onyomi": [
+      "ケイ"
+    ],
+    "char_simplified": "轻",
+    "char_shinjitai": "軽"
+  },
+  "夕": {
+    "readings_pinyin": [
+      "xī"
+    ],
+    "readings_onyomi": [
+      "セキ"
+    ]
+  },
+  "休": {
+    "readings_pinyin": [
+      "xiū"
+    ],
+    "readings_onyomi": [
+      "キュウ"
+    ]
+  },
+  "皮": {
+    "readings_pinyin": [
+      "pí"
+    ],
+    "readings_onyomi": [
+      "ヒ"
+    ]
+  },
+  "鼠": {
+    "readings_pinyin": [
+      "shǔ"
+    ],
+    "readings_onyomi": [
+      "ソ"
+    ]
+  },
+  "步": {
+    "readings_pinyin": [
+      "bù"
+    ],
+    "readings_onyomi": [
+      "ホ",
+      "ブ"
+    ],
+    "char_shinjitai": "歩"
+  },
+  "旁": {
+    "readings_pinyin": [
+      "páng"
+    ],
+    "readings_onyomi": [
+      "ボウ"
+    ]
+  },
+  "將": {
+    "readings_pinyin": [
+      "jiāng",
+      "jiàng"
+    ],
+    "readings_onyomi": [
+      "ショウ",
+      "ソウ"
+    ],
+    "char_simplified": "将",
+    "char_shinjitai": "将"
+  },
+  "象": {
+    "readings_pinyin": [
+      "xiàng"
+    ],
+    "readings_onyomi": [
+      "ショウ",
+      "ゾウ"
+    ]
+  },
+  "寒": {
+    "readings_pinyin": [
+      "hán"
+    ],
+    "readings_onyomi": [
+      "カン"
+    ]
+  },
+  "薄": {
+    "readings_pinyin": [
+      "báo",
+      "bó",
+      "bò"
+    ],
+    "readings_onyomi": [
+      "ハク"
+    ]
+  },
+  "弟": {
+    "readings_pinyin": [
+      "dì"
+    ],
+    "readings_onyomi": [
+      "テイ",
+      "ダイ"
+    ]
+  },
+  "虎": {
+    "readings_pinyin": [
+      "hǔ"
+    ],
+    "readings_onyomi": [
+      "コ"
+    ]
+  },
+  "敵": {
+    "readings_pinyin": [
+      "dí"
+    ],
+    "readings_onyomi": [
+      "テキ"
+    ]
+  },
+  "船": {
+    "readings_pinyin": [
+      "chuán"
+    ],
+    "readings_onyomi": [
+      "セン"
+    ]
+  },
+  "仙": {
+    "readings_pinyin": [
+      "xiān"
+    ],
+    "readings_onyomi": [
+      "セン"
+    ]
+  }
+}

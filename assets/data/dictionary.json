@@ -1,0 +1,192 @@
+[
+  {
+    "character": "文",
+    "han_viet_reading": "văn",
+    "meaning": "chữ viết; văn chương; văn bản",
+    "radical": "文",
+    "structure": "Đơn thể",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Liên tưởng các nét như hình một mẫu văn tự được viết thành chữ."
+  },
+  {
+    "character": "言",
+    "han_viet_reading": "ngôn",
+    "meaning": "lời nói; ngôn ngữ",
+    "radical": "言",
+    "structure": "Đơn thể",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Bộ Ngôn gợi lời nói và ngôn ngữ."
+  },
+  {
+    "character": "見",
+    "han_viet_reading": "kiến",
+    "meaning": "thấy; nhìn thấy; ý kiến",
+    "radical": "見",
+    "structure": "Trên dưới",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Liên tưởng con mắt đang nhìn về phía trước."
+  },
+  {
+    "character": "早",
+    "han_viet_reading": "tảo",
+    "meaning": "sớm; buổi sớm",
+    "radical": "日",
+    "structure": "Trên dưới",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Nhật 日 xuất hiện sớm trên đường chân trời."
+  },
+  {
+    "character": "晚",
+    "han_viet_reading": "vãn",
+    "meaning": "muộn; buổi tối",
+    "radical": "日",
+    "structure": "Trái phải",
+    "difficulty": 3,
+    "type": "Hán",
+    "mnemonic": "Bộ Nhật 日 gợi thời điểm trong ngày; chữ thường dùng trong nghĩa muộn hoặc tối."
+  },
+  {
+    "character": "計",
+    "han_viet_reading": "kế",
+    "meaning": "tính toán; kế hoạch",
+    "radical": "言",
+    "structure": "Trái phải",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Ngôn 言 kết hợp với phần gợi âm, liên tưởng đến lời bàn tính kế."
+  },
+  {
+    "character": "清",
+    "han_viet_reading": "thanh",
+    "meaning": "trong; trong sạch; thanh khiết",
+    "radical": "氵",
+    "structure": "Trái phải",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Bộ Thủy 氵 gợi nước trong, sạch."
+  },
+  {
+    "character": "力",
+    "han_viet_reading": "lực",
+    "meaning": "sức; sức lực; năng lực",
+    "radical": "力",
+    "structure": "Đơn thể",
+    "difficulty": 1,
+    "type": "Hán",
+    "mnemonic": "Hình nét gợi cánh tay gồng sức."
+  },
+  {
+    "character": "工",
+    "han_viet_reading": "công",
+    "meaning": "công việc; thợ; kỹ nghệ",
+    "radical": "工",
+    "structure": "Đơn thể",
+    "difficulty": 1,
+    "type": "Hán",
+    "mnemonic": "Hình dáng gợi dụng cụ dùng trong lao động."
+  },
+  {
+    "character": "弓",
+    "han_viet_reading": "cung",
+    "meaning": "cây cung",
+    "radical": "弓",
+    "structure": "Đơn thể",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Đường nét cong gợi hình cây cung."
+  },
+  {
+    "character": "刀",
+    "han_viet_reading": "đao",
+    "meaning": "dao; vũ khí dạng lưỡi",
+    "radical": "刀",
+    "structure": "Đơn thể",
+    "difficulty": 1,
+    "type": "Hán",
+    "mnemonic": "Nét cong và mác gợi hình lưỡi dao."
+  },
+  {
+    "character": "王",
+    "han_viet_reading": "vương",
+    "meaning": "vua; bậc đứng đầu",
+    "radical": "王",
+    "structure": "Đơn thể",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Ba nét ngang nối bằng nét dọc; liên tưởng quyền lực ở vị trí đứng đầu."
+  },
+  {
+    "character": "玉",
+    "han_viet_reading": "ngọc",
+    "meaning": "ngọc; đá quý",
+    "radical": "玉",
+    "structure": "Đơn thể",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Gần giống chữ Vương 王, thêm chấm để phân biệt chữ Ngọc 玉."
+  },
+  {
+    "character": "永",
+    "han_viet_reading": "vĩnh",
+    "meaning": "lâu dài; vĩnh viễn",
+    "radical": "水",
+    "structure": "Đơn thể",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Chữ thường được dùng trong nghĩa lâu dài, vĩnh viễn."
+  },
+  {
+    "character": "玄",
+    "han_viet_reading": "huyền",
+    "meaning": "sâu xa; huyền bí; màu đen sẫm",
+    "radical": "玄",
+    "structure": "Đơn thể",
+    "difficulty": 3,
+    "type": "Hán",
+    "mnemonic": "Liên tưởng nét chữ nhỏ và khó đoán với ý nghĩa huyền bí."
+  },
+  {
+    "character": "至",
+    "han_viet_reading": "chí",
+    "meaning": "đến; đạt tới; hết sức",
+    "radical": "至",
+    "structure": "Đơn thể",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Gợi một điểm đã tới nơi hoặc đạt đến."
+  },
+  {
+    "character": "志",
+    "han_viet_reading": "chí",
+    "meaning": "ý chí; chí hướng; ghi nhớ",
+    "radical": "心",
+    "structure": "Trên dưới",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Tâm 心 ở dưới gợi quyết tâm và chí hướng trong lòng."
+  },
+  {
+    "character": "品",
+    "han_viet_reading": "phẩm",
+    "meaning": "phẩm chất; phẩm loại; món hàng",
+    "radical": "口",
+    "structure": "Trên dưới",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Ba chữ Khẩu 口 xếp thành hình, liên tưởng nhiều mục hoặc phẩm loại."
+  },
+  {
+    "character": "初",
+    "han_viet_reading": "sơ",
+    "meaning": "ban đầu; lúc đầu; sơ khai",
+    "radical": "刀",
+    "structure": "Trái phải",
+    "difficulty": 2,
+    "type": "Hán",
+    "mnemonic": "Liên tưởng đến bước đầu khi cắt mở một việc mới."
+  }
+]
