@@ -85,7 +85,7 @@ class _SpeedChallengeScreenState extends State<SpeedChallengeScreen> {
       if (_combo > _maxCombo) _maxCombo = _combo;
 
       _score += 10 * _combo;
-      unawaited(TtsService.instance.speakChinese(_currentChar.character));
+      unawaited(TtsService.instance.speakVietnamese(_currentChar.hanVietReading));
       _nextQuestion();
     } else {
       _wrongCount++;
