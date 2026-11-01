@@ -33,7 +33,7 @@ void main() {
     expect(
       find.byWidgetPredicate(
         (widget) => widget is RichText &&
-            widget.text.toPlainText() == 'NHÂN\\nngười',
+            widget.text.toPlainText() == 'NHÂN\nngười',
       ),
       findsOneWidget,
     );
