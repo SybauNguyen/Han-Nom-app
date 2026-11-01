@@ -16,6 +16,7 @@ import '../widgets/matching_pairs_widget.dart';
 import '../widgets/stats_widgets.dart';
 import '../widgets/translate_sentence_widget.dart';
 import '../widgets/type_badge.dart';
+import '../widgets/character_pronunciation_controls.dart';
 
 class LessonScreen extends StatefulWidget {
   final AppState appState;
@@ -204,7 +205,10 @@ class _LessonScreenState extends State<LessonScreen> {
         } else {
           _correctCharacters.add(_question.character);
           if (_question.character.trim().isNotEmpty && _question.character.runes.length == 1) {
-            unawaited(TtsService.instance.speakChinese(_question.character.trim()));
+            final reading = findCharacter(_question.character)?.hanVietReading ?? '';
+            if (reading.trim().isNotEmpty) {
+              unawaited(TtsService.instance.speakVietnamese(reading));
+            }
           }
         }
       }
@@ -566,6 +570,19 @@ class _LessonScreenState extends State<LessonScreen> {
                         ],
                       ]),
                     ),
+                  if (character != null &&
+                      !character.isNom &&
+                      question.character.trim().runes.length == 1) ...[
+                    const SizedBox(height: 10),
+                    Center(
+                      child: CharacterPronunciationControls(
+                        hanVietReading: character.hanVietReading,
+                        supplementaryLanguage: widget.appState.supplementaryLanguage,
+                        cjkCharacter: widget.appState.cjkCharacterFor(question.character),
+                        compact: false,
+                      ),
+                    ),
+                  ],
                   const SizedBox(height: 18),
                   if (question.type == QuestionType.typing ||
                       question.type == QuestionType.typingSentenceMeaning ||
