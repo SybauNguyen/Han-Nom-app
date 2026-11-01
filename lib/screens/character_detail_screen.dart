@@ -25,7 +25,7 @@ class CharacterDetailScreen extends StatelessWidget {
             icon: const Icon(Icons.brush_rounded, color: kGreen),
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute<void>(
-                builder: (_) => WritingPracticeScreen(character: character, databaseService: databaseService, appState: appState),
+                builder: (_) => WritingPracticeScreen(character: character),
               ));
             },
           ),
