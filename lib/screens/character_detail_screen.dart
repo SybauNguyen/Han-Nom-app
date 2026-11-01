@@ -79,7 +79,7 @@ class CharacterDetailScreen extends StatelessWidget {
                       );
                     }
                     final displayChar = record.getDisplayChar(language);
-                    final readings = record.getReadings(language).join(' · ');
+                    final readings = record.getReadings(language).where((reading) => reading.trim().isNotEmpty).take(language == SupplementaryLanguage.japanese ? 2 : 1).join(' · ');
                     return Container(
                       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
                       decoration: BoxDecoration(color: Colors.white.withOpacity(0.82), borderRadius: BorderRadius.circular(16), border: Border.all(color: const Color(0xFFDCE8DD))),
