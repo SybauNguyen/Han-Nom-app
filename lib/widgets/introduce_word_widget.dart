@@ -1,13 +1,16 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../data/question.dart';
 import '../data/models/cjk_character.dart';
+import '../services/tts_service.dart';
 import 'interactive_sentence.dart';
 
 const Color _introGreen = Color(0xFF28664F);
 const Color _introBlue = Color(0xFF3186C8);
 
-/// Giao diện giới thiệu từ mới: chạm vào chữ để xem tooltip, sau đó chọn nghĩa.
+/// Giao diện giới thiệu từ mới; âm Hán-Việt được phát một lần khi từ xuất hiện.
 class IntroduceWordWidget extends StatefulWidget {
   final Question question;
   final ValueChanged<String> onSelected;
@@ -31,6 +34,22 @@ class IntroduceWordWidget extends StatefulWidget {
 }
 
 class _IntroduceWordWidgetState extends State<IntroduceWordWidget> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      final reading = (widget.question.sentenceTokens ?? const <SentenceToken>[])
+          .where((token) => !token.isBlank)
+          .map((token) => token.hanVietReading?.trim() ?? '')
+          .where((value) => value.isNotEmpty)
+          .join(' ');
+      if (reading.isNotEmpty) {
+        unawaited(TtsService.instance.speakVietnamese(reading));
+      }
+    });
+  }
+
   Widget _buildCard(String option) {
     final isSelected = widget.selectedAnswer == option;
     return AnimatedContainer(
