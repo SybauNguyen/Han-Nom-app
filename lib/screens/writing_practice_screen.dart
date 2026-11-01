@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../core/database/database_service.dart';
 import '../data/han_character.dart';
-import '../data/models/cjk_character.dart';
-import '../state/app_state.dart';
 import '../widgets/hanzi_canvas.dart';
-import '../widgets/character_pronunciation_controls.dart';
 
 const Color _kGreen = Color(0xFF28664F);
 const Color _kGreenLight = Color(0xFFE4F1E8);
@@ -14,14 +10,10 @@ const Color _kRed = Color(0xFFD94343);
 
 class WritingPracticeScreen extends StatefulWidget {
   final HanCharacter character;
-  final DatabaseService? databaseService;
-  final AppState appState;
 
   const WritingPracticeScreen({
     super.key,
     required this.character,
-    this.databaseService,
-    required this.appState,
   });
 
   @override
@@ -32,22 +24,6 @@ class _WritingPracticeScreenState extends State<WritingPracticeScreen> {
   final GlobalKey<HanziCanvasState> _canvasKey = GlobalKey<HanziCanvasState>();
   double _templateOpacity = 0.25;
   int _strokeCount = 0;
-  CjkCharacter? _cjkRecord;
-
-  @override
-  void initState() {
-    super.initState();
-    _loadCjkData();
-  }
-
-  Future<void> _loadCjkData() async {
-    if (widget.databaseService != null && !widget.character.isNom) {
-      final record = await widget.databaseService!.getCjkCharacter(widget.character.character);
-      if (mounted) {
-        setState(() => _cjkRecord = record);
-      }
-    }
-  }
 
   void _toggleOpacity() {
     setState(() {
@@ -73,15 +49,6 @@ class _WritingPracticeScreenState extends State<WritingPracticeScreen> {
           char.isNom ? 'Luyện viết chữ Nôm' : 'Luyện viết Hán tự',
           style: const TextStyle(fontWeight: FontWeight.w800),
         ),
-        actions: [
-          CharacterPronunciationControls(
-            hanVietReading: char.hanVietReading,
-            supplementaryLanguage: widget.appState.supplementaryLanguage,
-            cjkCharacter: _cjkRecord ?? widget.appState.cjkCharacterFor(char.character),
-            compact: true,
-          ),
-          const SizedBox(width: 6),
-        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
