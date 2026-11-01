@@ -303,8 +303,8 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
           ),
           const Spacer(),
           Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              child: Text(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            child: Text(
                 card.character,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
@@ -313,8 +313,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
                   fontWeight: FontWeight.w500,
                   color: kGreen,
                   fontFamilyFallback: ['NomNaTong', 'HanNomB'],
-                ),
-              ),
+            ),
           ),
           const Spacer(),
           Container(
