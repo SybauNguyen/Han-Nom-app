@@ -7,6 +7,7 @@ import '../core/theme/app_colors.dart';
 import '../data/han_character.dart';
 import '../data/han_seed_data.dart';
 import '../data/question.dart';
+import '../services/ad_service.dart';
 import '../services/tts_service.dart';
 import '../state/app_state.dart';
 import '../widgets/fill_in_the_blank_widget.dart';
@@ -119,7 +120,7 @@ class _LessonScreenState extends State<LessonScreen> {
     }
 
     final knownChars = _knownCharactersForQuestionGeneration();
-    _questions = generateLessonQuestions(
+    _questions = generateLessonPartQuestions(
       _characters,
       knownCharacters: knownChars,
       part: _isActivePartLesson ? _lessonPart : 3,
@@ -298,23 +299,17 @@ class _LessonScreenState extends State<LessonScreen> {
               OutlinedButton.icon(
                 onPressed: () async {
                   Navigator.of(dialogContext).pop();
-                  showDialog<void>(
-                    context: context,
-                    barrierDismissible: false,
-                    builder: (_) => const AlertDialog(
-                      content: Row(children: [CircularProgressIndicator(), SizedBox(width: 18), Expanded(child: Text('Đang xem quảng cáo giả lập...'))]),
-                    ),
+                  await AdService.instance.showRewardedAd(
+                    context,
+                    rewardDescription: '1 Tim ❤️',
+                    onRewardGranted: () async {
+                      await widget.appState.addHeart(1);
+                      if (mounted) setState(() {});
+                    },
                   );
-                  await Future<void>.delayed(const Duration(seconds: 2));
-                  if (!mounted) return;
-                  Navigator.of(context).pop();
-                  await widget.appState.addHeart(1);
-                  if (!mounted) return;
-                  setState(() {});
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Đã nhận +1 tim! ❤️')));
                 },
                 icon: const Icon(Icons.ondemand_video_rounded),
-                label: const Text('Xem quảng cáo giả lập · +1 tim'),
+                label: const Text('Xem quảng cáo để nhận +1 tim'),
               ),
               const SizedBox(height: 8),
               TextButton(

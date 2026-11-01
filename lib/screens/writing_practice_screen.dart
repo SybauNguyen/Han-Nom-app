@@ -132,10 +132,10 @@ class _WritingPracticeScreenState extends State<WritingPracticeScreen> {
                                 onTap: () => TtsService.instance.speakVietnamese(char.hanVietReading),
                                 child: const Icon(Icons.volume_down_rounded, size: 20, color: _kOrange),
                               ),
-                              if (_cjkRecord?.pinyin.isNotEmpty ?? false) ...[
+                              if (_cjkRecord?.readingsPinyin.isNotEmpty ?? false) ...[
                                 const SizedBox(width: 10),
                                 Text(
-                                  _cjkRecord!.pinyin.first,
+                                  _cjkRecord!.readingsPinyin.first,
                                   style: const TextStyle(fontSize: 14, color: _kGreen, fontWeight: FontWeight.w800),
                                 ),
                                 const SizedBox(width: 4),
@@ -173,7 +173,38 @@ class _WritingPracticeScreenState extends State<WritingPracticeScreen> {
                 },
               ),
 
-              const SizedBox(height: 16),
+              const SizedBox(height: 14),
+
+              // Nút xem hoạt họa bút thuận
+              FilledButton.icon(
+                style: FilledButton.styleFrom(
+                  backgroundColor: _kOrange,
+                  foregroundColor: Colors.white,
+                  minimumSize: const Size(220, 42),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                ),
+                onPressed: () {
+                  final state = _canvasKey.currentState;
+                  if (state != null) {
+                    if (state.isDemonstrating) {
+                      state.stopStrokeAnimation();
+                    } else {
+                      state.playStrokeAnimation();
+                    }
+                    setState(() {});
+                  }
+                },
+                icon: Icon(
+                  _canvasKey.currentState?.isDemonstrating == true ? Icons.pause_rounded : Icons.play_circle_filled_rounded,
+                  size: 20,
+                ),
+                label: Text(
+                  _canvasKey.currentState?.isDemonstrating == true ? 'Dừng xem cách viết' : 'Xem cách viết (Bút thuận)',
+                  style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 14),
+                ),
+              ),
+
+              const SizedBox(height: 12),
 
               // Thanh công cụ điều khiển nét viết
               Row(

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'core/database/database_service.dart';
 import 'core/theme/app_colors.dart';
+import 'data/models/cjk_character.dart';
 import 'screens/dictionary_screen.dart';
 import 'screens/han_track_screen.dart';
 import 'screens/nom_track_screen.dart';

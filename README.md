@@ -15,6 +15,36 @@
 - Xem `CHANGELOG.md` và `assets/data/READINGS_DATA_NOTES.md` để biết chi tiết và giới hạn dữ liệu âm đọc.
 
 
+## Các tính năng mới bổ sung (v2.7.0)
+
+1. 🎬 **Quảng cáo nhận thưởng nạp Tim (Google AdMob Rewarded Video Ads)**:
+   - Cơ chế Duolingo: Người học có 5 tim, mỗi lần trả lời sai bị trừ 1 tim.
+   - Khi hết tim trong lúc làm bài hoặc còn dưới 5 tim trên trang chủ Lộ trình, người học có thể bấm: **"Xem video nhận tim miễn phí"** (Bộ đếm 10s chân thực, thanh tiến trình mô phỏng quảng cáo video) để nhận ngay +1 tim mà không cần tốn 50 đá quý hay chờ 30 phút.
+
+2. ▶️ **Hoạt họa thứ tự nét bút (Stroke Order Animation — Bút thuận)**:
+   - Trên bảng luyện viết ô Mễ (米字格), người học có thể nhấn **"▶️ Xem cách viết (Bút thuận)"**.
+   - Nét chữ sẽ được tự động vẽ động tuần tự theo đúng quy tắc bút thuận truyền thống (trên trước dưới sau, trái trước phải sau, ngoài trước trong sau), có vệt bút lông lướt sáng và hiển thị tiến độ % thời gian thực.
+   - Có thể mở từ thẻ chi tiết chữ trong Từ điển hoặc trang Lộ trình.
+
+3. 🗂️ **Chế độ Lật thẻ ghi nhớ nhanh (3D Flashcard phong cách Anki)**:
+   - Truy cập ngay tại nút **"Lật thẻ Flashcard"** màu xanh ngọc ở đầu Lộ trình Hán Tự.
+   - Hiệu ứng lật 3D phối cảnh xoay 180 độ chân thực (`Matrix4` 3D Perspective Rotation).
+   - Tích hợp phát âm TTS giọng chuẩn Hán-Việt và Quan thoại.
+   - 3 nút đánh giá chuẩn Spaced Repetition (Anki): **"Chưa thuộc"** (sẽ hỏi lại), **"Nhớ mang máng"**, **"Đã thuộc làu"** để tự động cập nhật mức thuần thục (Mastery) và tích lũy XP.
+
+4. ⚡ **Mini-Game 60 giây thử thách phản xạ (Speed Challenge)**:
+   - Truy cập tại nút **"Thử thách 60 Giây"** màu cam nổi bật trên Lộ trình Hán Tự.
+   - Đếm ngược 60 giây căng thẳng với thanh thời gian đổi màu liên tục.
+   - Cơ chế tính điểm Combo bùng nổ: Đúng liên tiếp x2, x3, x4, tối đa **x5 điểm**.
+   - Trả lời sai sẽ bị chớp đỏ màn hình và trừ ngay 2 giây.
+   - Lưu trữ kỷ lục điểm số cao nhất (High Score) vào `SharedPreferences`, thưởng XP và Đá quý sau mỗi trận đấu.
+
+5. 🔊 **Hệ thống phát âm TTS đa ngữ & Luyện viết**:
+   - Nghe âm Hán-Việt chuẩn và tiếng Quan thoại (Pinyin) mọi lúc trên Từ điển, Thẻ chữ và Flashcard.
+   - Tùy chỉnh độ mờ chữ mẫu, nút Lùi nét (Undo) và Xóa nét (Clear) trên bảng vẽ ô Mễ.
+
+---
+
 Phiên bản mã nguồn **2.6.3+20**. Ứng dụng học Hán tự theo âm Hán-Việt, lưu tiến độ trên thiết bị bằng `shared_preferences` và không cần máy chủ.
 
 ## Câu dịch Hán-Việt hai chiều (2.6.0)

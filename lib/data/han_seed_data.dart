@@ -1133,6 +1133,22 @@ List<Question> _shuffleQuestionsWithSeparation(List<Question> input, Random rand
   return result;
 }
 
+List<Question> generateLessonQuestions(
+  List<HanCharacter> allLessonCharacters, {
+  int part = 3,
+  Iterable<HanCharacter>? knownCharacters,
+  Random? random,
+  int translationPhraseLimit = 1,
+  int sentenceTypingLimit = 0,
+}) => generateLessonPartQuestions(
+  allLessonCharacters,
+  part: part,
+  knownCharacters: knownCharacters,
+  random: random,
+  translationPhraseLimit: translationPhraseLimit,
+  sentenceTypingLimit: sentenceTypingLimit,
+);
+
 /// Sinh câu hỏi cho cấu trúc một Node gồm 3 phần.
 /// Node Hán có 10 chữ: Phần 1 học 5 chữ đầu, Phần 2 học 5 chữ sau,
 /// Phần 3 ôn toàn bộ 10 chữ và yêu cầu tự gõ âm Hán-Việt. Bộ sinh câu hỏi này

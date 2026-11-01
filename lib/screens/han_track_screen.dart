@@ -4,11 +4,14 @@ import '../core/database/database_service.dart';
 import '../core/theme/app_colors.dart';
 import '../data/han_character.dart';
 import '../data/han_seed_data.dart';
+import '../services/ad_service.dart';
 import '../state/app_state.dart';
 import '../widgets/stats_widgets.dart';
 import '../widgets/type_badge.dart';
+import 'flashcard_screen.dart';
 import 'lesson_screen.dart';
 import 'review_screen.dart';
+import 'speed_challenge_screen.dart';
 
 class HanTrackScreen extends StatelessWidget {
   final AppState appState;
@@ -27,6 +30,17 @@ class HanTrackScreen extends StatelessWidget {
             Text('Lộ trình Hán Tự', style: TextStyle(fontWeight: FontWeight.w800)),
           ]),
           actions: [
+            IconButton(
+              tooltip: 'Xem quảng cáo nạp tim miễn phí',
+              onPressed: appState.hearts < 5
+                  ? () => AdService.instance.showRewardedAd(
+                        context,
+                        rewardDescription: '1 Tim ❤️',
+                        onRewardGranted: () => appState.addHeart(1),
+                      )
+                  : null,
+              icon: const Icon(Icons.ondemand_video_rounded, color: kOrange),
+            ),
             IconButton(
               tooltip: 'Ôn tập tự do',
               onPressed: () => Navigator.of(context).push(MaterialPageRoute<void>(
@@ -57,6 +71,162 @@ class HanTrackScreen extends StatelessWidget {
               StatsStrip(appState: appState),
               const SizedBox(height: 15),
               DailyGoalCard(xp: appState.xpInLevel, level: appState.level),
+              const SizedBox(height: 14),
+
+              // Banner nhận thưởng nạp tim qua AdMob khi tim < 5
+              if (appState.hearts < 5) ...[
+                Container(
+                  margin: const EdgeInsets.only(bottom: 14),
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFFF4E8),
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: const Color(0xFFFFD4B0)),
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.favorite_rounded, color: kRed, size: 26),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Đang còn ${appState.hearts}/5 tim',
+                              style: const TextStyle(fontWeight: FontWeight.w900, color: Color(0xFFD35400), fontSize: 13),
+                            ),
+                            const Text(
+                              'Xem video ngắn 10s nhận ngay +1 tim miễn phí!',
+                              style: TextStyle(fontSize: 11.5, color: Colors.black87),
+                            ),
+                          ],
+                        ),
+                      ),
+                      ElevatedButton.icon(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: kOrange,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                          textStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800),
+                        ),
+                        onPressed: () => AdService.instance.showRewardedAd(
+                          context,
+                          rewardDescription: '1 Tim ❤️',
+                          onRewardGranted: () => appState.addHeart(1),
+                        ),
+                        icon: const Icon(Icons.play_circle_filled_rounded, size: 16),
+                        label: const Text('Nhận tim'),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+
+              // Hai chế độ luyện tập mới: 3D Flashcard & Thử thách 60s
+              Row(
+                children: [
+                  Expanded(
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(18),
+                      onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(
+                        builder: (_) => FlashcardScreen(appState: appState, databaseService: databaseService),
+                      )),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [Color(0xFF28664F), Color(0xFF3B8A6E)],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(18),
+                          boxShadow: const [
+                            BoxShadow(color: Color(0x2228664F), blurRadius: 8, offset: Offset(0, 3)),
+                          ],
+                        ),
+                        child: const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Icon(Icons.style_rounded, color: Colors.white, size: 24),
+                                Text('3D ANKI', style: TextStyle(color: Colors.white70, fontSize: 10, fontWeight: FontWeight.w900)),
+                              ],
+                            ),
+                            SizedBox(height: 8),
+                            Text(
+                              'Lật thẻ Flashcard',
+                              style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 14),
+                            ),
+                            SizedBox(height: 2),
+                            Text(
+                              'Ôn nhớ nhanh 3 mức',
+                              style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(18),
+                      onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(
+                        builder: (_) => SpeedChallengeScreen(appState: appState),
+                      )),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
+                        decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                            colors: [Color(0xFFCC6B3D), Color(0xFFE28254)],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(18),
+                          boxShadow: const [
+                            BoxShadow(color: Color(0x22CC6B3D), blurRadius: 8, offset: Offset(0, 3)),
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const Icon(Icons.bolt_rounded, color: Colors.white, size: 24),
+                                if (appState.speedChallengeHighScore > 0)
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                                    decoration: BoxDecoration(
+                                      color: Colors.black26,
+                                      borderRadius: BorderRadius.circular(6),
+                                    ),
+                                    child: Text(
+                                      'Top ${appState.speedChallengeHighScore}',
+                                      style: const TextStyle(color: Colors.white, fontSize: 9.5, fontWeight: FontWeight.w800),
+                                    ),
+                                  ),
+                              ],
+                            ),
+                            const SizedBox(height: 8),
+                            const Text(
+                              'Thử thách 60 Giây',
+                              style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 14),
+                            ),
+                            const SizedBox(height: 2),
+                            const Text(
+                              'Phản xạ combo x5 điểm',
+                              style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               const SizedBox(height: 16),
               Container(
                 padding: const EdgeInsets.all(15),

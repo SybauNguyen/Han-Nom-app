@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../core/theme/app_colors.dart';
 import '../data/han_seed_data.dart';
+import '../data/models/cjk_character.dart';
 import '../state/app_state.dart';
 import '../widgets/stats_widgets.dart';
 

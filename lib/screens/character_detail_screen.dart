@@ -232,6 +232,22 @@ class CharacterDetailScreen extends StatelessWidget {
               child: Row(children: [const Icon(Icons.insights_rounded, color: kBlue), const SizedBox(width: 10), Expanded(child: Text('Mức thuần thục: ${appState.masteryOf(character.character)}/5', style: const TextStyle(fontWeight: FontWeight.w800))), const Icon(Icons.auto_awesome, color: kOrange)]),
             ),
           ),
+          const SizedBox(height: 16),
+          ElevatedButton.icon(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: kGreen,
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(vertical: 14),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            ),
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute<void>(
+                builder: (_) => WritingPracticeScreen(character: character, databaseService: databaseService),
+              ));
+            },
+            icon: const Icon(Icons.brush_rounded, size: 20),
+            label: Text('Luyện viết chữ “${character.character}” (Có Bút thuận)', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 14)),
+          ),
         ],
       ),
     );
