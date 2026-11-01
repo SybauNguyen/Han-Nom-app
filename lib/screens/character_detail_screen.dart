@@ -6,7 +6,6 @@ import '../data/han_character.dart';
 import '../data/models/cjk_character.dart';
 import '../state/app_state.dart';
 import '../widgets/type_badge.dart';
-import '../widgets/character_pronunciation_controls.dart';
 import 'writing_practice_screen.dart';
 
 class CharacterDetailScreen extends StatelessWidget {
@@ -50,11 +49,6 @@ class CharacterDetailScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(character.isNom ? character.hanVietReading : character.hanVietReading.toUpperCase(), style: const TextStyle(color: kOrange, fontSize: 24, fontWeight: FontWeight.w900, letterSpacing: 1.0)),
-                  const SizedBox(width: 6),
-                  CharacterPronunciationControls(
-                    hanVietReading: character.hanVietReading,
-                    supplementaryLanguage: SupplementaryLanguage.none,
-                  ),
                 ],
               ),
               if (!character.isNom && appState.supplementaryLanguage != SupplementaryLanguage.none) ...[
@@ -105,14 +99,6 @@ class CharacterDetailScreen extends StatelessWidget {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Text(readings, style: const TextStyle(fontSize: 20, color: kGreen, fontWeight: FontWeight.w900)),
-                                  const SizedBox(width: 6),
-                                  CharacterPronunciationControls(
-                                    hanVietReading: '',
-                                    showHanViet: false,
-                                    compact: true,
-                                    supplementaryLanguage: language,
-                                    cjkCharacter: record,
-                                  ),
                                 ],
                               ),
                               Text(language.characterFormLabel, style: const TextStyle(fontSize: 10, color: Colors.black45)),
