@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../data/question.dart';
 import '../data/models/cjk_character.dart';
+import '../services/tts_service.dart';
 
 const Color _sentenceGreen = Color(0xFF28664F);
 const Color _sentenceOrange = Color(0xFFCC6B3D);
 
-/// Hien thi tung chu trong cau; cham vao chu co the xem am Han-Viet va nghia.
+/// Hien thi tung chu trong cau. Cham vao chu de nghe am Han-Viet;
+/// nhan giu de xem cach doc bo sung va nghia.
 class InteractiveSentence extends StatelessWidget {
   final List<SentenceToken> tokens;
   final String? selectedAnswer;
@@ -60,11 +62,17 @@ class InteractiveSentence extends StatelessWidget {
         }
 
         final cjkRecord = _findCjkRecord(token.text);
-        final hasSupplementaryReading = supplementaryLanguage != SupplementaryLanguage.none &&
-            cjkRecord != null && cjkRecord.hasReadingFor(supplementaryLanguage);
+        final supplementaryReadings = supplementaryLanguage == SupplementaryLanguage.none ||
+                cjkRecord == null
+            ? const <String>[]
+            : cjkRecord.getReadings(supplementaryLanguage)
+                .map((reading) => reading.trim())
+                .where((reading) => reading.isNotEmpty)
+                .take(supplementaryLanguage == SupplementaryLanguage.japanese ? 2 : 1)
+                .toList();
 
         return Tooltip(
-          triggerMode: TooltipTriggerMode.tap,
+          triggerMode: TooltipTriggerMode.longPress,
           showDuration: const Duration(seconds: 3),
           padding: const EdgeInsets.all(12),
           margin: const EdgeInsets.symmetric(horizontal: 22),
@@ -78,30 +86,42 @@ class InteractiveSentence extends StatelessWidget {
           ),
           richMessage: TextSpan(children: [
             TextSpan(
-              text: '${token.hanVietReading?.toUpperCase() ?? ''}\n',
+              text: '${token.hanVietReading?.toUpperCase() ?? ''}\\n',
               style: const TextStyle(color: _sentenceOrange, fontSize: 16, fontWeight: FontWeight.w900),
             ),
             TextSpan(
               text: token.meaning ?? '',
               style: const TextStyle(color: Colors.black87, fontSize: 14),
             ),
-            if (hasSupplementaryReading)
+            if (supplementaryReadings.isNotEmpty)
               TextSpan(
-                text: '\n${supplementaryLanguage.label}: ${cjkRecord!.getDisplayChar(supplementaryLanguage)} · ${cjkRecord!.getReadings(supplementaryLanguage).join(' · ')}',
+                text: '\\n${supplementaryLanguage.label}: ${supplementaryReadings.join(' · ')}',
                 style: const TextStyle(color: _sentenceGreen, fontSize: 14, fontWeight: FontWeight.w800),
               ),
           ]),
-          child: Text(
-            token.text,
-            style: const TextStyle(
-              fontSize: 42,
-              fontFamilyFallback: ['NomNaTong'],
-              fontWeight: FontWeight.w600,
-              color: Colors.black87,
-              decoration: TextDecoration.underline,
-              decorationStyle: TextDecorationStyle.dotted,
-              decorationColor: Colors.grey,
-              decorationThickness: 2,
+          child: InkWell(
+            borderRadius: BorderRadius.circular(6),
+            onTap: () {
+              final reading = token.hanVietReading?.trim() ?? '';
+              if (reading.isNotEmpty) {
+                TtsService.instance.speakVietnamese(reading);
+              }
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
+              child: Text(
+                token.text,
+                style: const TextStyle(
+                  fontSize: 42,
+                  fontFamilyFallback: ['NomNaTong'],
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black87,
+                  decoration: TextDecoration.underline,
+                  decorationStyle: TextDecorationStyle.dotted,
+                  decorationColor: Colors.grey,
+                  decorationThickness: 2,
+                ),
+              ),
             ),
           ),
         );
