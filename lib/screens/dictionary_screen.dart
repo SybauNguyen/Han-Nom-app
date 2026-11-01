@@ -15,14 +15,14 @@ class DictionaryScreen extends StatefulWidget {
   const DictionaryScreen({super.key, required this.appState, required this.databaseService});
 
   @override
-  State<[^>]*> createState() => _DictionaryScreenState();
+  State<DictionaryScreen> createState() => _DictionaryScreenState();
 }
 
-class _DictionaryScreenState extends State<[^>]*> {
+class _DictionaryScreenState extends State<DictionaryScreen> {
   final TextEditingController _controller = TextEditingController();
   String _query = '';
   String _typeFilter = 'Tất cả';
-  List<[^>]*> _results = [];
+  List<HanCharacter> _results = [];
   bool _isSearching = true;
   int _matchCount = 0;
   int _requestGeneration = 0;
@@ -49,7 +49,7 @@ class _DictionaryScreenState extends State<[^>]*> {
     _loadResults(reset: true);
   }
 
-  Future<[^>]*> _loadResults({required bool reset}) async {
+  Future<void> _loadResults({required bool reset}) async {
     final request = ++_requestGeneration;
     final query = _query;
     final type = _typeFilter;
@@ -204,7 +204,8 @@ class _DictionaryScreenState extends State<[^>]*> {
                       ? _DictionaryEmptyState(query: _query, typeFilter: _typeFilter)
                       : ListView.separated(
                           padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
-                          itemCount: _results.length + (_results.length <[^>]*> const SizedBox(height: 9),
+                          itemCount: _results.length + (_results.length < _matchCount ? 1 : 0),
+                          separatorBuilder: (_, __) => const SizedBox(height: 9),
                           itemBuilder: (context, index) {
                             if (index >= _results.length) {
                               return Padding(
@@ -223,7 +224,7 @@ class _DictionaryScreenState extends State<[^>]*> {
                               clipBehavior: Clip.antiAlias,
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
                               child: InkWell(
-                                onTap: () => Navigator.of(context).push(MaterialPageRoute<[^>]*>(
+                                onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(
                                   builder: (_) => CharacterDetailScreen(character: character, appState: widget.appState, databaseService: widget.databaseService),
                                 )),
                                 child: Padding(
