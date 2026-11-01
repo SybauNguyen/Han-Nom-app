@@ -4,9 +4,9 @@ import '../core/database/database_service.dart';
 import '../core/theme/app_colors.dart';
 import '../data/han_character.dart';
 import '../data/han_seed_data.dart';
-import '../services/tts_service.dart';
 import '../state/app_state.dart';
 import '../widgets/type_badge.dart';
+import '../widgets/character_pronunciation_controls.dart';
 import 'character_detail_screen.dart';
 
 class DictionaryScreen extends StatefulWidget {
@@ -15,14 +15,14 @@ class DictionaryScreen extends StatefulWidget {
   const DictionaryScreen({super.key, required this.appState, required this.databaseService});
 
   @override
-  State<DictionaryScreen> createState() => _DictionaryScreenState();
+  State<[^>]*> createState() => _DictionaryScreenState();
 }
 
-class _DictionaryScreenState extends State<DictionaryScreen> {
+class _DictionaryScreenState extends State<[^>]*> {
   final TextEditingController _controller = TextEditingController();
   String _query = '';
   String _typeFilter = 'Tất cả';
-  List<HanCharacter> _results = [];
+  List<[^>]*> _results = [];
   bool _isSearching = true;
   int _matchCount = 0;
   int _requestGeneration = 0;
@@ -49,7 +49,7 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
     _loadResults(reset: true);
   }
 
-  Future<void> _loadResults({required bool reset}) async {
+  Future<[^>]*> _loadResults({required bool reset}) async {
     final request = ++_requestGeneration;
     final query = _query;
     final type = _typeFilter;
@@ -204,8 +204,7 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
                       ? _DictionaryEmptyState(query: _query, typeFilter: _typeFilter)
                       : ListView.separated(
                           padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
-                          itemCount: _results.length + (_results.length < _matchCount ? 1 : 0),
-                          separatorBuilder: (_, __) => const SizedBox(height: 9),
+                          itemCount: _results.length + (_results.length <[^>]*> const SizedBox(height: 9),
                           itemBuilder: (context, index) {
                             if (index >= _results.length) {
                               return Padding(
@@ -224,7 +223,7 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
                               clipBehavior: Clip.antiAlias,
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
                               child: InkWell(
-                                onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(
+                                onTap: () => Navigator.of(context).push(MaterialPageRoute<[^>]*>(
                                   builder: (_) => CharacterDetailScreen(character: character, appState: widget.appState, databaseService: widget.databaseService),
                                 )),
                                 child: Padding(
@@ -241,11 +240,10 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
                                     Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                                       Row(children: [
                                         Expanded(child: Text(character.isNom ? 'Cách đọc: ${character.hanVietReading}' : character.hanVietReading.toUpperCase(), style: const TextStyle(fontSize: 15, letterSpacing: 0.2, fontWeight: FontWeight.w900, color: Color(0xFF20372C)))),
-                                        const SizedBox(width: 4),
-                                        InkWell(
-                                          onTap: () => TtsService.instance.speakChinese(character.character),
-                                          borderRadius: BorderRadius.circular(12),
-                                          child: const Padding(padding: EdgeInsets.all(4), child: Icon(Icons.volume_up_rounded, size: 18, color: kGreen)),
+                                        CharacterPronunciationControls(
+                                          hanVietReading: character.hanVietReading,
+                                          supplementaryLanguage: widget.appState.supplementaryLanguage,
+                                          cjkCharacter: widget.appState.cjkCharacterFor(character.character),
                                         ),
                                         const SizedBox(width: 4),
                                         TypeBadge(type: character.type, compact: true),
