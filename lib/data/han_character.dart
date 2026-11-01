@@ -35,6 +35,8 @@ class HanCharacter {
 
   bool get isNom => type == 'Nôm';
   bool get isHan => !isNom;
+  bool get hasProvisionalImportedMeaning =>
+      !inCurriculum && isNom && meaning.trim().toLowerCase() == hanVietReading.trim().toLowerCase();
 
   HanCharacter copyWith({
     int? id,
@@ -129,6 +131,8 @@ class HanCharacter {
   }
 }
 
+bool hasProvisionalImportedMeaning(HanCharacter character) => character.hasProvisionalImportedMeaning;
+
 String _encodeExamples(List<String> examples) => jsonEncode(examples);
 
 List<String> _decodeExamples(String value) =>
@@ -151,7 +155,6 @@ class LessonUnit {
 
   bool get isNom => type == 'Nôm';
 }
-
 
 String _normalizeCharacterType(String? rawType) {
   final value = (rawType ?? '').trim().toLowerCase();
