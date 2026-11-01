@@ -57,6 +57,7 @@ class AppState extends ChangeNotifier {
 
   /// Tiến độ hai luồng độc lập. Bài ôn tập không tăng số bài học mới.
   int hanLessonsCompleted = 0;
+  int speedChallengeHighScore = 0;
   /// Phần tiếp theo của bài Hán đang học (1–3). Chỉ chuyển sang bài mới sau phần 3.
   int currentLessonPart = 1;
   int nomLessonsCompleted = 0;
@@ -227,6 +228,7 @@ class AppState extends ChangeNotifier {
       if (rawMastery != null) {
         final decoded = jsonDecode(rawMastery) as Map<String, dynamic>;
         mastery = decoded.map((key, value) => MapEntry(key, (value as num).toInt()));
+        speedChallengeHighScore = prefs.getInt('speedChallengeHighScore') ?? 0;
       }
       // One-time curriculum migration: v2.3 had 50 Han Nodes x 5 chars and
       // 6 Nom Nodes; v2.4 reorganizes the same 250 Han characters into 25
@@ -327,6 +329,24 @@ class AppState extends ChangeNotifier {
     await _save();
     notifyListeners();
     return true;
+  }
+
+  Future<void> saveSpeedChallengeScore(int score, {int xpEarned = 0, int gemsEarned = 0}) async {
+    if (score > speedChallengeHighScore) {
+      speedChallengeHighScore = score;
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setInt('speedChallengeHighScore', speedChallengeHighScore);
+    }
+    if (xpEarned > 0) xp += xpEarned;
+    if (gemsEarned > 0) gems += gemsEarned;
+    await _save();
+    notifyListeners();
+  }
+
+  Future<void> updateMastery(String character, int newLevel) async {
+    mastery[character] = newLevel.clamp(0, 5).toInt();
+    await _save();
+    notifyListeners();
   }
 
   Future<void> addHeart(int amount) async {

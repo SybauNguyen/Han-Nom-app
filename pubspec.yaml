@@ -1,7 +1,7 @@
 name: han_viet_duo
 description: Ung dung hoc chu Han theo am Han-Viet, lay cam hung tu vong lap hoc tap cua Duolingo.
 publish_to: 'none'
-version: 2.6.3+20
+version: 2.7.1+21
 
 environment:
   sdk: '>=3.5.0 <4.0.0'
@@ -14,6 +14,7 @@ dependencies:
   sqflite_common_ffi: ^2.3.6
   path: ^1.9.1
   crypto: ^3.0.6
+  flutter_tts: ^4.2.2
 
 dev_dependencies:
   flutter_test:
