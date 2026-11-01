@@ -98,21 +98,21 @@ class InteractiveSentence extends StatelessWidget {
               ),
           ]),
           child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
-              child: Text(
-                token.text,
-                style: const TextStyle(
-                  fontSize: 42,
-                  fontFamilyFallback: ['NomNaTong'],
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black87,
-                  decoration: TextDecoration.underline,
-                  decorationStyle: TextDecorationStyle.dotted,
-                  decorationColor: Colors.grey,
-                  decorationThickness: 2,
-                ),
+            padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
+            child: Text(
+              token.text,
+              style: const TextStyle(
+                fontSize: 42,
+                fontFamilyFallback: ['NomNaTong'],
+                fontWeight: FontWeight.w600,
+                color: Colors.black87,
+                decoration: TextDecoration.underline,
+                decorationStyle: TextDecorationStyle.dotted,
+                decorationColor: Colors.grey,
+                decorationThickness: 2,
               ),
             ),
+          ),
         );
       }).toList(),
     );
