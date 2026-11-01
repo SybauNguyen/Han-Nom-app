@@ -97,10 +97,7 @@ class InteractiveSentence extends StatelessWidget {
                 style: const TextStyle(color: _sentenceGreen, fontSize: 14, fontWeight: FontWeight.w800),
               ),
           ]),
-          child: InkWell(
-            borderRadius: BorderRadius.circular(6),
-            onTap: null,
-            child: Padding(
+          child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
               child: Text(
                 token.text,
@@ -116,7 +113,6 @@ class InteractiveSentence extends StatelessWidget {
                 ),
               ),
             ),
-          ),
         );
       }).toList(),
     );
