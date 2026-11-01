@@ -28,6 +28,15 @@ void main() {
     final tooltip = tester.widget<Tooltip>(find.byType(Tooltip));
     expect(tooltip.triggerMode, TooltipTriggerMode.tap);
     expect(tooltip.richMessage?.toPlainText(), 'NHÂN\nngười');
+    await tester.tap(find.text('人'));
+    await tester.pumpAndSettle();
+    expect(
+      find.byWidgetPredicate(
+        (widget) => widget is RichText &&
+            widget.text.toPlainText() == 'NHÂN\\nngười',
+      ),
+      findsOneWidget,
+    );
     expect(find.byType(IconButton), findsNothing);
   });
 }
