@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../data/question.dart';
 import '../data/models/cjk_character.dart';
-import '../services/tts_service.dart';
 
 const Color _sentenceGreen = Color(0xFF28664F);
 const Color _sentenceOrange = Color(0xFFCC6B3D);
 
-/// Hien thi tung chu trong cau. Cham vao chu de nghe am Han-Viet;
-/// nhan giu de xem cach doc bo sung va nghia.
+/// Hiển thị từng chữ trong câu. Chạm vào chữ để xem âm Hán-Việt và nghĩa.
 class InteractiveSentence extends StatelessWidget {
   final List<SentenceToken> tokens;
   final String? selectedAnswer;
@@ -72,7 +70,7 @@ class InteractiveSentence extends StatelessWidget {
                 .toList();
 
         return Tooltip(
-          triggerMode: TooltipTriggerMode.longPress,
+          triggerMode: TooltipTriggerMode.tap,
           showDuration: const Duration(seconds: 3),
           padding: const EdgeInsets.all(12),
           margin: const EdgeInsets.symmetric(horizontal: 22),
@@ -86,7 +84,7 @@ class InteractiveSentence extends StatelessWidget {
           ),
           richMessage: TextSpan(children: [
             TextSpan(
-              text: '${token.hanVietReading?.toUpperCase() ?? ''}\\n',
+              text: '${token.hanVietReading?.toUpperCase() ?? ''}\n',
               style: const TextStyle(color: _sentenceOrange, fontSize: 16, fontWeight: FontWeight.w900),
             ),
             TextSpan(
@@ -95,18 +93,13 @@ class InteractiveSentence extends StatelessWidget {
             ),
             if (supplementaryReadings.isNotEmpty)
               TextSpan(
-                text: '\\n${supplementaryLanguage.label}: ${supplementaryReadings.join(' · ')}',
+                text: '\n${supplementaryLanguage.label}: ${supplementaryReadings.join(' · ')}',
                 style: const TextStyle(color: _sentenceGreen, fontSize: 14, fontWeight: FontWeight.w800),
               ),
           ]),
           child: InkWell(
             borderRadius: BorderRadius.circular(6),
-            onTap: () {
-              final reading = token.hanVietReading?.trim() ?? '';
-              if (reading.isNotEmpty) {
-                TtsService.instance.speakVietnamese(reading);
-              }
-            },
+            onTap: null,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
               child: Text(
