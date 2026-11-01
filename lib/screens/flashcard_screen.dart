@@ -6,7 +6,6 @@ import '../core/theme/app_colors.dart';
 import '../data/han_character.dart';
 import '../data/han_seed_data.dart';
 import '../data/models/cjk_character.dart';
-import '../services/tts_service.dart';
 import '../state/app_state.dart';
 import '../widgets/type_badge.dart';
 import '../widgets/character_pronunciation_controls.dart';
@@ -303,10 +302,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
             ],
           ),
           const Spacer(),
-          InkWell(
-            borderRadius: BorderRadius.circular(16),
-            onTap: () => TtsService.instance.speakVietnamese(card.hanVietReading),
-            child: Padding(
+          Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               child: Text(
                 card.character,
@@ -319,7 +315,6 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
                   fontFamilyFallback: ['NomNaTong', 'HanNomB'],
                 ),
               ),
-            ),
           ),
           const Spacer(),
           Container(
