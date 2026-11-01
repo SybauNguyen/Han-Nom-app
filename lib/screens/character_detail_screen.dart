@@ -4,9 +4,9 @@ import '../core/database/database_service.dart';
 import '../core/theme/app_colors.dart';
 import '../data/han_character.dart';
 import '../data/models/cjk_character.dart';
-import '../services/tts_service.dart';
 import '../state/app_state.dart';
 import '../widgets/type_badge.dart';
+import '../widgets/character_pronunciation_controls.dart';
 import 'writing_practice_screen.dart';
 
 class CharacterDetailScreen extends StatelessWidget {
@@ -30,11 +30,6 @@ class CharacterDetailScreen extends StatelessWidget {
               ));
             },
           ),
-          IconButton(
-            tooltip: 'Phát âm tiếng Trung (Pinyin)',
-            icon: const Icon(Icons.volume_up_rounded, color: kGreen),
-            onPressed: () => TtsService.instance.speakChinese(character.character),
-          ),
           const SizedBox(width: 8),
         ],
       ),
@@ -56,12 +51,9 @@ class CharacterDetailScreen extends StatelessWidget {
                 children: [
                   Text(character.isNom ? character.hanVietReading : character.hanVietReading.toUpperCase(), style: const TextStyle(color: kOrange, fontSize: 24, fontWeight: FontWeight.w900, letterSpacing: 1.0)),
                   const SizedBox(width: 6),
-                  IconButton(
-                    tooltip: 'Nghe âm Hán-Việt',
-                    padding: EdgeInsets.zero,
-                    constraints: const BoxConstraints(),
-                    icon: const Icon(Icons.volume_down_rounded, color: kOrange, size: 22),
-                    onPressed: () => TtsService.instance.speakVietnamese(character.hanVietReading),
+                  CharacterPronunciationControls(
+                    hanVietReading: character.hanVietReading,
+                    supplementaryLanguage: SupplementaryLanguage.none,
                   ),
                 ],
               ),
@@ -114,18 +106,12 @@ class CharacterDetailScreen extends StatelessWidget {
                                 children: [
                                   Text(readings, style: const TextStyle(fontSize: 20, color: kGreen, fontWeight: FontWeight.w900)),
                                   const SizedBox(width: 6),
-                                  IconButton(
-                                    tooltip: 'Nghe phát âm',
-                                    padding: EdgeInsets.zero,
-                                    constraints: const BoxConstraints(),
-                                    icon: const Icon(Icons.volume_up_rounded, color: kGreen, size: 20),
-                                    onPressed: () {
-                                      if (language == SupplementaryLanguage.mandarin) {
-                                        TtsService.instance.speakChinese(displayChar);
-                                      } else if (language == SupplementaryLanguage.japanese) {
-                                        TtsService.instance.speakJapanese(displayChar);
-                                      }
-                                    },
+                                  CharacterPronunciationControls(
+                                    hanVietReading: '',
+                                    showHanViet: false,
+                                    compact: true,
+                                    supplementaryLanguage: language,
+                                    cjkCharacter: record,
                                   ),
                                 ],
                               ),
