@@ -122,7 +122,7 @@ class CharacterDetailScreen extends StatelessWidget {
                 ),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute<void>(
-                    builder: (_) => WritingPracticeScreen(character: character, databaseService: databaseService, appState: appState),
+                    builder: (_) => WritingPracticeScreen(character: character),
                   ));
                 },
                 icon: const Icon(Icons.brush_rounded, size: 19),
@@ -214,7 +214,7 @@ class CharacterDetailScreen extends StatelessWidget {
             ),
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute<void>(
-                builder: (_) => WritingPracticeScreen(character: character, databaseService: databaseService, appState: appState),
+                builder: (_) => WritingPracticeScreen(character: character),
               ));
             },
             icon: const Icon(Icons.brush_rounded, size: 20),
