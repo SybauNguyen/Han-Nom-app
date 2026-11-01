@@ -101,7 +101,7 @@ class TtsService {
       // Cấu hình locale và tốc độ trong cùng một tác vụ tuần tự.
       await engine.stop();
       final languageResult = await engine.setLanguage(locale);
-      if (languageResult == false) {
+      if (languageResult == false || languageResult == 0) {
         debugPrint('TTS locale unavailable: $locale ($label).');
         return;
       }
