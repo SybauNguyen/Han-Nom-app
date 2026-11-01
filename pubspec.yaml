@@ -1,7 +1,7 @@
 name: han_viet_duo
 description: Ung dung hoc chu Han theo am Han-Viet, lay cam hung tu vong lap hoc tap cua Duolingo.
 publish_to: 'none'
-version: 2.6.3+20
+version: 2.7.1+21
 
 environment:
   sdk: '>=3.5.0 <4.0.0'
