@@ -26,7 +26,7 @@ class CharacterDetailScreen extends StatelessWidget {
             icon: const Icon(Icons.brush_rounded, color: kGreen),
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute<void>(
-                builder: (_) => WritingPracticeScreen(character: character, databaseService: databaseService),
+                builder: (_) => WritingPracticeScreen(character: character, databaseService: databaseService, appState: appState),
               ));
             },
           ),
@@ -136,7 +136,7 @@ class CharacterDetailScreen extends StatelessWidget {
                 ),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute<void>(
-                    builder: (_) => WritingPracticeScreen(character: character, databaseService: databaseService),
+                    builder: (_) => WritingPracticeScreen(character: character, databaseService: databaseService, appState: appState),
                   ));
                 },
                 icon: const Icon(Icons.brush_rounded, size: 19),
@@ -228,7 +228,7 @@ class CharacterDetailScreen extends StatelessWidget {
             ),
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute<void>(
-                builder: (_) => WritingPracticeScreen(character: character, databaseService: databaseService),
+                builder: (_) => WritingPracticeScreen(character: character, databaseService: databaseService, appState: appState),
               ));
             },
             icon: const Icon(Icons.brush_rounded, size: 20),
