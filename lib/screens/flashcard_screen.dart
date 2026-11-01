@@ -305,14 +305,15 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             child: Text(
-                card.character,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontSize: 108,
-                  height: 1.1,
-                  fontWeight: FontWeight.w500,
-                  color: kGreen,
-                  fontFamilyFallback: ['NomNaTong', 'HanNomB'],
+              card.character,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 108,
+                height: 1.1,
+                fontWeight: FontWeight.w500,
+                color: kGreen,
+                fontFamilyFallback: ['NomNaTong', 'HanNomB'],
+              ),
             ),
           ),
           const Spacer(),
