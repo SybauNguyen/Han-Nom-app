@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 2.7.2+22 — tinh gọn phát âm và sửa Tooltip
+
+- Chỉ giữ các nút nghe phiên âm chủ động trong Từ điển và Flashcard; bỏ nút loa khỏi bài học, màn chi tiết chữ và Luyện viết.
+- Chạm vào chữ Hán trong câu chỉ mở Tooltip xem âm/ nghĩa, không phát âm; Flashcard cũng không tự đọc khi chạm trực tiếp vào mặt chữ.
+- Tự phát âm Hán-Việt một lần khi màn giới thiệu một từ mới xuất hiện; bỏ đọc tự động sau khi trả lời đúng và trong Speed Challenge.
+- Sửa ký tự xuống dòng trong Tooltip để âm đọc, nghĩa và âm đọc bổ sung hiển thị thành các dòng riêng.
+
 ## Version 2.6.3+20 — đọc câu bằng âm Hán-Việt và chọn ngôn ngữ lần đầu
 
 - Đổi bài gõ câu Hán văn: người học nhập âm Hán-Việt theo thứ tự chữ, thay vì phải đoán một bản dịch tiếng Việt duy nhất.
