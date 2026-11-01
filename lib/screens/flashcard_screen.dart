@@ -9,6 +9,7 @@ import '../data/models/cjk_character.dart';
 import '../services/tts_service.dart';
 import '../state/app_state.dart';
 import '../widgets/type_badge.dart';
+import '../widgets/character_pronunciation_controls.dart';
 
 class FlashcardScreen extends StatefulWidget {
   final AppState appState;
@@ -294,23 +295,30 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               TypeBadge(type: card.type, compact: true),
-              IconButton(
-                icon: const Icon(Icons.volume_up_rounded, color: kGreen, size: 26),
-                tooltip: 'Nghe phát âm tiếng Trung',
-                onPressed: () => TtsService.instance.speakChinese(card.character),
+              CharacterPronunciationControls(
+                hanVietReading: card.hanVietReading,
+                supplementaryLanguage: widget.appState.supplementaryLanguage,
+                cjkCharacter: widget.appState.cjkCharacterFor(card.character),
               ),
             ],
           ),
           const Spacer(),
-          Text(
-            card.character,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 108,
-              height: 1.1,
-              fontWeight: FontWeight.w500,
-              color: kGreen,
-              fontFamilyFallback: ['NomNaTong', 'HanNomB'],
+          InkWell(
+            borderRadius: BorderRadius.circular(16),
+            onTap: () => TtsService.instance.speakVietnamese(card.hanVietReading),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              child: Text(
+                card.character,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 108,
+                  height: 1.1,
+                  fontWeight: FontWeight.w500,
+                  color: kGreen,
+                  fontFamilyFallback: ['NomNaTong', 'HanNomB'],
+                ),
+              ),
             ),
           ),
           const Spacer(),
@@ -358,20 +366,10 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
                   card.character,
                   style: const TextStyle(fontSize: 34, fontWeight: FontWeight.w800, color: kGreen, fontFamilyFallback: ['NomNaTong', 'HanNomB']),
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                      icon: const Icon(Icons.volume_down_rounded, color: kOrange, size: 22),
-                      tooltip: 'Nghe âm Hán-Việt',
-                      onPressed: () => TtsService.instance.speakVietnamese(card.hanVietReading),
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.volume_up_rounded, color: kGreen, size: 22),
-                      tooltip: 'Nghe tiếng Trung',
-                      onPressed: () => TtsService.instance.speakChinese(card.character),
-                    ),
-                  ],
+                CharacterPronunciationControls(
+                  hanVietReading: card.hanVietReading,
+                  supplementaryLanguage: widget.appState.supplementaryLanguage,
+                  cjkCharacter: widget.appState.cjkCharacterFor(card.character),
                 ),
               ],
             ),
