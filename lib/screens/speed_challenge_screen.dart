@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import '../core/theme/app_colors.dart';
 import '../data/han_character.dart';
 import '../data/han_seed_data.dart';
-import '../services/tts_service.dart';
 import '../state/app_state.dart';
 
 class SpeedChallengeScreen extends StatefulWidget {
@@ -85,7 +84,6 @@ class _SpeedChallengeScreenState extends State<SpeedChallengeScreen> {
       if (_combo > _maxCombo) _maxCombo = _combo;
 
       _score += 10 * _combo;
-      unawaited(TtsService.instance.speakVietnamese(_currentChar.hanVietReading));
       _nextQuestion();
     } else {
       _wrongCount++;
