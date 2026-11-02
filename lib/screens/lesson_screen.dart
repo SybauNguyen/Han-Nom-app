@@ -9,11 +9,13 @@ import '../data/question.dart';
 import '../services/ad_service.dart';
 import '../state/app_state.dart';
 import '../widgets/fill_in_the_blank_widget.dart';
+import '../widgets/hanzi_canvas.dart';
 import '../widgets/introduce_word_widget.dart';
 import '../widgets/matching_pairs_widget.dart';
 import '../widgets/stats_widgets.dart';
 import '../widgets/translate_sentence_widget.dart';
 import '../widgets/type_badge.dart';
+import 'writing_lesson_screen.dart';
 
 class LessonScreen extends StatefulWidget {
   final AppState appState;
@@ -60,11 +62,27 @@ class _LessonScreenState extends State<LessonScreen> {
   bool _isCorrect = false;
   bool _finishing = false;
   bool _outOfHeartsDialogOpen = false;
+  bool _jumpAheadFailureDialogOpen = false;
+  bool _writingStageOpened = false;
   bool _matchingMistakeCharged = false;
+  int _jumpAheadHearts = 5;
   final Set<String> _correctCharacters = {};
   final TextEditingController _typingController = TextEditingController();
 
   Question get _question => _questions[_questionIndex];
+
+  bool get _isWritingStage =>
+      _isActivePartLesson && (_lessonPart == 2 || _lessonPart == 4);
+
+  bool get _hasHeartsLeft =>
+      widget.isJumpAhead ? _jumpAheadHearts > 0 : widget.appState.hearts > 0;
+
+  List<HanCharacter> get _writingCharacters {
+    final splitAt = (_characters.length ~/ 2).clamp(1, _characters.length).toInt();
+    return _lessonPart == 2
+        ? _characters.take(splitAt).toList()
+        : _characters.skip(splitAt).toList();
+  }
 
   @override
   void initState() {
@@ -117,12 +135,49 @@ class _LessonScreenState extends State<LessonScreen> {
       _characters = seedCharacters.take(4).toList();
     }
 
-    final knownChars = _knownCharactersForQuestionGeneration();
-    _questions = generateLessonPartQuestions(
-      _characters,
-      knownCharacters: knownChars,
-      part: _isActivePartLesson ? _lessonPart : 3,
+    if (_isWritingStage) {
+      _questions = <Question>[];
+      WidgetsBinding.instance.addPostFrameCallback((_) => _openWritingStage());
+    } else {
+      final knownChars = _knownCharactersForQuestionGeneration();
+      final int questionPart;
+      if (!_isActivePartLesson || _lessonPart == 5) {
+        questionPart = 3;
+      } else if (_lessonPart == 3) {
+        questionPart = 2;
+      } else {
+        questionPart = 1;
+      }
+      _questions = generateLessonPartQuestions(
+        _characters,
+        knownCharacters: knownChars,
+        part: questionPart,
+        sectionLabel: _isActivePartLesson ? 'Phần $_lessonPart/5' : null,
+      );
+    }
+  }
+
+  Future<void> _openWritingStage() async {
+    if (!mounted || _writingStageOpened || !_isWritingStage) return;
+    _writingStageOpened = true;
+    final completed = await Navigator.of(context).push<bool>(
+      MaterialPageRoute<bool>(
+        builder: (_) => WritingLessonScreen(
+          appState: widget.appState,
+          characters: _writingCharacters,
+          trackType: widget.trackType,
+          trackLessonNumber: widget.trackLessonNumber,
+          level: WritingPracticeLevel.guided,
+        ),
+      ),
     );
+    if (!mounted) return;
+    if (completed == true) {
+      _correctCharacters.addAll(_writingCharacters.map((item) => item.character));
+      await _finishLesson();
+    } else {
+      Navigator.of(context).pop();
+    }
   }
 
   List<HanCharacter> _knownCharactersForQuestionGeneration() {
@@ -176,7 +231,7 @@ class _LessonScreenState extends State<LessonScreen> {
       .trim();
 
   Future<void> _checkAnswer() async {
-    if (_selectedOption == null || _selectedOption!.trim().isEmpty || _checked) return;
+    if (!_hasHeartsLeft || _selectedOption == null || _selectedOption!.trim().isEmpty || _checked) return;
 
     final typed = _normalizeAnswer(_selectedOption!);
     final accepted = _question.acceptedAnswers?.map(_normalizeAnswer).toList() ?? const <String>[];
@@ -206,12 +261,7 @@ class _LessonScreenState extends State<LessonScreen> {
     });
     FocusManager.instance.primaryFocus?.unfocus();
 
-    if (!correct) {
-      await widget.appState.recordWrongAnswer();
-      if (!mounted) return;
-      setState(() {});
-      if (widget.appState.hearts <= 0) await _showOutOfHeartsDialog();
-    }
+    if (!correct) await _registerWrongAnswer();
   }
 
   void _completeMatchingQuestion() {
@@ -225,12 +275,55 @@ class _LessonScreenState extends State<LessonScreen> {
   }
 
   Future<void> _registerMatchingMistake() async {
-    if (!mounted || _checked || _matchingMistakeCharged) return;
+    if (!mounted || _checked || _matchingMistakeCharged || !_hasHeartsLeft) return;
     _matchingMistakeCharged = true;
+    await _registerWrongAnswer();
+  }
+
+  Future<void> _registerWrongAnswer() async {
+    if (widget.isJumpAhead) {
+      if (_jumpAheadHearts <= 0) return;
+      setState(() => _jumpAheadHearts--);
+      if (_jumpAheadHearts == 0) await _showJumpAheadFailureDialog();
+      return;
+    }
+
     await widget.appState.recordWrongAnswer();
     if (!mounted) return;
     setState(() {});
     if (widget.appState.hearts <= 0) await _showOutOfHeartsDialog();
+  }
+
+  Future<void> _showJumpAheadFailureDialog() async {
+    if (!mounted || _jumpAheadFailureDialogOpen || _jumpAheadHearts > 0) return;
+    _jumpAheadFailureDialogOpen = true;
+    await showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (dialogContext) => PopScope(
+        canPop: false,
+        child: AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+          icon: const Icon(Icons.heart_broken_rounded, color: Color(0xFFE8B52B), size: 50),
+          title: const Text('Học vượt chưa thành công', textAlign: TextAlign.center),
+          content: const Text(
+            'Bạn đã sử dụng hết 5 tim vàng của lượt thi này. Hãy thử lại khi sẵn sàng nhé. Tim thường của bạn không bị trừ.',
+            textAlign: TextAlign.center,
+          ),
+          actionsAlignment: MainAxisAlignment.center,
+          actions: [
+            FilledButton(
+              onPressed: () {
+                Navigator.of(dialogContext).pop();
+                if (mounted) Navigator.of(context).pop();
+              },
+              child: const Text('Thoát bài thi'),
+            ),
+          ],
+        ),
+      ),
+    );
+    _jumpAheadFailureDialogOpen = false;
   }
 
   Future<void> _showOutOfHeartsDialog() async {
@@ -339,7 +432,7 @@ class _LessonScreenState extends State<LessonScreen> {
   }
 
   Future<void> _finishLesson() async {
-    if (_finishing) return;
+    if (_finishing || (widget.isJumpAhead && _jumpAheadHearts <= 0)) return;
     _finishing = true;
     await widget.appState.finishLesson(
       lessonIndex: widget.trackLessonNumber != null || widget.reviewMode || widget.isJumpAhead
@@ -354,6 +447,7 @@ class _LessonScreenState extends State<LessonScreen> {
       lessonPart: _isActivePartLesson ? _lessonPart : null,
       unlockTargetLessonNumber: widget.isJumpAhead ? widget.targetIndex : null,
       reviewCheckpointNumber: widget.checkpointIndex,
+      awardHeart: !widget.isJumpAhead,
     );
     if (!mounted) return;
     showDialog<void>(
@@ -366,7 +460,7 @@ class _LessonScreenState extends State<LessonScreen> {
           widget.isJumpAhead ? 'Nhảy cóc thành công! 🚀'
               : widget.checkpointIndex != null ? 'Tổng Ôn tập hoàn thành! 🏆'
               : widget.reviewMode ? 'Ôn tập hoàn tất!'
-              : _isActivePartLesson ? 'Hoàn thành Phần $_lessonPart/3! 🎉'
+              : _isActivePartLesson ? 'Hoàn thành Phần $_lessonPart/5! 🎉'
               : 'Hoàn thành bài học!',
         ),
         content: Column(mainAxisSize: MainAxisSize.min, children: [
@@ -378,11 +472,11 @@ class _LessonScreenState extends State<LessonScreen> {
                 : widget.checkpointIndex != null
                     ? 'Bạn đã hoàn thành Tổng Ôn tập ${widget.checkpointIndex} và mở cụm bài tiếp theo!\n+20 XP     +5 đá quý'
                     : _isActivePartLesson
-                        ? (_lessonPart < 3
-                            ? 'Phần ${_lessonPart + 1}/3 đã được mở khóa. Quay về lộ trình để tiếp tục bài học.\n+15 XP     +5 đá quý'
+                        ? (_lessonPart < 5
+                            ? 'Phần ${_lessonPart + 1}/5 đã được mở khóa. Quay về lộ trình để tiếp tục bài học.\n+15 XP     +5 đá quý'
                             : ((widget.trackLessonNumber ?? 0) % hanLessonsPerCycle == 0
-                                ? 'Bạn đã hoàn tất đủ 3 phần! Tổng Ôn tập đã mở khóa.\n+15 XP     +5 đá quý'
-                                : 'Bạn đã hoàn tất đủ 3 phần và mở khóa bài tiếp theo!\n+15 XP     +5 đá quý'))
+                                ? 'Bạn đã hoàn tất đủ 5 phần! Tổng Ôn tập đã mở khóa.\n+15 XP     +5 đá quý'
+                                : 'Bạn đã hoàn tất đủ 5 phần và mở khóa bài tiếp theo!\n+15 XP     +5 đá quý'))
                         : '+20 XP     +5 đá quý',
             textAlign: TextAlign.center,
             style: const TextStyle(color: kGreen, fontWeight: FontWeight.w900, fontSize: 16),
@@ -409,6 +503,28 @@ class _LessonScreenState extends State<LessonScreen> {
 
   @override
   Widget build(BuildContext context) {
+    if (_isWritingStage) {
+      return Scaffold(
+        backgroundColor: kPaper,
+        appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(Icons.close_rounded),
+            onPressed: () => Navigator.of(context).maybePop(),
+          ),
+          title: const Text('Đang mở phần luyện viết'),
+        ),
+        body: const Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CircularProgressIndicator(),
+              SizedBox(height: 16),
+              Text('Chuẩn bị khu vực luyện viết chữ Hán…'),
+            ],
+          ),
+        ),
+      );
+    }
     if (_questions.isEmpty) {
       return Scaffold(
         backgroundColor: kPaper,
@@ -429,14 +545,44 @@ class _LessonScreenState extends State<LessonScreen> {
     final character = findCharacter(question.character);
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(icon: const Icon(Icons.close_rounded), onPressed: () => Navigator.of(context).maybePop()),
+        leadingWidth: widget.isJumpAhead ? 178 : null,
+        leading: widget.isJumpAhead
+            ? Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.close_rounded),
+                    onPressed: () => Navigator.of(context).maybePop(),
+                    padding: EdgeInsets.zero,
+                    constraints: const BoxConstraints.tightFor(width: 42),
+                  ),
+                  ...List.generate(
+                    5,
+                    (index) => Icon(
+                      Icons.favorite_rounded,
+                      size: 20,
+                      color: index < _jumpAheadHearts
+                          ? const Color(0xFFFFC62E)
+                          : const Color(0xFFD9D9D9),
+                    ),
+                  ),
+                ],
+              )
+            : IconButton(
+                icon: const Icon(Icons.close_rounded),
+                onPressed: () => Navigator.of(context).maybePop(),
+              ),
         title: ClipRRect(
           borderRadius: BorderRadius.circular(20),
           child: LinearProgressIndicator(value: (_questionIndex + 1) / _questions.length, minHeight: 9, backgroundColor: const Color(0xFFE0E7DF), color: kGreen),
         ),
-        actions: [
-          Padding(padding: const EdgeInsets.only(right: 15), child: HeartAppBarStatus(appState: widget.appState)),
-        ],
+        actions: widget.isJumpAhead
+            ? const []
+            : [
+                Padding(
+                  padding: const EdgeInsets.only(right: 15),
+                  child: HeartAppBarStatus(appState: widget.appState),
+                ),
+              ],
       ),
       body: SafeArea(
         child: Column(
@@ -453,7 +599,7 @@ class _LessonScreenState extends State<LessonScreen> {
                             : widget.reviewMode
                                 ? 'ÔN TẬP CÁ NHÂN'
                                 : widget.trackLessonNumber != null
-                                    ? '${widget.trackType == 'Nôm' ? 'CHỮ NÔM' : 'HÁN TỰ'} · BÀI ${widget.trackLessonNumber}${_isActivePartLesson ? ' · PHẦN $_lessonPart/3' : ''}'
+                                    ? '${widget.trackType == 'Nôm' ? 'CHỮ NÔM' : 'HÁN TỰ'} · BÀI ${widget.trackLessonNumber}${_isActivePartLesson ? ' · PHẦN $_lessonPart/5' : ''}'
                                     : 'BÀI ${(widget.lessonIndex ?? 0) + 1}',
                     style: const TextStyle(color: kGreen, letterSpacing: 1.2, fontWeight: FontWeight.w900, fontSize: 12),
                     textAlign: TextAlign.center,
@@ -475,7 +621,7 @@ class _LessonScreenState extends State<LessonScreen> {
                       key: ValueKey('introduce-word-$_questionIndex'),
                       question: question,
                       selectedAnswer: _selectedOption,
-                      enabled: !_checked && widget.appState.hearts > 0,
+                      enabled: !_checked && _hasHeartsLeft,
                       supplementaryLanguage: widget.appState.supplementaryLanguage,
                       cjkCharacters: widget.appState.cjkCharacters,
                       onSelected: (answer) {
@@ -490,13 +636,13 @@ class _LessonScreenState extends State<LessonScreen> {
                       correctAnswer: question.correctAnswer,
                       checked: _checked,
                       isCorrect: _isCorrect,
-                      onSelected: (answer) => setState(() => _selectedOption = answer),
+                      onSelected: (answer) { if (_hasHeartsLeft) setState(() => _selectedOption = answer); },
                     )
                   else if (question.type == QuestionType.matchingPairs)
                     MatchingPairsWidget(
                       key: ValueKey('matching-question-$_questionIndex'),
                       pairs: question.matchingPairs ?? const <String, String>{},
-                      enabled: !_checked && widget.appState.hearts > 0,
+                      enabled: !_checked && _hasHeartsLeft,
                       onComplete: _completeMatchingQuestion,
                       onMistake: _registerMatchingMistake,
                     )
@@ -506,9 +652,9 @@ class _LessonScreenState extends State<LessonScreen> {
                       key: ValueKey('translate-question-$_questionIndex'),
                       question: question,
                       reverseDirection: question.type == QuestionType.translateHanVietToCharacter,
-                      enabled: !_checked,
+                      enabled: !_checked && _hasHeartsLeft,
                       onAnswerChanged: (answer) {
-                        if (!_checked) setState(() => _selectedOption = answer);
+                        if (!_checked && _hasHeartsLeft) setState(() => _selectedOption = answer);
                       },
                     )
                   else
@@ -567,7 +713,7 @@ class _LessonScreenState extends State<LessonScreen> {
                       question.type == QuestionType.typingSentenceReading) ...[
                     TextField(
                       controller: _typingController,
-                      enabled: !_checked,
+                      enabled: !_checked && _hasHeartsLeft,
                       autofocus: false,
                       textAlign: TextAlign.center,
                       textInputAction: TextInputAction.done,
@@ -607,7 +753,7 @@ class _LessonScreenState extends State<LessonScreen> {
                         selected: _selectedOption == question.options[index],
                         checked: _checked,
                         correct: question.options[index] == question.correctAnswer,
-                        onTap: _checked ? null : () => setState(() => _selectedOption = question.options[index]),
+                        onTap: _checked || !_hasHeartsLeft ? null : () => setState(() => _selectedOption = question.options[index]),
                       ),
                   ],
                 ],
