@@ -1158,6 +1158,7 @@ List<Question> generateLessonPartQuestions(
   required int part,
   Iterable<HanCharacter>? knownCharacters,
   Random? random,
+  String? sectionLabel,
   int translationPhraseLimit = 1,
   int sentenceTypingLimit = 0,
 }) {
@@ -1175,7 +1176,7 @@ List<Question> generateLessonPartQuestions(
           : allLessonCharacters.toList();
   final effectiveTargets = targetCharacters.isEmpty ? allLessonCharacters : targetCharacters;
   final questions = <Question>[];
-  final partName = 'Phần $part/3';
+  final partName = sectionLabel ?? 'Phần $part/3';
   const fallback = <String>['một', 'hai', 'ba', 'người', 'trời', 'đất', 'nước', 'núi', 'cây', 'lửa'];
 
   List<String> optionsFor(String answer, Iterable<String> candidates) {
