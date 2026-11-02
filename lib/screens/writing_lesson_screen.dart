@@ -14,8 +14,6 @@ class WritingLessonScreen extends StatefulWidget {
   final String trackType;
   final int? trackLessonNumber;
   final WritingPracticeLevel level;
-  final int? lessonPart;
-  final int? reviewCheckpointNumber;
   final bool reviewMode;
 
   const WritingLessonScreen({
@@ -25,8 +23,6 @@ class WritingLessonScreen extends StatefulWidget {
     required this.trackType,
     this.trackLessonNumber,
     this.level = WritingPracticeLevel.guided,
-    this.lessonPart,
-    this.reviewCheckpointNumber,
     this.reviewMode = false,
   });
 
@@ -39,7 +35,6 @@ class _WritingLessonScreenState extends State<WritingLessonScreen> {
   int _index = 0;
   int _completedCharacters = 0;
   int _retryCount = 0;
-  bool _finishing = false;
   String? _feedback;
   bool _lastCorrect = false;
 
@@ -61,7 +56,7 @@ class _WritingLessonScreenState extends State<WritingLessonScreen> {
         _lastCorrect = false;
       });
     } else {
-      await _finishWritingLesson();
+      Navigator.of(context).pop(true);
     }
   }
 
@@ -72,45 +67,6 @@ class _WritingLessonScreenState extends State<WritingLessonScreen> {
       _feedback = result.feedback;
       if (!result.correct) _retryCount++;
     });
-  }
-
-  Future<void> _finishWritingLesson() async {
-    if (_finishing) return;
-    _finishing = true;
-    final mastered = widget.characters.map((character) => character.character).toSet();
-    await widget.appState.finishLesson(
-      lessonIndex: null,
-      trackType: widget.trackType,
-      trackLessonNumber: widget.reviewMode ? null : widget.trackLessonNumber,
-      masteredCharacters: mastered,
-      xpReward: widget.reviewMode ? 20 : 15,
-      lessonPart: widget.reviewMode ? null : widget.lessonPart,
-      reviewCheckpointNumber: widget.reviewCheckpointNumber,
-    );
-    if (!mounted) return;
-    await showDialog<void>(
-      context: context,
-      barrierDismissible: false,
-      builder: (dialogContext) => AlertDialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-        icon: const Icon(Icons.auto_awesome_rounded, color: _orange, size: 50),
-        title: Text(widget.reviewMode ? 'Review viết hoàn thành! ✍️' : 'Phần luyện viết hoàn thành! 🎉'),
-        content: Text(
-          'Bạn đã viết đúng thứ tự từng nét của $_completedCharacters/${widget.characters.length} chữ.'
-          '\n\nViết lại: $_retryCount lần\n+${widget.reviewMode ? 20 : 15} XP     +5 đá quý',
-          textAlign: TextAlign.center,
-        ),
-        actions: [
-          FilledButton(
-            onPressed: () {
-              Navigator.of(dialogContext).pop();
-              Navigator.of(context).pop();
-            },
-            child: const Text('Về bài học'),
-          ),
-        ],
-      ),
-    );
   }
 
   @override
