@@ -126,6 +126,7 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
     final result = HanziStrokeService.instance.evaluate(
       userPoints: userPoints,
       expectedPoints: expected,
+      canvasSize: widget.size,
       tolerance: widget.level == WritingPracticeLevel.review ? 0.24 : 0.28,
     );
 
@@ -145,12 +146,7 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
     return Container(
       width: widget.size,
       height: widget.size,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(22),
-        border: Border.all(color: const Color(0xFFC7D8C6), width: 2),
-        boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 10, offset: Offset(0, 4))],
-      ),
+      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(22), border: Border.all(color: const Color(0xFFC7D8C6), width: 2), boxShadow: const [BoxShadow(color: Colors.black12, blurRadius: 10, offset: Offset(0, 4))]),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
         child: Stack(
@@ -158,18 +154,9 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
           children: [
             CustomPaint(size: Size(widget.size, widget.size), painter: _CalligraphyGridPainter()),
             if (_templateOpacity > 0 && !_isDemonstrating)
-              IgnorePointer(child: Opacity(
-                opacity: _templateOpacity,
-                child: Text(widget.character, textAlign: TextAlign.center, style: TextStyle(
-                  fontSize: widget.size * 0.72, height: 1.15, fontWeight: FontWeight.w400,
-                  color: const Color(0xFF28664F), fontFamilyFallback: const ['NomNaTong', 'HanNomB'],
-                )),
-              )),
+              IgnorePointer(child: Opacity(opacity: _templateOpacity, child: Text(widget.character, textAlign: TextAlign.center, style: TextStyle(fontSize: widget.size * 0.72, height: 1.15, fontWeight: FontWeight.w400, color: const Color(0xFF28664F), fontFamilyFallback: const ['NomNaTong', 'HanNomB'])))),
             if (_isDemonstrating)
-              IgnorePointer(child: CustomPaint(
-                size: Size(widget.size, widget.size),
-                painter: _StrokeDemoPainter(progress: _animController.value, character: widget.character, size: widget.size),
-              )),
+              IgnorePointer(child: CustomPaint(size: Size(widget.size, widget.size), painter: _StrokeDemoPainter(progress: _animController.value, character: widget.character, size: widget.size))),
             GestureDetector(
               onPanStart: (details) {
                 if (_isDemonstrating) stopStrokeAnimation();
@@ -182,29 +169,13 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
               child: CustomPaint(size: Size(widget.size, widget.size), painter: _InkPainter(strokes: _strokes)),
             ),
             if (_loadingStrokeData)
-              const DecoratedBox(
-                decoration: BoxDecoration(color: Color(0xCCFFFFFF)),
-                child: Padding(padding: EdgeInsets.all(12), child: SizedBox(width: 24, height: 24, child: CircularProgressIndicator(strokeWidth: 2.5))),
-              ),
+              const DecoratedBox(decoration: BoxDecoration(color: Color(0xCCFFFFFF)), child: Padding(padding: EdgeInsets.all(12), child: SizedBox(width: 24, height: 24, child: CircularProgressIndicator(strokeWidth: 2.5)))),
             if (_strokeDataUnavailable)
-              Positioned(left: 18, right: 18, bottom: 14, child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                decoration: BoxDecoration(color: const Color(0xFFFFF1D7), borderRadius: BorderRadius.circular(12)),
-                child: const Text('Chưa có dữ liệu nét cho chữ này. Hãy thử lại khi có mạng.', textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 11, color: Color(0xFF9A5A20), fontWeight: FontWeight.w700)),
-              )),
+              Positioned(left: 18, right: 18, bottom: 14, child: Container(padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8), decoration: BoxDecoration(color: const Color(0xFFFFF1D7), borderRadius: BorderRadius.circular(12)), child: const Text('Chưa có dữ liệu nét cho chữ này. Hãy thử lại khi có mạng.', textAlign: TextAlign.center, style: TextStyle(fontSize: 11, color: Color(0xFF9A5A20), fontWeight: FontWeight.w700)))),
             if (!_loadingStrokeData && !_strokeDataUnavailable && !isComplete)
-              Positioned(top: 10, child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                decoration: BoxDecoration(color: const Color(0xFFEAF4ED), borderRadius: BorderRadius.circular(12)),
-                child: Text('Nét $currentStrokeNumber/$totalStrokeCount', style: const TextStyle(fontSize: 11, color: Color(0xFF28664F), fontWeight: FontWeight.w900)),
-              )),
+              Positioned(top: 10, child: Container(padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5), decoration: BoxDecoration(color: const Color(0xFFEAF4ED), borderRadius: BorderRadius.circular(12)), child: Text('Nét $currentStrokeNumber/$totalStrokeCount', style: const TextStyle(fontSize: 11, color: Color(0xFF28664F), fontWeight: FontWeight.w900)))),
             if (isComplete)
-              Positioned(bottom: 12, child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-                decoration: BoxDecoration(color: const Color(0xFF28664F), borderRadius: BorderRadius.circular(14)),
-                child: const Text('✓ Hoàn thành chữ', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 12)),
-              )),
+              Positioned(bottom: 12, child: Container(padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6), decoration: BoxDecoration(color: const Color(0xFF28664F), borderRadius: BorderRadius.circular(14)), child: const Text('✓ Hoàn thành chữ', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 12)))),
           ],
         ),
       ),
@@ -272,18 +243,12 @@ class _StrokeDemoPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final textPainter = TextPainter(
-      text: TextSpan(text: character, style: TextStyle(fontSize: this.size * 0.72, height: 1.15, fontWeight: FontWeight.w400, color: const Color(0xFF28664F).withOpacity(0.2), fontFamilyFallback: const ['NomNaTong', 'HanNomB'])),
-      textDirection: TextDirection.ltr,
-    )..layout();
+    final textPainter = TextPainter(text: TextSpan(text: character, style: TextStyle(fontSize: this.size * 0.72, height: 1.15, fontWeight: FontWeight.w400, color: const Color(0xFF28664F).withOpacity(0.2), fontFamilyFallback: const ['NomNaTong', 'HanNomB'])), textDirection: TextDirection.ltr)..layout();
     final offset = Offset((size.width - textPainter.width) / 2, (size.height - textPainter.height) / 2);
     textPainter.paint(canvas, offset);
     canvas.save();
     canvas.clipRect(Rect.fromLTWH(0, 0, size.width, size.height * progress));
-    final solid = TextPainter(
-      text: TextSpan(text: character, style: TextStyle(fontSize: this.size * 0.72, height: 1.15, fontWeight: FontWeight.w500, color: const Color(0xFFCC6B3D), fontFamilyFallback: const ['NomNaTong', 'HanNomB'])),
-      textDirection: TextDirection.ltr,
-    )..layout();
+    final solid = TextPainter(text: TextSpan(text: character, style: TextStyle(fontSize: this.size * 0.72, height: 1.15, fontWeight: FontWeight.w500, color: const Color(0xFFCC6B3D), fontFamilyFallback: const ['NomNaTong', 'HanNomB'])), textDirection: TextDirection.ltr)..layout();
     solid.paint(canvas, offset);
     canvas.restore();
     final brushPos = Offset(size.width / 2 + sin(progress * pi * 4) * 35, offset.dy + solid.height * progress);
