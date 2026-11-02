@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/han_character.dart';
+import '../services/hanzi_stroke_service.dart';
 import '../state/app_state.dart';
 import '../widgets/hanzi_canvas.dart';
 
@@ -64,11 +65,11 @@ class _WritingLessonScreenState extends State<WritingLessonScreen> {
     }
   }
 
-  void _onEvaluation(dynamic result) {
+  void _onEvaluation(StrokeEvaluation result) {
     if (!mounted) return;
     setState(() {
-      _lastCorrect = result.correct == true;
-      _feedback = result.feedback as String;
+      _lastCorrect = result.correct;
+      _feedback = result.feedback;
       if (!result.correct) _retryCount++;
     });
   }
@@ -150,7 +151,7 @@ class _WritingLessonScreenState extends State<WritingLessonScreen> {
               ),
               const SizedBox(height: 14),
               HanziCanvas(
-                key: ValueKey('writing-canvas-${char.character}'),
+                key: _canvasKey,
                 character: char.character,
                 size: canvasSize,
                 level: widget.level,
