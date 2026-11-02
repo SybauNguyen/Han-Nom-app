@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 2.9.0+24 — bài học 5 chặng và tim riêng cho Học vượt
+
+- Mỗi bài Hán có 5 chặng: học 5 chữ đầu, luyện viết 5 chữ, học 5 chữ tiếp theo, luyện viết 5 chữ và ôn tập toàn bộ 10 chữ.
+- Mỗi phần luyện viết có hai lượt: viết theo mẫu trước, sau đó viết lại 5 chữ theo thứ tự ngẫu nhiên với gợi ý bị ẩn; mẫu mờ chỉ xuất hiện sau 3 lần viết sai.
+- Tiến độ lộ trình chuyển sang 5/5 chặng; bài đã hoàn thành được giữ nguyên, người đang học dở chuyển đến chặng luyện viết đầu tiên trong format mới.
+- Học vượt dùng 5 tim vàng riêng cho mỗi lượt thi. Mỗi câu sai mất 1 tim; hết tim thì thi thất bại. Tim vàng không hồi, không mua, không nhận từ quảng cáo và không ảnh hưởng tim thường.
+
+
 ## Version 2.7.2+22 — tinh gọn phát âm và sửa Tooltip
 
 - Chỉ giữ các nút nghe phiên âm chủ động trong Từ điển và Flashcard; bỏ nút loa khỏi bài học, màn chi tiết chữ và Luyện viết.
