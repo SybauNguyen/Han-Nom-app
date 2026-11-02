@@ -14,10 +14,7 @@ class HanziStrokeData {
   final String character;
   final List<List<StrokePoint>> medians;
 
-  const HanziStrokeData({
-    required this.character,
-    required this.medians,
-  });
+  const HanziStrokeData({required this.character, required this.medians});
 
   int get strokeCount => medians.length;
 }
@@ -27,11 +24,7 @@ class StrokeEvaluation {
   final double score;
   final String feedback;
 
-  const StrokeEvaluation({
-    required this.correct,
-    required this.score,
-    required this.feedback,
-  });
+  const StrokeEvaluation({required this.correct, required this.score, required this.feedback});
 }
 
 class HanziStrokeService {
@@ -43,7 +36,6 @@ class HanziStrokeService {
 
   Future<HanziStrokeData?> load(String character) async {
     if (_cache.containsKey(character)) return _cache[character];
-
     try {
       final uri = Uri.parse('$_baseUrl/${Uri.encodeComponent(character)}.json');
       final response = await http.get(uri).timeout(const Duration(seconds: 8));
@@ -57,21 +49,16 @@ class HanziStrokeService {
         _cache[character] = null;
         return null;
       }
-
       final medians = <List<StrokePoint>>[];
       for (final rawStroke in rawMedians) {
         if (rawStroke is! List) continue;
         final points = <StrokePoint>[];
         for (final rawPoint in rawStroke) {
           if (rawPoint is! List || rawPoint.length < 2) continue;
-          points.add(StrokePoint(
-            (rawPoint[0] as num).toDouble(),
-            (rawPoint[1] as num).toDouble(),
-          ));
+          points.add(StrokePoint((rawPoint[0] as num).toDouble(), (rawPoint[1] as num).toDouble()));
         }
         if (points.length >= 2) medians.add(points);
       }
-
       final data = medians.isEmpty ? null : HanziStrokeData(character: character, medians: medians);
       _cache[character] = data;
       return data;
@@ -84,14 +71,15 @@ class HanziStrokeService {
   StrokeEvaluation evaluate({
     required List<StrokePoint> userPoints,
     required List<StrokePoint> expectedPoints,
+    required double canvasSize,
     double tolerance = 0.28,
   }) {
     if (userPoints.length < 2 || expectedPoints.length < 2) {
       return const StrokeEvaluation(correct: false, score: 0, feedback: 'Hãy viết đủ một nét rồi thả tay.');
     }
 
-    final user = _normalize(userPoints);
-    final expected = _normalize(expectedPoints);
+    final user = _toCanvasUnit(userPoints, canvasSize);
+    final expected = _toCanvasUnit(expectedPoints, canvasSize);
     final startDistance = _distance(user.first, expected.first);
     final endDistance = _distance(user.last, expected.last);
     final directionError = _directionError(user, expected);
@@ -99,16 +87,8 @@ class HanziStrokeService {
     final lengthRatio = _pathLength(user) / math.max(_pathLength(expected), 0.0001);
     final lengthError = math.log(lengthRatio).abs();
 
-    final score = (1 - (
-      startDistance * 0.24 +
-      endDistance * 0.20 +
-      directionError * 0.18 +
-      shapeError * 0.30 +
-      math.min(lengthError, 1.0) * 0.08
-    )).clamp(0.0, 1.0);
-
-    final correct =
-        startDistance <= tolerance &&
+    final score = (1 - (startDistance * 0.24 + endDistance * 0.20 + directionError * 0.18 + shapeError * 0.30 + math.min(lengthError, 1.0) * 0.08)).clamp(0.0, 1.0);
+    final correct = startDistance <= tolerance &&
         endDistance <= tolerance * 1.25 &&
         directionError <= 0.42 &&
         shapeError <= tolerance * 0.95 &&
@@ -130,22 +110,13 @@ class HanziStrokeService {
     return StrokeEvaluation(correct: correct, score: score, feedback: feedback);
   }
 
-  List<StrokePoint> medianFor(HanziStrokeData data, int index, double canvasSize) {
-    return data.medians[index]
-        .map((point) => StrokePoint(point.x / 1024 * canvasSize, point.y / 1024 * canvasSize))
-        .toList(growable: false);
-  }
+  List<StrokePoint> medianFor(HanziStrokeData data, int index, double canvasSize) => data.medians[index]
+      .map((point) => StrokePoint(point.x / 1024 * canvasSize, point.y / 1024 * canvasSize))
+      .toList(growable: false);
 
-  List<StrokePoint> _normalize(List<StrokePoint> points) {
-    final minX = points.map((p) => p.x).reduce(math.min);
-    final maxX = points.map((p) => p.x).reduce(math.max);
-    final minY = points.map((p) => p.y).reduce(math.min);
-    final maxY = points.map((p) => p.y).reduce(math.max);
-    final scale = math.max(maxX - minX, maxY - minY).clamp(1.0, double.infinity);
-    return points
-        .map((p) => StrokePoint((p.x - minX) / scale, (p.y - minY) / scale))
-        .toList(growable: false);
-  }
+  List<StrokePoint> _toCanvasUnit(List<StrokePoint> points, double canvasSize) => points
+      .map((p) => StrokePoint(p.x / canvasSize, p.y / canvasSize))
+      .toList(growable: false);
 
   double _directionError(List<StrokePoint> a, List<StrokePoint> b) {
     final aDx = a.last.x - a.first.x;
@@ -188,7 +159,5 @@ class HanziStrokeService {
     return total;
   }
 
-  double _distance(StrokePoint a, StrokePoint b) => math.sqrt(
-        math.pow(a.x - b.x, 2) + math.pow(a.y - b.y, 2),
-      );
+  double _distance(StrokePoint a, StrokePoint b) => math.sqrt(math.pow(a.x - b.x, 2) + math.pow(a.y - b.y, 2));
 }
