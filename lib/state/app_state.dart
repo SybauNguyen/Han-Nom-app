@@ -58,7 +58,7 @@ class AppState extends ChangeNotifier {
   /// Tiến độ hai luồng độc lập. Bài ôn tập không tăng số bài học mới.
   int hanLessonsCompleted = 0;
   int speedChallengeHighScore = 0;
-  /// Phần tiếp theo của bài Hán đang học (1–3). Chỉ chuyển sang bài mới sau phần 3.
+  /// Chặng tiếp theo của bài Hán đang học (1–5). Chỉ chuyển sang bài mới sau chặng 5.
   int currentLessonPart = 1;
   int nomLessonsCompleted = 0;
   int completedHanReviewCheckpoints = 0;
@@ -171,7 +171,13 @@ class AppState extends ChangeNotifier {
       hearts = (prefs.getInt('hearts') ?? 5).clamp(0, maxHearts).toInt();
       lastHeartRegenTime = DateTime.tryParse(prefs.getString('lastHeartRegenTime') ?? '')?.toLocal();
 
-      currentLessonPart = (prefs.getInt('currentLessonPart') ?? 1).clamp(1, 3).toInt();
+      final savedLessonPart = prefs.getInt('currentLessonPart') ?? 1;
+      final fiveStageFormatEnabled = prefs.getBool('fiveStageLessonFormatV1') ?? false;
+      // Learners with an unfinished old-format lesson resume at the first
+      // new writing stage; completed lesson progress is preserved.
+      currentLessonPart = fiveStageFormatEnabled
+          ? savedLessonPart.clamp(1, 5).toInt()
+          : (savedLessonPart <= 1 ? 1 : 2);
       hasSeenSupplementaryLanguagePrompt = prefs.getBool('supplementaryLanguagePromptSeen') ?? false;
       final savedSupplementaryLanguage = prefs.getString('supplementaryLanguage');
       supplementaryLanguage = SupplementaryLanguage.values.firstWhere(
@@ -440,8 +446,9 @@ class AppState extends ChangeNotifier {
     DateTime? completedAt,
     int? reviewCheckpointNumber,
     int? lessonPart,
+    bool awardHeart = true,
   }) async {
-    if (lessonPart != null && (lessonPart < 1 || lessonPart > 3)) return;
+    if (lessonPart != null && (lessonPart < 1 || lessonPart > 5)) return;
     var normalizedType = trackType;
     var normalizedLessonNumber = trackLessonNumber;
 
@@ -473,12 +480,12 @@ class AppState extends ChangeNotifier {
     if (normalizedType == 'Nôm' && normalizedLessonNumber != null &&
         completedHanReviewCheckpoints < normalizedLessonNumber) return;
 
-    await refreshHeartRegeneration();
+    // Learn Ahead has a separate heart pool; do not touch normal hearts there.
+    if (awardHeart) await refreshHeartRegeneration();
     xp += xpReward;
     gems += 5;
-    // Chỉ thưởng tim khi hoàn tất một Node đầy đủ, không phải sau từng phần 1/3.
-    if ((lessonPart == null || lessonPart >= 3) && hearts < maxHearts) hearts++;
-    _normalizeHeartRegenAnchor();
+    if (awardHeart && (lessonPart == null || lessonPart >= 5) && hearts < maxHearts) hearts++;
+    if (awardHeart) _normalizeHeartRegenAnchor();
 
     for (final character in masteredCharacters) {
       mastery[character] = ((mastery[character] ?? 0) + 1).clamp(0, 5).toInt();
@@ -496,8 +503,8 @@ class AppState extends ChangeNotifier {
       } else if (lessonPart != null && normalizedLessonNumber == hanLessonsCompleted + 1) {
         // Bỏ qua callback phần cũ nếu tiến độ đã thay đổi ở màn hình khác.
         if (lessonPart == currentLessonPart) {
-          // Hoàn thành phần 1/2 chỉ lưu phần kế tiếp; phần 3 mới hoàn tất Node.
-          if (lessonPart < 3) {
+          // Stages 1–4 open the next stage; stage 5 completes the lesson Node.
+          if (lessonPart < 5) {
             currentLessonPart = lessonPart + 1;
           } else {
             hanLessonsCompleted = normalizedLessonNumber;
@@ -549,7 +556,8 @@ class AppState extends ChangeNotifier {
       await prefs.setInt('completedLessons', completedLessons);
       await prefs.setInt('completedReviewCheckpoints', completedHanReviewCheckpoints);
       await prefs.setInt('hanLessonsCompleted', hanLessonsCompleted);
-      await prefs.setInt('currentLessonPart', currentLessonPart.clamp(1, 3).toInt());
+      await prefs.setInt('currentLessonPart', currentLessonPart.clamp(1, 5).toInt());
+      await prefs.setBool('fiveStageLessonFormatV1', true);
       await prefs.setString('supplementaryLanguage', supplementaryLanguage.name);
       await prefs.setBool('supplementaryLanguagePromptSeen', hasSeenSupplementaryLanguagePrompt);
       await prefs.setInt('nomLessonsCompleted', nomLessonsCompleted);
