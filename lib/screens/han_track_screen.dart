@@ -312,7 +312,8 @@ void _showJumpAheadDialog(BuildContext context, AppState appState, {required int
       title: const Text('Học vượt? 🚀', textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.w900)),
       content: Text(
         'Thử sức với 10 chữ Hán ngẫu nhiên lấy từ các bài đứng trước Bài $targetLessonNumber.\n\n'
-        'Bài thi trộn nhận diện chữ, gõ âm Hán-Việt, dịch hai chiều và nhiều câu Hán văn phải tự gõ nghĩa tiếng Việt — không có lựa chọn trắc nghiệm cho phần dịch câu. Hoàn thành để mở khóa Bài Hán $targetLessonNumber và nhận 50 XP.',
+        'Bài thi trộn nhận diện chữ, gõ âm Hán-Việt, dịch hai chiều và nhiều câu Hán văn phải tự gõ nghĩa tiếng Việt — không có lựa chọn trắc nghiệm cho phần dịch câu. Hoàn thành để mở khóa Bài Hán $targetLessonNumber và nhận 50 XP.\n\n'
+        'Bạn có 5 tim vàng riêng cho lượt thi; mỗi câu sai mất 1 tim. Hết tim, học vượt thất bại. Tim thường không bị ảnh hưởng.',
         textAlign: TextAlign.center,
       ),
       actionsAlignment: MainAxisAlignment.center,
@@ -377,7 +378,7 @@ class LessonUnitTile extends StatelessWidget {
                         width: 60,
                         height: 60,
                         child: CircularProgressIndicator(
-                          value: isCompleted ? 1.0 : ((currentPart - 1) / 3).clamp(0.0, 1.0).toDouble(),
+                          value: isCompleted ? 1.0 : ((currentPart - 1) / 5).clamp(0.0, 1.0).toDouble(),
                           strokeWidth: 3.5,
                           backgroundColor: const Color(0xFFE4E9E3),
                           valueColor: AlwaysStoppedAnimation<Color>(isCompleted ? kGreen : kOrange),
@@ -410,14 +411,14 @@ class LessonUnitTile extends StatelessWidget {
                   if (isCurrent || isCompleted) ...[
                     const SizedBox(height: 5),
                     Text(
-                      isCompleted ? 'Đã hoàn thành · 3/3 phần' : 'ĐANG HỌC · PHẦN $currentPart/3',
+                      isCompleted ? 'Đã hoàn thành · 5/5 phần' : 'ĐANG HỌC · PHẦN $currentPart/5',
                       style: TextStyle(fontSize: 10, letterSpacing: 0.5, fontWeight: FontWeight.w900, color: isCompleted ? kGreen : kOrange),
                     ),
                   ],
                   const SizedBox(height: 9),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20),
-                    child: LinearProgressIndicator(value: isCompleted ? 1.0 : isCurrent ? ((currentPart - 1) / 3).clamp(0.0, 1.0).toDouble() : 0.0, minHeight: 5, backgroundColor: const Color(0xFFE9EDE8), color: color),
+                    child: LinearProgressIndicator(value: isCompleted ? 1.0 : isCurrent ? ((currentPart - 1) / 5).clamp(0.0, 1.0).toDouble() : 0.0, minHeight: 5, backgroundColor: const Color(0xFFE9EDE8), color: color),
                   ),
                 ]),
               ),
