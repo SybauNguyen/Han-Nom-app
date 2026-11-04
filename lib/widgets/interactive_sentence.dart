@@ -106,7 +106,7 @@ class InteractiveSentence extends StatelessWidget {
           ),
           richMessage: TextSpan(children: [
             TextSpan(
-              text: '${token.hanVietReading?.toUpperCase() ?? ''}\\n',
+              text: '${token.hanVietReading?.toUpperCase() ?? ''}\n',
               style: const TextStyle(color: _sentenceOrange, fontSize: 16, fontWeight: FontWeight.w900),
             ),
             TextSpan(
@@ -115,7 +115,7 @@ class InteractiveSentence extends StatelessWidget {
             ),
             if (supplementaryReadings.isNotEmpty)
               TextSpan(
-                text: '\\n${supplementaryLanguage.label}: ${supplementaryReadings.join(' · ')}',
+                text: '\n${supplementaryLanguage.label}: ${supplementaryReadings.join(' · ')}',
                 style: const TextStyle(color: _sentenceGreen, fontSize: 14, fontWeight: FontWeight.w800),
               ),
           ]),
