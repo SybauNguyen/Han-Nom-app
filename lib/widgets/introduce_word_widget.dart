@@ -120,7 +120,6 @@ class _IntroduceWordWidgetState extends State<IntroduceWordWidget> {
                 supplementaryLanguage: widget.supplementaryLanguage,
                 cjkCharacters: widget.cjkCharacters,
                 tapEnabled: widget.tapEnabled,
-                phraseMeaning: widget.question.mnemonic,
                 onCharacterTapped: widget.onCharacterTapped,
               ),
               const SizedBox(height: 10),
