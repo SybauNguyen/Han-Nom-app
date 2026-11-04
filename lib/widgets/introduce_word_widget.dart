@@ -124,7 +124,7 @@ class _IntroduceWordWidgetState extends State<IntroduceWordWidget> {
                 onCharacterTapped: widget.onCharacterTapped,
               ),
               const SizedBox(height: 10),
-              const Text(
+              Text(
                 widget.tapEnabled ? 'Chạm vào chữ để xem âm Hán-Việt và nghĩa' : 'Tự nhớ âm đọc và nghĩa của từng chữ',
                 textAlign: TextAlign.center,
                 style: TextStyle(color: _introGreen, fontSize: 12, fontWeight: FontWeight.w600),
