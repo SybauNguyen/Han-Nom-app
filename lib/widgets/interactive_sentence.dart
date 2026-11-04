@@ -120,7 +120,7 @@ class InteractiveSentence extends StatelessWidget {
             ),
             if ((phraseMeaning ?? '').trim().isNotEmpty)
               TextSpan(
-                text: '\\nNghĩa cả cụm: ${phraseMeaning!.trim()}',
+                text: '\nNghĩa cả cụm: ${phraseMeaning!.trim()}',
                 style: const TextStyle(color: _sentenceGreen, fontSize: 13, fontWeight: FontWeight.w700),
               ),
             if (supplementaryReadings.isNotEmpty)
