@@ -85,9 +85,14 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
   }
 
   Future<void> _loadStrokeData() async {
-    setState(() { _loadingStrokeData = true; _strokeDataUnavailable = false; });
-    final data = await HanziStrokeService.instance.load(widget.character);
-    if (!mounted) return;
+    final requestedCharacter = widget.character;
+    setState(() {
+      _loadingStrokeData = true;
+      _strokeDataUnavailable = false;
+      _strokeData = null;
+    });
+    final data = await HanziStrokeService.instance.load(requestedCharacter);
+    if (!mounted || widget.character != requestedCharacter) return;
     setState(() {
       _strokeData = data;
       _loadingStrokeData = false;
