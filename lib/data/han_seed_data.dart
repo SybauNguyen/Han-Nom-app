@@ -1112,7 +1112,7 @@ String _capitalizeReading(String value) => value.isEmpty
     : '${value.substring(0, 1).toUpperCase()}${value.substring(1)}';
 
 String _normalizePhraseKey(String value) =>
-    value.replaceAll(RegExp(r'[\\s，、。；：！？!?.,;:…·「」『』]'), '');
+    value.replaceAll(RegExp(r'[\s，、。；：！？!?.,;:…·「」『』]'), '');
 
 /// Sinh một cặp bài dịch thuận/ngược từ cùng một cụm đã duyệt.
 /// Thuận: chữ Hán -> xếp âm Hán-Việt. Ngược: âm Hán-Việt -> xếp chữ Hán.
