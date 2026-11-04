@@ -358,8 +358,10 @@ class AppState extends ChangeNotifier {
   /// Không tăng mastery; chữ vẫn phải được ôn lại để trở thành thuần thục.
   Future<void> markContextualCharacterEncountered(String character) async {
     final value = character.trim();
+    final record = findCharacter(value);
     if (value.isEmpty ||
-        !supplementaryPhraseCharacters.any((item) => item.character == value) ||
+        record == null ||
+        masteryOf(value) >= 5 ||
         !encounteredContextualCharacters.add(value)) {
       return;
     }
