@@ -12,6 +12,10 @@ class InteractiveSentence extends StatelessWidget {
   final String? selectedAnswer;
   final SupplementaryLanguage supplementaryLanguage;
   final List<CjkCharacter> cjkCharacters;
+  final bool tapEnabled;
+  final double fontSize;
+  final String? phraseMeaning;
+  final ValueChanged<String>? onCharacterTapped;
 
   const InteractiveSentence({
     super.key,
@@ -19,6 +23,10 @@ class InteractiveSentence extends StatelessWidget {
     this.selectedAnswer,
     this.supplementaryLanguage = SupplementaryLanguage.none,
     this.cjkCharacters = const <CjkCharacter>[],
+    this.tapEnabled = true,
+    this.fontSize = 42,
+    this.phraseMeaning,
+    this.onCharacterTapped,
   });
 
   CjkCharacter? _findCjkRecord(String character) {
@@ -69,8 +77,30 @@ class InteractiveSentence extends StatelessWidget {
                 .take(supplementaryLanguage == SupplementaryLanguage.japanese ? 2 : 1)
                 .toList();
 
+        final characterText = Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
+          child: Text(
+            token.text,
+            style: TextStyle(
+              fontSize: fontSize,
+              fontFamilyFallback: const ['NomNaTong'],
+              fontWeight: FontWeight.w600,
+              color: Colors.black87,
+              decoration: tapEnabled ? TextDecoration.underline : TextDecoration.none,
+              decorationStyle: TextDecorationStyle.dotted,
+              decorationColor: Colors.grey,
+              decorationThickness: 2,
+            ),
+          ),
+        );
+        if (!tapEnabled) return characterText;
+        final contextualMeaning = (phraseMeaning ?? '')
+            .trim()
+            .replaceFirst(RegExp(r'^Nghĩa cả cụm:\s*'), '');
+
         return Tooltip(
           triggerMode: TooltipTriggerMode.tap,
+          onTriggered: () => onCharacterTapped?.call(token.text),
           showDuration: const Duration(seconds: 3),
           padding: const EdgeInsets.all(12),
           margin: const EdgeInsets.symmetric(horizontal: 22),
@@ -91,28 +121,18 @@ class InteractiveSentence extends StatelessWidget {
               text: token.meaning ?? '',
               style: const TextStyle(color: Colors.black87, fontSize: 14),
             ),
+            if (contextualMeaning.isNotEmpty)
+              TextSpan(
+                text: '\nNghĩa cả cụm: ${contextualMeaning}',
+                style: const TextStyle(color: _sentenceGreen, fontSize: 13, fontWeight: FontWeight.w700),
+              ),
             if (supplementaryReadings.isNotEmpty)
               TextSpan(
                 text: '\n${supplementaryLanguage.label}: ${supplementaryReadings.join(' · ')}',
                 style: const TextStyle(color: _sentenceGreen, fontSize: 14, fontWeight: FontWeight.w800),
               ),
           ]),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
-            child: Text(
-              token.text,
-              style: const TextStyle(
-                fontSize: 42,
-                fontFamilyFallback: ['NomNaTong'],
-                fontWeight: FontWeight.w600,
-                color: Colors.black87,
-                decoration: TextDecoration.underline,
-                decorationStyle: TextDecorationStyle.dotted,
-                decorationColor: Colors.grey,
-                decorationThickness: 2,
-              ),
-            ),
-          ),
+          child: characterText,
         );
       }).toList(),
     );

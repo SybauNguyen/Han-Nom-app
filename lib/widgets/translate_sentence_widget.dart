@@ -16,6 +16,9 @@ class TranslateSentenceWidget extends StatefulWidget {
   final bool enabled;
   /// true khi đề bài là âm Hán-Việt và đáp án cần ghép là chữ Hán.
   final bool reverseDirection;
+  final bool tapEnabled;
+  final String? phraseMeaning;
+  final ValueChanged<String>? onCharacterTapped;
 
   const TranslateSentenceWidget({
     super.key,
@@ -23,6 +26,9 @@ class TranslateSentenceWidget extends StatefulWidget {
     required this.onAnswerChanged,
     this.enabled = true,
     this.reverseDirection = false,
+    this.tapEnabled = true,
+    this.phraseMeaning,
+    this.onCharacterTapped,
   });
 
   @override
@@ -154,7 +160,9 @@ class _TranslateSentenceWidgetState extends State<TranslateSentenceWidget> {
                 Flexible(child: Text(
                   widget.reverseDirection
                       ? 'ĐỌC ÂM HÁN-VIỆT, GHÉP CÁC CHỮ HÁN TƯƠNG ỨNG'
-                      : 'CHẠM VÀO CHỮ ĐỂ XEM ÂM VÀ NGHĨA',
+                      : widget.tapEnabled
+                          ? 'CHẠM VÀO CHỮ ĐỂ XEM ÂM VÀ NGHĨA'
+                          : 'TỰ NHỚ ÂM HÁN-VIỆT, KHÔNG CÓ GỢI Ý',
                   textAlign: TextAlign.center,
                   style: const TextStyle(fontSize: 10, letterSpacing: 0.7, color: _translateGreen, fontWeight: FontWeight.w900),
                 )),
@@ -170,7 +178,12 @@ class _TranslateSentenceWidgetState extends State<TranslateSentenceWidget> {
                   ),
                 )
               else
-                InteractiveSentence(tokens: widget.question.sentenceTokens ?? const <SentenceToken>[]),
+                InteractiveSentence(
+                  tokens: widget.question.sentenceTokens ?? const <SentenceToken>[],
+                  tapEnabled: widget.tapEnabled,
+                  phraseMeaning: widget.phraseMeaning,
+                  onCharacterTapped: widget.onCharacterTapped,
+                ),
             ],
           ),
         ),

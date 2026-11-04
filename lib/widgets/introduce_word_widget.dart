@@ -18,6 +18,7 @@ class IntroduceWordWidget extends StatefulWidget {
   final String? selectedAnswer;
   final SupplementaryLanguage supplementaryLanguage;
   final List<CjkCharacter> cjkCharacters;
+  final bool tapEnabled;
 
   const IntroduceWordWidget({
     super.key,
@@ -27,6 +28,7 @@ class IntroduceWordWidget extends StatefulWidget {
     this.selectedAnswer,
     this.supplementaryLanguage = SupplementaryLanguage.none,
     this.cjkCharacters = const <CjkCharacter>[],
+    this.tapEnabled = true,
   });
 
   @override
@@ -115,10 +117,11 @@ class _IntroduceWordWidgetState extends State<IntroduceWordWidget> {
                 tokens: tokens,
                 supplementaryLanguage: widget.supplementaryLanguage,
                 cjkCharacters: widget.cjkCharacters,
+                tapEnabled: widget.tapEnabled,
               ),
               const SizedBox(height: 10),
-              const Text(
-                'Chạm vào chữ để xem âm Hán-Việt và nghĩa',
+              Text(
+                widget.tapEnabled ? 'Chạm vào chữ để xem âm Hán-Việt và nghĩa' : 'Tự nhớ âm đọc và nghĩa của từng chữ',
                 textAlign: TextAlign.center,
                 style: TextStyle(color: _introGreen, fontSize: 12, fontWeight: FontWeight.w600),
               ),

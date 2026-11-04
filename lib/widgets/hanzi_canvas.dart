@@ -5,10 +5,13 @@ import '../services/hanzi_stroke_service.dart';
 
 enum WritingPracticeLevel { guided, faint, recall, review }
 
+const Color _greenOrderHint = Color(0xFF28664F);
+
 class HanziCanvas extends StatefulWidget {
   final String character;
   final double size;
   final WritingPracticeLevel level;
+  final bool showStrokeOrderHints;
   final Function(int strokeCount)? onStrokeCountChanged;
   final ValueChanged<StrokeEvaluation>? onStrokeEvaluated;
   final VoidCallback? onComplete;
@@ -18,6 +21,7 @@ class HanziCanvas extends StatefulWidget {
     required this.character,
     this.size = 280,
     this.level = WritingPracticeLevel.guided,
+    this.showStrokeOrderHints = false,
     this.onStrokeCountChanged,
     this.onStrokeEvaluated,
     this.onComplete,
@@ -31,7 +35,7 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
   final List<List<Offset>> _strokes = [];
   List<Offset>? _currentStroke;
   HanziStrokeData? _strokeData;
-  int _currentStrokeIndex = 0;
+  bool _completed = false;
   bool _loadingStrokeData = true;
   bool _strokeDataUnavailable = false;
   StrokeEvaluation? _lastEvaluation;
@@ -42,8 +46,8 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
   bool get isDemonstrating => _isDemonstrating;
   int get strokeCount => _strokes.length;
   int get totalStrokeCount => _strokeData?.strokeCount ?? 0;
-  int get currentStrokeNumber => _currentStrokeIndex + 1;
-  bool get isComplete => _strokeData != null && _currentStrokeIndex >= _strokeData!.strokeCount;
+  int get currentStrokeNumber => _strokes.length.clamp(0, totalStrokeCount).toInt();
+  bool get isComplete => _completed;
   bool get isLoadingStrokeData => _loadingStrokeData;
   bool get strokeDataUnavailable => _strokeDataUnavailable;
   StrokeEvaluation? get lastEvaluation => _lastEvaluation;
@@ -81,9 +85,14 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
   }
 
   Future<void> _loadStrokeData() async {
-    setState(() { _loadingStrokeData = true; _strokeDataUnavailable = false; });
-    final data = await HanziStrokeService.instance.load(widget.character);
-    if (!mounted) return;
+    final requestedCharacter = widget.character;
+    setState(() {
+      _loadingStrokeData = true;
+      _strokeDataUnavailable = false;
+      _strokeData = null;
+    });
+    final data = await HanziStrokeService.instance.load(requestedCharacter);
+    if (!mounted || widget.character != requestedCharacter) return;
     setState(() {
       _strokeData = data;
       _loadingStrokeData = false;
@@ -95,7 +104,7 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
   void _resetForNewCharacter() {
     _strokes.clear();
     _currentStroke = null;
-    _currentStrokeIndex = 0;
+    _completed = false;
     _lastEvaluation = null;
   }
 
@@ -106,39 +115,144 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
   void stopStrokeAnimation() { _animController.stop(); if (mounted) setState(() => _isDemonstrating = false); }
 
   void clear() {
-    setState(() { _strokes.clear(); _currentStroke = null; _currentStrokeIndex = 0; _lastEvaluation = null; });
+    setState(() {
+      _strokes.clear();
+      _currentStroke = null;
+      _completed = false;
+      _lastEvaluation = null;
+    });
     widget.onStrokeCountChanged?.call(0);
   }
 
   void undo() {
     if (_strokes.isEmpty) return;
-    setState(() { _strokes.removeLast(); _currentStrokeIndex = max(0, _currentStrokeIndex - 1); _lastEvaluation = null; });
+    setState(() {
+      _strokes.removeLast();
+      _completed = false;
+      _lastEvaluation = null;
+    });
     widget.onStrokeCountChanged?.call(_strokes.length);
   }
 
-  Future<void> _finishCurrentStroke() async {
+  void _finishCurrentStroke() {
     final points = _currentStroke;
     _currentStroke = null;
-    if (points == null || points.length < 2 || _strokeData == null || isComplete) return;
+    if (points == null) return;
+    if (points.length < 2 && _strokes.isNotEmpty) {
+      setState(() => _strokes.removeLast());
+    }
+    widget.onStrokeCountChanged?.call(_strokes.length);
+  }
 
-    final expected = HanziStrokeService.instance.medianFor(_strokeData!, _currentStrokeIndex, widget.size);
-    final userPoints = points.map((p) => StrokePoint(p.dx, p.dy)).toList(growable: false);
-    final result = HanziStrokeService.instance.evaluate(
-      userPoints: userPoints,
-      expectedPoints: expected,
-      canvasSize: widget.size,
-      tolerance: widget.level == WritingPracticeLevel.review ? 0.24 : 0.28,
+  /// Chỉ chấm khi người học chủ động bấm nút Kiểm tra.
+  /// Từng nét được ghép với nét mẫu phù hợp nhất, không phụ thuộc thứ tự vẽ.
+  StrokeEvaluation checkWrittenCharacter() {
+    final data = _strokeData;
+    if (_loadingStrokeData || data == null || _strokeDataUnavailable) {
+      const result = StrokeEvaluation(
+        correct: false,
+        score: 0,
+        feedback: 'Chưa tải được dữ liệu nét của chữ này. Hãy thử tải lại khi có mạng.',
+      );
+      _lastEvaluation = result;
+      widget.onStrokeEvaluated?.call(result);
+      return result;
+    }
+
+    final expectedCount = data.strokeCount;
+    if (_strokes.length != expectedCount) {
+      final result = StrokeEvaluation(
+        correct: false,
+        score: 0,
+        feedback: _strokes.length < expectedCount
+            ? 'Bạn đã viết ${_strokes.length}/$expectedCount nét. Hãy viết đủ rồi bấm kiểm tra.'
+            : 'Bạn đang có ${_strokes.length} nét, nhiều hơn số nét chuẩn ($expectedCount). Hãy xóa hoặc gộp nét thừa.',
+      );
+      setState(() => _lastEvaluation = result);
+      widget.onStrokeEvaluated?.call(result);
+      return result;
+    }
+
+    final evaluations = List<List<StrokeEvaluation>>.generate(
+      expectedCount,
+      (userIndex) => List<StrokeEvaluation>.generate(expectedCount, (expectedIndex) {
+        final userPoints = _strokes[userIndex]
+            .map((point) => StrokePoint(point.dx, point.dy))
+            .toList(growable: false);
+        final expectedPoints = HanziStrokeService.instance.medianFor(
+          data,
+          expectedIndex,
+          widget.size,
+        );
+        return HanziStrokeService.instance.evaluate(
+          userPoints: userPoints,
+          expectedPoints: expectedPoints,
+          canvasSize: widget.size,
+          tolerance: widget.level == WritingPracticeLevel.review ? 0.30 : 0.33,
+        );
+      }),
     );
 
-    if (!mounted) return;
+    // Maximum bipartite matching: each user stroke must match one different
+    // reference stroke. The DFS reassignment avoids false failures caused by
+    // a greedy match choosing the wrong expected stroke first.
+    final expectedToUser = List<int>.filled(expectedCount, -1);
+    bool assignStroke(int userIndex, Set<int> visitedExpected) {
+      final choices = List<int>.generate(expectedCount, (index) => index)
+        ..sort((a, b) => evaluations[userIndex][b].score.compareTo(evaluations[userIndex][a].score));
+      for (final expectedIndex in choices) {
+        if (!evaluations[userIndex][expectedIndex].correct ||
+            !visitedExpected.add(expectedIndex)) {
+          continue;
+        }
+        final previousUser = expectedToUser[expectedIndex];
+        if (previousUser == -1 || assignStroke(previousUser, visitedExpected)) {
+          expectedToUser[expectedIndex] = userIndex;
+          return true;
+        }
+      }
+      return false;
+    }
+
+    final userOrder = List<int>.generate(expectedCount, (index) => index)
+      ..sort((a, b) {
+        final aOptions = evaluations[a].where((result) => result.correct).length;
+        final bOptions = evaluations[b].where((result) => result.correct).length;
+        return aOptions.compareTo(bOptions);
+      });
+
+    var matched = 0;
+    for (final userIndex in userOrder) {
+      if (assignStroke(userIndex, <int>{})) matched++;
+    }
+
+    final correct = matched == expectedCount;
+    final matchedEvaluations = <StrokeEvaluation>[];
+    if (correct) {
+      for (var expectedIndex = 0; expectedIndex < expectedCount; expectedIndex++) {
+        final userIndex = expectedToUser[expectedIndex];
+        matchedEvaluations.add(evaluations[userIndex][expectedIndex]);
+      }
+    }
+    final averageScore = correct
+        ? matchedEvaluations.map((result) => result.score).reduce((a, b) => a + b) / expectedCount
+        : 0.0;
+    final result = StrokeEvaluation(
+      correct: correct,
+      score: averageScore,
+      feedback: correct
+          ? 'Chính xác! Các nét đã khớp với chữ mẫu.'
+          : 'Hình dạng hoặc hướng của một vài nét chưa khớp. Bạn có thể sửa nét rồi bấm Kiểm tra lại.',
+    );
+
     setState(() {
       _lastEvaluation = result;
-      if (!result.correct && _strokes.isNotEmpty) _strokes.removeLast();
-      if (result.correct) _currentStrokeIndex++;
+      _completed = correct;
     });
     widget.onStrokeEvaluated?.call(result);
     widget.onStrokeCountChanged?.call(_strokes.length);
-    if (result.correct && isComplete) widget.onComplete?.call();
+    if (correct) widget.onComplete?.call();
+    return result;
   }
 
   @override
@@ -157,6 +271,31 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
               IgnorePointer(child: Opacity(opacity: _templateOpacity, child: Text(widget.character, textAlign: TextAlign.center, style: TextStyle(fontSize: widget.size * 0.72, height: 1.15, fontWeight: FontWeight.w400, color: const Color(0xFF28664F), fontFamilyFallback: const ['NomNaTong', 'HanNomB'])))),
             if (_isDemonstrating)
               IgnorePointer(child: CustomPaint(size: Size(widget.size, widget.size), painter: _StrokeDemoPainter(progress: _animController.value, character: widget.character, size: widget.size))),
+            if (widget.showStrokeOrderHints && _strokeData != null)
+              for (var strokeIndex = 0; strokeIndex < _strokeData!.medians.length; strokeIndex++)
+                if (_strokeData!.medians[strokeIndex].isNotEmpty)
+                  Positioned(
+                    left: (_strokeData!.medians[strokeIndex].first.x / 1024 * widget.size - 11)
+                        .clamp(2.0, widget.size - 24).toDouble(),
+                    top: (_strokeData!.medians[strokeIndex].first.y / 1024 * widget.size - 11)
+                        .clamp(2.0, widget.size - 24).toDouble(),
+                    child: IgnorePointer(
+                      child: Container(
+                        width: 22,
+                        height: 22,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: _greenOrderHint,
+                          borderRadius: BorderRadius.circular(11),
+                          border: Border.all(color: Colors.white, width: 1.5),
+                        ),
+                        child: Text(
+                          '${strokeIndex + 1}',
+                          style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w900),
+                        ),
+                      ),
+                    ),
+                  ),
             GestureDetector(
               onPanStart: (details) {
                 if (_isDemonstrating) stopStrokeAnimation();
@@ -173,7 +312,7 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
             if (_strokeDataUnavailable)
               Positioned(left: 18, right: 18, bottom: 14, child: Container(padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8), decoration: BoxDecoration(color: const Color(0xFFFFF1D7), borderRadius: BorderRadius.circular(12)), child: const Text('Chưa có dữ liệu nét cho chữ này. Hãy thử lại khi có mạng.', textAlign: TextAlign.center, style: TextStyle(fontSize: 11, color: Color(0xFF9A5A20), fontWeight: FontWeight.w700)))),
             if (!_loadingStrokeData && !_strokeDataUnavailable && !isComplete)
-              Positioned(top: 10, child: Container(padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5), decoration: BoxDecoration(color: const Color(0xFFEAF4ED), borderRadius: BorderRadius.circular(12)), child: Text('Nét $currentStrokeNumber/$totalStrokeCount', style: const TextStyle(fontSize: 11, color: Color(0xFF28664F), fontWeight: FontWeight.w900)))),
+              Positioned(top: 10, child: Container(padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5), decoration: BoxDecoration(color: const Color(0xFFEAF4ED), borderRadius: BorderRadius.circular(12)), child: Text('Đã vẽ $currentStrokeNumber/$totalStrokeCount nét', style: const TextStyle(fontSize: 11, color: Color(0xFF28664F), fontWeight: FontWeight.w900)))),
             if (isComplete)
               Positioned(bottom: 12, child: Container(padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6), decoration: BoxDecoration(color: const Color(0xFF28664F), borderRadius: BorderRadius.circular(14)), child: const Text('✓ Hoàn thành chữ', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 12)))),
           ],

@@ -15,6 +15,9 @@ class FillInTheBlankWidget extends StatelessWidget {
   final bool checked;
   final bool isCorrect;
   final ValueChanged<String> onSelected;
+  final bool tapEnabled;
+  final String? phraseMeaning;
+  final ValueChanged<String>? onCharacterTapped;
 
   const FillInTheBlankWidget({
     super.key,
@@ -25,6 +28,9 @@ class FillInTheBlankWidget extends StatelessWidget {
     required this.checked,
     required this.isCorrect,
     required this.onSelected,
+    this.tapEnabled = true,
+    this.phraseMeaning,
+    this.onCharacterTapped,
   });
 
   @override
@@ -38,13 +44,23 @@ class FillInTheBlankWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 22),
           decoration: BoxDecoration(color: const Color(0xFFE4F1E8), borderRadius: BorderRadius.circular(22)),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Icon(Icons.touch_app_rounded, color: _blankGreen, size: 18),
-              SizedBox(width: 6),
-              Flexible(child: Text('CHẠM VÀO CHỮ ĐỂ XEM NGHĨA', textAlign: TextAlign.center, style: TextStyle(fontSize: 10, letterSpacing: 0.7, color: _blankGreen, fontWeight: FontWeight.w900))),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              if (tapEnabled) const Icon(Icons.touch_app_rounded, color: _blankGreen, size: 18),
+              if (tapEnabled) const SizedBox(width: 6),
+              Flexible(child: Text(
+                tapEnabled ? 'CHẠM VÀO CHỮ ĐỂ XEM NGHĨA' : 'TỰ NHỚ NGHĨA, KHÔNG CÓ GỢI Ý',
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 10, letterSpacing: 0.7, color: _blankGreen, fontWeight: FontWeight.w900),
+              )),
             ]),
             const SizedBox(height: 18),
-            InteractiveSentence(tokens: tokens, selectedAnswer: selectedAnswer),
+            InteractiveSentence(
+              tokens: tokens,
+              selectedAnswer: selectedAnswer,
+              tapEnabled: tapEnabled,
+              phraseMeaning: phraseMeaning,
+              onCharacterTapped: onCharacterTapped,
+            ),
           ]),
         ),
         const SizedBox(height: 20),

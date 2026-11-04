@@ -65,6 +65,8 @@ class AppState extends ChangeNotifier {
   int unlockedHanThroughLesson = 0;
 
   Map<String, int> mastery = {};
+  /// Chữ bổ trợ người học đã chạm để xem nghĩa; không đồng nghĩa với đã thuần thục.
+  final Set<String> encounteredContextualCharacters = <String>{};
   final Map<String, CjkCharacter> _cjkCharacters = <String, CjkCharacter>{};
 
   List<CjkCharacter> get cjkCharacters => List<CjkCharacter>.unmodifiable(_cjkCharacters.values);
@@ -230,6 +232,9 @@ class AppState extends ChangeNotifier {
         streak = 0;
         await prefs.setInt('streak', streak);
       }
+      encounteredContextualCharacters
+        ..clear()
+        ..addAll(prefs.getStringList('encounteredContextualCharacters') ?? const <String>[]);
       final rawMastery = prefs.getString('mastery');
       if (rawMastery != null) {
         final decoded = jsonDecode(rawMastery) as Map<String, dynamic>;
@@ -345,6 +350,21 @@ class AppState extends ChangeNotifier {
     }
     if (xpEarned > 0) xp += xpEarned;
     if (gemsEarned > 0) gems += gemsEarned;
+    await _save();
+    notifyListeners();
+  }
+
+  /// Ghi nhận đã gặp chữ bổ trợ khi người học chủ động chạm xem nghĩa.
+  /// Không tăng mastery; chữ vẫn phải được ôn lại để trở thành thuần thục.
+  Future<void> markContextualCharacterEncountered(String character) async {
+    final value = character.trim();
+    final record = findCharacter(value);
+    if (value.isEmpty ||
+        record == null ||
+        masteryOf(value) >= 5 ||
+        !encounteredContextualCharacters.add(value)) {
+      return;
+    }
     await _save();
     notifyListeners();
   }
@@ -524,10 +544,17 @@ class AppState extends ChangeNotifier {
       unlockedHanThroughLesson = unlockedHanThroughLesson < unlockTargetLessonNumber
           ? unlockTargetLessonNumber
           : unlockedHanThroughLesson;
-      // Học vượt marks earlier Hán lessons as skipped/unlocked, but does NOT
-      // auto-complete a Boss checkpoint; therefore it cannot unlock Nôm by itself.
+      // Khi vượt qua bài thi Học vượt, mọi mốc Tổng Ôn tập nằm hoàn toàn
+      // trước bài mục tiêu được đánh dấu hoàn thành để người học không phải
+      // quay lại làm lại các mốc đã được bài thi này bao phủ.
       final beforeTarget = (unlockTargetLessonNumber - 1).clamp(0, hanCoreLessonCount).toInt();
       if (hanLessonsCompleted < beforeTarget) hanLessonsCompleted = beforeTarget;
+      final checkpointsBeforeTarget = (beforeTarget ~/ hanLessonsPerCycle)
+          .clamp(0, hanCoreLessonCount ~/ hanLessonsPerCycle)
+          .toInt();
+      if (completedHanReviewCheckpoints < checkpointsBeforeTarget) {
+        completedHanReviewCheckpoints = checkpointsBeforeTarget;
+      }
       currentLessonPart = 1;
     }
 
@@ -573,6 +600,7 @@ class AppState extends ChangeNotifier {
         await prefs.setString('lastStudyDate', lastStudyDate!);
       }
       await prefs.setString('mastery', jsonEncode(mastery));
+      await prefs.setStringList('encounteredContextualCharacters', encounteredContextualCharacters.toList()..sort());
     } catch (_) {
       // Không làm gián đoạn vòng học nếu lưu trạng thái gặp lỗi tạm thời.
     }

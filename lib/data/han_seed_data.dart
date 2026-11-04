@@ -331,6 +331,80 @@ const List<LessonUnit> lessonUnits = [
   LessonUnit(title: 'Bài Nôm 3', subtitle: 'Tạm ẩn dữ liệu trong thời gian chuẩn hóa chữ và mã Unicode.', characters: [], icon: '🟠', type: 'Nôm'),
 ];
 
+const List<HanCharacter> supplementaryPhraseCharacters = <HanCharacter>[
+  HanCharacter(character: '鈞', hanVietReading: 'quân', meaning: 'đơn vị cân nặng cổ; cân', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '髮', hanVietReading: 'phát', meaning: 'tóc, sợi tóc', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '不', hanVietReading: 'bất', meaning: 'không, chẳng', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '傾', hanVietReading: 'khuynh', meaning: 'nghiêng, đổ', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '城', hanVietReading: 'thành', meaning: 'thành, thành trì', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '相', hanVietReading: 'tương', meaning: 'lẫn nhau, cùng nhau', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '殘', hanVietReading: 'tàn', meaning: 'tàn hại, làm tổn thương', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '是', hanVietReading: 'thị', meaning: 'là, đúng', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '非', hanVietReading: 'phi', meaning: 'không phải, sai', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '噴', hanVietReading: 'phún', meaning: 'phun, xịt', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '眾', hanVietReading: 'chúng', meaning: 'đám đông, mọi người', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '和', hanVietReading: 'hòa', meaning: 'hòa hợp, cùng', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '遠', hanVietReading: 'viễn', meaning: 'xa', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '從', hanVietReading: 'tòng', meaning: 'theo, từ', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '禍', hanVietReading: 'họa', meaning: 'tai họa', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '隨', hanVietReading: 'tùy', meaning: 'theo, tùy thuận', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '俗', hanVietReading: 'tục', meaning: 'phong tục, tập quán', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '半', hanVietReading: 'bán', meaning: 'một nửa', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '疑', hanVietReading: 'nghi', meaning: 'nghi ngờ', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '字', hanVietReading: 'tự', meaning: 'chữ, văn tự', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '師', hanVietReading: 'sư', meaning: 'thầy, người dạy', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '言', hanVietReading: 'ngôn', meaning: 'lời nói', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '鼎', hanVietReading: 'đỉnh', meaning: 'đỉnh ba chân; vạc', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '驚', hanVietReading: 'kinh', meaning: 'kinh ngạc, hoảng sợ', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '動', hanVietReading: 'động', meaning: 'chuyển động', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '色', hanVietReading: 'sắc', meaning: 'màu sắc, sắc đẹp', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '香', hanVietReading: 'hương', meaning: 'hương thơm', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '帆', hanVietReading: 'phàm', meaning: 'cánh buồm', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '順', hanVietReading: 'thuận', meaning: 'thuận lợi, xuôi', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '皆', hanVietReading: 'giai', meaning: 'đều, tất cả', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '撈', hanVietReading: 'lao', meaning: 'vớt, mò', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '滴', hanVietReading: 'trích', meaning: 'giọt; nhỏ giọt', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '穿', hanVietReading: 'xuyên', meaning: 'xuyên qua, đâm thủng', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '吃', hanVietReading: 'ngật', meaning: 'ăn', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '觀', hanVietReading: 'quan', meaning: 'xem, quan sát', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '對', hanVietReading: 'đối', meaning: 'đối diện, tương ứng; đúng', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '彈', hanVietReading: 'đàn', meaning: 'đàn; búng, bắn', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '琴', hanVietReading: 'cầm', meaning: 'đàn cầm', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '亡', hanVietReading: 'vong', meaning: 'mất, chết; không còn', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '補', hanVietReading: 'bổ', meaning: 'bù, bổ sung', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '牢', hanVietReading: 'lao', meaning: 'chuồng gia súc; kiên cố', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '佛', hanVietReading: 'phật', meaning: 'Phật', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '無', hanVietReading: 'vô', meaning: 'không, không có', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '放', hanVietReading: 'phóng', meaning: 'thả, buông', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '歸', hanVietReading: 'quy', meaning: 'trở về, quy về', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '打', hanVietReading: 'đả', meaning: 'đánh, đập', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '調', hanVietReading: 'điệu', meaning: 'điệu; điều chỉnh (âm đọc theo thành ngữ 調虎離山)', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '離', hanVietReading: 'ly', meaning: 'rời xa, ly khai', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '狐', hanVietReading: 'hồ', meaning: 'cáo', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '威', hanVietReading: 'uy', meaning: 'uy thế, quyền uy', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '偕', hanVietReading: 'giai', meaning: 'cùng nhau', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '老', hanVietReading: 'lão', meaning: 'già, lâu năm', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '樹', hanVietReading: 'thụ', meaning: 'cây; trồng cây', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '惡', hanVietReading: 'ố', meaning: 'ố; điều xấu, ghét', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '懸', hanVietReading: 'huyền', meaning: 'treo, lơ lửng', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '狗', hanVietReading: 'cẩu', meaning: 'chó', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '毒', hanVietReading: 'độc', meaning: 'độc, dữ', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '錦', hanVietReading: 'cẩm', meaning: 'gấm vóc', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '行', hanVietReading: 'hành', meaning: 'đi, thực hiện', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '當', hanVietReading: 'đương', meaning: 'đúng, tương xứng; đảm đương', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '戶', hanVietReading: 'hộ', meaning: 'cửa, hộ gia đình', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '破', hanVietReading: 'phá', meaning: 'vỡ, phá', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '鏡', hanVietReading: 'kính', meaning: 'gương', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '望', hanVietReading: 'vọng', meaning: 'trông, mong; danh vọng', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '謀', hanVietReading: 'mưu', meaning: 'mưu kế, tính toán', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '源', hanVietReading: 'nguyên', meaning: 'nguồn', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '怕', hanVietReading: 'phạ', meaning: 'sợ', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '變', hanVietReading: 'biến', meaning: 'thay đổi', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '應', hanVietReading: 'ứng', meaning: 'đáp lại, ứng với', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '業', hanVietReading: 'nghiệp', meaning: 'sự nghiệp, nghề nghiệp', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+  HanCharacter(character: '尊', hanVietReading: 'tôn', meaning: 'tôn kính, đáng kính', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
+];
+
 /// Separate skill-tree lists used by the Hán/Nôm tabs.
 final List<LessonUnit> hanLessonUnits = List<LessonUnit>.unmodifiable(
   lessonUnits.take(hanCoreLessonCount),
@@ -341,6 +415,9 @@ final List<LessonUnit> nomLessonUnits = List<LessonUnit>.unmodifiable(
 
 HanCharacter? findCharacter(String value) {
   for (final character in seedCharacters) {
+    if (character.character == value) return character;
+  }
+  for (final character in supplementaryPhraseCharacters) {
     if (character.character == value) return character;
   }
   return null;
@@ -402,26 +479,80 @@ List<HanCharacter> randomReviewCheckpointCharacters({
 /// Một cụm/câu đã được duyệt cho bài dịch Hán <-> âm Hán-Việt.
 /// Không ghép nghĩa từng chữ theo kiểu máy móc; chỉ dùng những chuỗi có
 /// cách đọc/cách dùng ổn định trong Hán-Việt.
+enum CuratedPhraseKind { basicCompound, fixedExpression, exampleSentence }
+
+const Set<String> _basicPhraseTexts = <String>{
+  '朋友', '君臣', '民兵', '父母', '兄弟', '國家', '學生', '學問', '日月',
+  '左右', '前後', '上下', '出入', '內外', '手足', '山水', '金銀', '黑白',
+  '東西南北', '天地日月', '春夏秋冬', '南國山河', '江河湖海', '山河大地',
+  '前後左右',
+};
+
+const Set<String> _fixedExpressionTexts = <String>{
+  '四海一家', '五湖四海', '一日千秋', '白日青天', '山高水長', '光明正大',
+  '天高地厚', '人山人海', '花好月圓', '青山綠水', '花前月下', '一心一意',
+  '三心二意', '千山萬水', '愛恨分明', '夜長夢多', '青天白日', '筆下生花',
+  '一問一答', '上下一心', '七上八下',
+  '千鈞一髮', '前後不一', '傾城傾國', '骨肉相殘', '口是心非', '血口噴人',
+  '萬眾一心', '面和心不和', '高飛遠走', '病從口入，禍從口出', '入家隨俗',
+  '半信半疑', '一字師，半字師', '一言九鼎', '頂天立地', '驚天動地',
+  '國色天香', '一帆風順', '四海皆兄弟', '水中撈月', '滴水穿石',
+  '大魚吃小魚', '牛頭馬面', '走馬觀花', '對牛彈琴', '亡羊補牢',
+  '口佛心蛇', '虎父無犬子', '放虎歸山', '打草驚蛇', '調虎離山',
+  '狐假虎威', '百年偕老', '十年樹木，百年樹人', '喜怒愛惡', '喜怒哀樂',
+  '懸羊頭賣狗肉', '虎毒不食子', '錦衣夜行', '門當戶對', '一字千金',
+  '破鏡重圓', '德高望重', '足智多謀', '飲水思源', '真金不怕火',
+  '以不變應萬變', '安居樂業', '尊師重道',
+};
+
+const Set<String> _coreExamplePhraseTexts = <String>{
+  '日出東方', '父母愛子', '人多地少', '冬去春來', '江河入海', '日月光明',
+  '春來花開', '朋友來家', '多讀多問', '好學多問', '日出海上', '子問母答',
+  '日夜讀書', '年少好學', '君明臣忠', '母愛子女', '龍飛上天', '門開人出',
+};
+
 class CuratedHanVietPhrase {
   final String hanText;
   final String vietnameseGloss;
   final bool isFullSentence;
-  /// Các bản dịch diễn đạt khác được lưu để tham khảo; không dùng để chấm
-  /// câu gõ âm Hán-Việt vì nghĩa tiếng Việt không có một cách diễn đạt duy nhất.
   final List<String> acceptedVietnameseAnswers;
+  /// Bài đầu tiên dự kiến giới thiệu cụm từ trong lộ trình 25 bài.
+  final int? firstLessonNumber;
+  /// Số chữ ngoài giáo trình có thể được giới thiệu ngay trong ngữ cảnh.
+  /// Mặc định 0 để không vô tình đưa chữ lạ vào câu hỏi.
+  final int contextualNewCharacterLimit;
 
   const CuratedHanVietPhrase({
     required this.hanText,
     required this.vietnameseGloss,
     this.isFullSentence = false,
     this.acceptedVietnameseAnswers = const <String>[],
+    this.firstLessonNumber,
+    this.contextualNewCharacterLimit = 0,
   });
 
-  List<String> get symbols => hanText.runes.map(String.fromCharCode).toList();
+  CuratedPhraseKind get kind {
+    if (_basicPhraseTexts.contains(hanText)) return CuratedPhraseKind.basicCompound;
+    if (_fixedExpressionTexts.contains(hanText)) return CuratedPhraseKind.fixedExpression;
+    return CuratedPhraseKind.exampleSentence;
+  }
+
+  bool get isCoreLessonContent =>
+      kind != CuratedPhraseKind.exampleSentence || _coreExamplePhraseTexts.contains(hanText);
+
+  bool get isReviewTypingCandidate =>
+      kind == CuratedPhraseKind.fixedExpression ||
+      (kind == CuratedPhraseKind.exampleSentence && isFullSentence && isCoreLessonContent);
+
+  List<String> get symbols => hanText.runes
+      .map(String.fromCharCode)
+      .where((symbol) => !' \\t\\n，、。；：！？'.contains(symbol))
+      .toList();
 }
 
-/// Ngân hàng phrase được kiểm duyệt thủ công. Một phrase chỉ được sinh ra khi
-/// TẤT CẢ ký tự đã thuộc phạm vi người học được học.
+/// Kho cụm từ được phân loại: cụm cơ bản, thành ngữ/cụm cố định và câu ví dụ.
+/// Câu ví dụ lặp được giữ trong kho bổ sung; thành ngữ có thể giới thiệu tối đa
+/// 1–3 chữ ngoài giáo trình bằng thẻ nghĩa ngữ cảnh.
 const List<CuratedHanVietPhrase> curatedHanVietPhrases = [
   CuratedHanVietPhrase(hanText: '朋友', vietnameseGloss: 'bạn bè'),
   CuratedHanVietPhrase(hanText: '君臣', vietnameseGloss: 'vua tôi'),
@@ -921,11 +1052,67 @@ const List<CuratedHanVietPhrase> curatedHanVietPhrases = [
     vietnameseGloss: 'bồn chồn, không yên',
     acceptedVietnameseAnswers: ['thất thượng bát hạ; lòng dạ không yên'],
   ),
+
+  // Thành ngữ/cụm cố định được giới thiệu theo bài; chữ ngoài 250 chữ được
+  // tra từ supplementaryPhraseCharacters và có thể chạm để xem nghĩa.
+  CuratedHanVietPhrase(hanText: '千鈞一髮', vietnameseGloss: 'nghìn cân treo sợi tóc', firstLessonNumber: 2, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '前後不一', vietnameseGloss: 'trước sau không như một; tiền hậu bất nhất', firstLessonNumber: 3, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '傾城傾國', vietnameseGloss: 'nghiêng nước nghiêng thành; khuynh thành khuynh quốc', firstLessonNumber: 5, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '骨肉相殘', vietnameseGloss: 'cốt nhục tương tàn', firstLessonNumber: 8, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '口是心非', vietnameseGloss: 'khẩu thị tâm phi', firstLessonNumber: 8, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '血口噴人', vietnameseGloss: 'ngậm máu phun người', firstLessonNumber: 8, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '萬眾一心', vietnameseGloss: 'muôn người như một; vạn chúng nhất tâm', firstLessonNumber: 8, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '面和心不和', vietnameseGloss: 'bằng mặt không bằng lòng', firstLessonNumber: 8, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '高飛遠走', vietnameseGloss: 'cao chạy xa bay', firstLessonNumber: 9, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '病從口入，禍從口出', vietnameseGloss: 'bệnh từ miệng mà vào, họa từ miệng mà ra', firstLessonNumber: 9, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '入家隨俗', vietnameseGloss: 'nhập gia tùy tục', firstLessonNumber: 9, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '半信半疑', vietnameseGloss: 'bán tín bán nghi', firstLessonNumber: 10, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '一字師，半字師', vietnameseGloss: 'nhất tự vi sư, bán tự vi sư', firstLessonNumber: 10, contextualNewCharacterLimit: 3),
+  CuratedHanVietPhrase(hanText: '一言九鼎', vietnameseGloss: 'nhất ngôn cửu đỉnh; lời nói có trọng lượng', firstLessonNumber: 10, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '頂天立地', vietnameseGloss: 'đội trời đạp đất', firstLessonNumber: 11, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '驚天動地', vietnameseGloss: 'kinh thiên động địa', firstLessonNumber: 11, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '國色天香', vietnameseGloss: 'quốc sắc thiên hương', firstLessonNumber: 11, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '一帆風順', vietnameseGloss: 'thuận buồm xuôi gió', firstLessonNumber: 12, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '四海皆兄弟', vietnameseGloss: 'tứ hải giai huynh đệ', firstLessonNumber: 12, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '水中撈月', vietnameseGloss: 'mò trăng đáy nước; việc khó thành, hư ảo', firstLessonNumber: 12, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '滴水穿石', vietnameseGloss: 'nước chảy đá mòn', firstLessonNumber: 13, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '大魚吃小魚', vietnameseGloss: 'cá lớn nuốt cá bé', firstLessonNumber: 14, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '牛頭馬面', vietnameseGloss: 'đầu trâu mặt ngựa; hình tượng quỷ sai trong tín ngưỡng dân gian', firstLessonNumber: 14),
+  CuratedHanVietPhrase(hanText: '走馬觀花', vietnameseGloss: 'cưỡi ngựa xem hoa; xem qua loa, không kỹ', firstLessonNumber: 14, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '對牛彈琴', vietnameseGloss: 'đàn gảy tai trâu', firstLessonNumber: 14, contextualNewCharacterLimit: 3),
+  CuratedHanVietPhrase(hanText: '亡羊補牢', vietnameseGloss: 'mất bò mới lo làm chuồng; biết sửa sai sau tổn thất', firstLessonNumber: 14, contextualNewCharacterLimit: 3),
+  CuratedHanVietPhrase(hanText: '口佛心蛇', vietnameseGloss: 'khẩu Phật tâm xà', firstLessonNumber: 15, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '虎父無犬子', vietnameseGloss: 'hổ phụ sinh hổ tử', firstLessonNumber: 15, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '放虎歸山', vietnameseGloss: 'thả hổ về rừng', firstLessonNumber: 15, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '打草驚蛇', vietnameseGloss: 'đánh rắn động cỏ', firstLessonNumber: 15, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '調虎離山', vietnameseGloss: 'điệu hổ ly sơn', firstLessonNumber: 15, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '狐假虎威', vietnameseGloss: 'cáo mượn oai hùm', firstLessonNumber: 15, contextualNewCharacterLimit: 3),
+  CuratedHanVietPhrase(hanText: '百年偕老', vietnameseGloss: 'bách niên giai lão; sống bên nhau trọn đời', firstLessonNumber: 16, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '十年樹木，百年樹人', vietnameseGloss: 'mười năm trồng cây, trăm năm trồng người', firstLessonNumber: 16, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '喜怒愛惡', vietnameseGloss: 'hỷ nộ ái ố', firstLessonNumber: 17, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '喜怒哀樂', vietnameseGloss: 'hỷ nộ ai lạc; bốn trạng thái cảm xúc', firstLessonNumber: 17),
+  CuratedHanVietPhrase(hanText: '懸羊頭賣狗肉', vietnameseGloss: 'treo đầu dê bán thịt chó', firstLessonNumber: 19, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '虎毒不食子', vietnameseGloss: 'hổ dữ không ăn thịt con', firstLessonNumber: 19, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '錦衣夜行', vietnameseGloss: 'áo gấm đi đêm; có tài, có thành tựu mà không ai biết đến', firstLessonNumber: 20, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '門當戶對', vietnameseGloss: 'môn đăng hộ đối (âm Hán-Việt từng chữ: môn đương hộ đối)', firstLessonNumber: 20, contextualNewCharacterLimit: 3),
+  CuratedHanVietPhrase(hanText: '一字千金', vietnameseGloss: 'nhất tự thiên kim; một chữ đáng giá nghìn vàng', firstLessonNumber: 20, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '破鏡重圓', vietnameseGloss: 'gương vỡ lại lành', firstLessonNumber: 21, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '德高望重', vietnameseGloss: 'đức cao vọng trọng', firstLessonNumber: 22, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '足智多謀', vietnameseGloss: 'đa mưu túc trí', firstLessonNumber: 22, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '飲水思源', vietnameseGloss: 'uống nước nhớ nguồn', firstLessonNumber: 22, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '真金不怕火', vietnameseGloss: 'vàng thật không sợ lửa', firstLessonNumber: 23, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '以不變應萬變', vietnameseGloss: 'dĩ bất biến ứng vạn biến', firstLessonNumber: 23, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '安居樂業', vietnameseGloss: 'an cư lạc nghiệp', firstLessonNumber: 25, contextualNewCharacterLimit: 1),
+  CuratedHanVietPhrase(hanText: '尊師重道', vietnameseGloss: 'tôn sư trọng đạo', firstLessonNumber: 25, contextualNewCharacterLimit: 1),
+
 ];
 
 String _capitalizeReading(String value) => value.isEmpty
     ? value
     : '${value.substring(0, 1).toUpperCase()}${value.substring(1)}';
+
+String _normalizePhraseKey(String value) =>
+    value.replaceAll(RegExp(r'[\s，、。；：！？!?.,;:…·「」『』]'), '');
 
 /// Sinh một cặp bài dịch thuận/ngược từ cùng một cụm đã duyệt.
 /// Thuận: chữ Hán -> xếp âm Hán-Việt. Ngược: âm Hán-Việt -> xếp chữ Hán.
@@ -937,6 +1124,10 @@ List<Question> generateCuratedTranslationQuestions(
   Random? random,
   int maxPhrases = 1,
   Set<String> excludedHanTexts = const <String>{},
+  int? lessonNumber,
+  bool includeOlderLessonPhrases = false,
+  bool includeSupplemental = false,
+  bool allowContextualNewCharacters = false,
 }) {
   if (exerciseCharacters.length < 2 || maxPhrases <= 0) return <Question>[];
 
@@ -946,16 +1137,40 @@ List<Question> generateCuratedTranslationQuestions(
       if (character.isHan) character.character: character,
   };
   final exerciseSymbols = exerciseCharacters.map((c) => c.character).toSet();
-  final excluded = excludedHanTexts.map((text) => text.replaceAll(' ', '')).toSet();
+  final excluded = excludedHanTexts.map(_normalizePhraseKey).toSet();
+
+  int unseenCount(CuratedHanVietPhrase phrase) =>
+      phrase.symbols.where((symbol) => !knownBySymbol.containsKey(symbol)).length;
+
+  bool lessonAllowed(CuratedHanVietPhrase phrase) {
+    final firstLesson = phrase.firstLessonNumber;
+    if (firstLesson == null || lessonNumber == null) return true;
+    return includeOlderLessonPhrases ? firstLesson <= lessonNumber : firstLesson == lessonNumber;
+  }
+
+  bool charactersAvailable(CuratedHanVietPhrase phrase) {
+    final unknown = unseenCount(phrase);
+    if (unknown == 0) return true;
+    if (!allowContextualNewCharacters || unknown > phrase.contextualNewCharacterLimit) return false;
+    return phrase.symbols.every((symbol) => knownBySymbol.containsKey(symbol) || findCharacter(symbol) != null);
+  }
+
   final eligible = curatedHanVietPhrases.where((phrase) {
     final symbols = phrase.symbols;
     return symbols.length >= 2 &&
-        !excluded.contains(phrase.hanText) &&
-        symbols.every(knownBySymbol.containsKey) &&
-        symbols.any(exerciseSymbols.contains);
+        (includeSupplemental || phrase.isCoreLessonContent) &&
+        lessonAllowed(phrase) &&
+        !excluded.contains(_normalizePhraseKey(phrase.hanText)) &&
+        charactersAvailable(phrase) &&
+        (symbols.any(exerciseSymbols.contains) ||
+            (lessonNumber != null && phrase.firstLessonNumber == lessonNumber));
   }).toList();
   if (eligible.isEmpty) return <Question>[];
 
+  final fixedExpressions = eligible
+      .where((phrase) => phrase.kind == CuratedPhraseKind.fixedExpression && phrase.symbols.length >= 4)
+      .toList()
+    ..sort((a, b) => b.symbols.length.compareTo(a.symbols.length));
   final completeSentences = eligible
       .where((phrase) => phrase.isFullSentence && phrase.symbols.length >= 4)
       .toList()
@@ -967,27 +1182,35 @@ List<Question> generateCuratedTranslationQuestions(
 
   List<CuratedHanVietPhrase> selected;
   if (maxPhrases == 1) {
-    // Preserve the earlier behavior for ordinary lessons: sample from a small
-    // group of the strongest candidates instead of always asking the same phrase.
-    final preferred = completeSentences.isNotEmpty ? completeSentences : longPhrases.isNotEmpty ? longPhrases : eligible;
+    final preferred = fixedExpressions.isNotEmpty
+        ? fixedExpressions
+        : completeSentences.isNotEmpty
+            ? completeSentences
+            : longPhrases.isNotEmpty ? longPhrases : eligible;
     final longestLength = preferred.first.symbols.length;
-    final top = preferred.where((phrase) => phrase.symbols.length >= longestLength - 1).take(5).toList();
+    final top = preferred.where((phrase) => phrase.symbols.length >= longestLength - 1).take(8).toList();
     top.shuffle(rng);
     selected = top.take(1).toList();
   } else {
-    // Challenge mode uses distinct questions and favors complete/long phrases.
+    // Giữ thành ngữ/cụm cố định ở đầu danh sách để tăng cơ hội gặp chúng.
     final ordered = <CuratedHanVietPhrase>[
-      ...completeSentences,
-      ...longPhrases.where((phrase) => !completeSentences.any((sentence) => sentence.hanText == phrase.hanText)),
-      ...eligible.where((phrase) => !longPhrases.any((longPhrase) => longPhrase.hanText == phrase.hanText)),
+      ...fixedExpressions,
+      ...completeSentences.where((phrase) => !fixedExpressions.any((item) => item.hanText == phrase.hanText)),
+      ...longPhrases.where((phrase) =>
+          !fixedExpressions.any((item) => item.hanText == phrase.hanText) &&
+          !completeSentences.any((item) => item.hanText == phrase.hanText)),
+      ...eligible.where((phrase) => !longPhrases.any((item) => item.hanText == phrase.hanText)),
     ];
-    // Introduce randomness within a nearby length band but retain sentence priority.
+    final expressions = ordered.where((phrase) => phrase.kind == CuratedPhraseKind.fixedExpression).toList()..shuffle(rng);
     final sentences = ordered.where((phrase) => phrase.isFullSentence).toList()..shuffle(rng);
-    final nonSentences = ordered.where((phrase) => !phrase.isFullSentence).toList()..shuffle(rng);
-    selected = <CuratedHanVietPhrase>[];
-    selected.addAll(sentences.take(maxPhrases));
+    final others = ordered.where((phrase) =>
+        phrase.kind != CuratedPhraseKind.fixedExpression && !phrase.isFullSentence).toList()..shuffle(rng);
+    selected = <CuratedHanVietPhrase>[
+      ...expressions.take(maxPhrases),
+      ...sentences.take((maxPhrases - min(maxPhrases, expressions.length)).clamp(0, maxPhrases).toInt()),
+    ];
     if (selected.length < maxPhrases) {
-      selected.addAll(nonSentences.take(maxPhrases - selected.length));
+      selected.addAll(others.take(maxPhrases - selected.length));
     }
     selected = selected.toSet().toList();
   }
@@ -995,7 +1218,11 @@ List<Question> generateCuratedTranslationQuestions(
   final questions = <Question>[];
   for (final phrase in selected) {
     final symbols = phrase.symbols;
-    final phraseCharacters = symbols.map((symbol) => knownBySymbol[symbol]!).toList();
+    final phraseCharacters = symbols
+        .map((symbol) => knownBySymbol[symbol] ?? findCharacter(symbol))
+        .whereType<HanCharacter>()
+        .toList();
+    if (phraseCharacters.length != symbols.length) continue;
     final readings = phraseCharacters.map((character) => character.hanVietReading.trim()).toList();
     if (readings.any((reading) => reading.isEmpty)) continue;
 
@@ -1044,6 +1271,10 @@ List<Question> generateSentenceReadingTypingQuestions({
   required String sectionTitle,
   Set<String> excludedHanTexts = const <String>{},
   Random? random,
+  int? lessonNumber,
+  bool includeOlderLessonPhrases = false,
+  bool includeSupplemental = false,
+  bool allowContextualNewCharacters = false,
 }) {
   if (limit <= 0) return <Question>[];
   final rng = random ?? Random();
@@ -1055,34 +1286,55 @@ List<Question> generateSentenceReadingTypingQuestions({
       if (character.isHan) character.character: character,
   };
   final excluded = excludedHanTexts.map((text) => text.replaceAll(' ', '')).toSet();
+
+  bool lessonAllowed(CuratedHanVietPhrase phrase) {
+    final firstLesson = phrase.firstLessonNumber;
+    if (firstLesson == null || lessonNumber == null) return true;
+    return includeOlderLessonPhrases ? firstLesson <= lessonNumber : firstLesson == lessonNumber;
+  }
+
+  bool charactersAvailable(CuratedHanVietPhrase phrase) {
+    final unknown = phrase.symbols.where((symbol) => !knownBySymbol.containsKey(symbol)).toList();
+    if (unknown.isEmpty) return true;
+    if (!allowContextualNewCharacters || unknown.length > phrase.contextualNewCharacterLimit) return false;
+    return unknown.every((symbol) => findCharacter(symbol) != null);
+  }
+
   final candidates = curatedHanVietPhrases.where((phrase) {
-    return phrase.isFullSentence &&
+    final isReviewCandidate = phrase.kind == CuratedPhraseKind.fixedExpression ||
+        (phrase.kind == CuratedPhraseKind.exampleSentence &&
+            phrase.isFullSentence &&
+            (phrase.isCoreLessonContent || includeSupplemental));
+    return isReviewCandidate &&
+        (includeSupplemental || phrase.isCoreLessonContent) &&
+        lessonAllowed(phrase) &&
         phrase.symbols.length >= 4 &&
-        !excluded.contains(phrase.hanText) &&
-        phrase.symbols.every(knownBySymbol.containsKey) &&
-        phrase.symbols.every((symbol) => knownBySymbol[symbol]!.hanVietReading.trim().isNotEmpty) &&
+        !excluded.contains(phrase.hanText.replaceAll(' ', '')) &&
+        charactersAvailable(phrase) &&
+        phrase.symbols.every((symbol) =>
+            (knownBySymbol[symbol] ?? findCharacter(symbol))?.hanVietReading.trim().isNotEmpty == true) &&
         phrase.symbols.any(targetSymbols.contains) &&
         phrase.vietnameseGloss.trim().isNotEmpty;
   }).toList()
-    ..sort((a, b) => b.symbols.length.compareTo(a.symbols.length));
+    ..sort((a, b) {
+      final kindOrder = (a.kind == CuratedPhraseKind.fixedExpression ? 0 : 1)
+          .compareTo(b.kind == CuratedPhraseKind.fixedExpression ? 0 : 1);
+      return kindOrder != 0 ? kindOrder : b.symbols.length.compareTo(a.symbols.length);
+    });
   if (candidates.isEmpty) return <Question>[];
 
-  // A narrow length window gives challenging questions while shuffling the
-  // order prevents every session from repeating the same translation sequence.
-  final longest = candidates.first.symbols.length;
-  final preferred = candidates.where((phrase) => phrase.symbols.length >= longest - 2).toList()..shuffle(rng);
-  final fallback = candidates.where((phrase) => phrase.symbols.length < longest - 2).toList()..shuffle(rng);
-  final unique = <CuratedHanVietPhrase>[];
-  final seen = <String>{};
-  for (final phrase in [...preferred, ...fallback]) {
-    if (seen.add(phrase.hanText)) unique.add(phrase);
-  }
+  final expressions = candidates.where((phrase) => phrase.kind == CuratedPhraseKind.fixedExpression).toList()..shuffle(rng);
+  final exampleSentences = candidates.where((phrase) => phrase.kind != CuratedPhraseKind.fixedExpression).toList()..shuffle(rng);
+  final ordered = <CuratedHanVietPhrase>[...expressions, ...exampleSentences];
 
-  return unique.take(limit).map((phrase) {
-    final chars = phrase.symbols.map((symbol) => knownBySymbol[symbol]!).toList();
+  return ordered.take(limit).map((phrase) {
+    final chars = phrase.symbols
+        .map((symbol) => knownBySymbol[symbol] ?? findCharacter(symbol))
+        .whereType<HanCharacter>()
+        .toList();
     final readings = chars.map((character) => character.hanVietReading.trim()).toList();
-    if (readings.any((reading) => reading.isEmpty)) {
-      throw StateError('Thiếu âm Hán-Việt trong câu ${phrase.hanText}');
+    if (readings.any((reading) => reading.isEmpty) || chars.length != phrase.symbols.length) {
+      throw StateError('Thiếu dữ liệu âm Hán-Việt trong câu ${phrase.hanText}');
     }
     final hanVietAnswer = readings.join(' ');
     final tokens = chars.map((character) => SentenceToken(
@@ -1093,7 +1345,7 @@ List<Question> generateSentenceReadingTypingQuestions({
     return Question(
       type: QuestionType.typingSentenceReading,
       sectionTitle: sectionTitle,
-      prompt: 'Gõ âm Hán-Việt của câu Hán văn sau.',
+      prompt: 'Gõ âm Hán-Việt của thành ngữ/câu Hán văn sau.',
       options: const <String>[],
       correctAnswer: hanVietAnswer,
       acceptedAnswers: <String>[hanVietAnswer],
@@ -1101,7 +1353,7 @@ List<Question> generateSentenceReadingTypingQuestions({
       sentenceTokens: tokens,
       sourceText: phrase.hanText,
       meaningExplanation: phrase.vietnameseGloss,
-      mnemonic: 'Đọc theo âm Hán-Việt của từng chữ; nghĩa tiếng Việt sẽ hiện sau khi kiểm tra.',
+      mnemonic: 'Đọc âm Hán-Việt của từng chữ. Chạm vào chữ để xem nghĩa trong lúc học.',
       characterType: 'Hán',
     );
   }).toList();
@@ -1109,6 +1361,56 @@ List<Question> generateSentenceReadingTypingQuestions({
 
 /// Xáo trộn câu hỏi nhưng cố gắng không để cùng một chữ hoặc cùng một dạng
 /// câu hỏi xuất hiện liên tiếp, giảm khả năng đoán theo vị trí.
+/// Tạo các câu hỏi ôn lại chữ bổ trợ mà người học đã chủ động chạm xem nghĩa.
+/// Chạm xem chỉ ghi nhận đã gặp; mastery chỉ tăng khi trả lời đúng câu hỏi này.
+List<Question> generateContextualCharacterReviewQuestions({
+  required Iterable<HanCharacter> encounteredCharacters,
+  required int limit,
+  required String sectionTitle,
+  Random? random,
+}) {
+  if (limit <= 0) return <Question>[];
+  final rng = random ?? Random();
+  final candidates = encounteredCharacters
+      .where((character) =>
+          character.isHan &&
+          character.mastery < 5 &&
+          character.hanVietReading.trim().isNotEmpty &&
+          character.meaning.trim().isNotEmpty)
+      .toList()
+    ..sort((a, b) => a.mastery.compareTo(b.mastery));
+
+  if (candidates.isEmpty) return <Question>[];
+  final lowestMastery = candidates.first.mastery;
+  final preferred = candidates.where((character) => character.mastery <= lowestMastery + 1).toList()
+    ..shuffle(rng);
+  final selected = <HanCharacter>[
+    ...preferred,
+    ...candidates.where((character) => !preferred.any((item) => item.character == character.character)),
+  ].take(limit);
+
+  return selected.map((character) {
+    final meaningAnswers = character.meaning
+        .split(RegExp(r'[,;]'))
+        .map((meaning) => meaning.trim())
+        .where((meaning) => meaning.isNotEmpty)
+        .toSet();
+    final reading = character.hanVietReading.trim();
+    return Question(
+      type: QuestionType.typing,
+      sectionTitle: sectionTitle,
+      prompt: 'Gõ âm Hán-Việt hoặc nghĩa tiếng Việt của chữ đã gặp.',
+      options: const <String>[],
+      correctAnswer: reading,
+      acceptedAnswers: <String>{reading, character.meaning.trim(), ...meaningAnswers}.toList(),
+      associatedCharacter: character.character,
+      mnemonic: 'Âm Hán-Việt: $reading · Nghĩa: ${character.meaning}',
+      meaningExplanation: character.meaning,
+      characterType: 'Hán',
+    );
+  }).toList();
+}
+
 List<Question> _shuffleQuestionsWithSeparation(List<Question> input, Random random) {
   final remaining = List<Question>.from(input)..shuffle(random);
   final result = <Question>[];
@@ -1161,6 +1463,10 @@ List<Question> generateLessonPartQuestions(
   String? sectionLabel,
   int translationPhraseLimit = 1,
   int sentenceTypingLimit = 0,
+  int? lessonNumber,
+  bool includeOlderLessonPhrases = false,
+  bool includeSupplementalPhrases = false,
+  bool allowContextualNewCharacters = false,
 }) {
   if (part < 1 || part > 3) {
     throw ArgumentError.value(part, 'part', 'Phải nằm trong khoảng 1–3.');
@@ -1310,6 +1616,10 @@ List<Question> generateLessonPartQuestions(
       sectionTitle: '$partName · Dịch hai chiều',
       random: rng,
       maxPhrases: translationPhraseLimit,
+      lessonNumber: lessonNumber,
+      includeOlderLessonPhrases: includeOlderLessonPhrases,
+      includeSupplemental: includeSupplementalPhrases,
+      allowContextualNewCharacters: allowContextualNewCharacters,
     ));
     if (part == 3 && sentenceTypingLimit > 0) {
       final usedPhrases = questions
@@ -1322,9 +1632,13 @@ List<Question> generateLessonPartQuestions(
         targetCharacters: effectiveTargets,
         knownCharacters: knownCharacters ?? effectiveTargets,
         limit: sentenceTypingLimit,
-        sectionTitle: '$partName · Gõ âm Hán-Việt câu văn',
+        sectionTitle: '$partName · Gõ âm Hán-Việt thành ngữ',
         excludedHanTexts: usedPhrases,
         random: rng,
+        lessonNumber: lessonNumber,
+        includeOlderLessonPhrases: includeOlderLessonPhrases,
+        includeSupplemental: includeSupplementalPhrases,
+        allowContextualNewCharacters: allowContextualNewCharacters,
       ));
     }
   }
@@ -1343,6 +1657,8 @@ List<Question> generateAdvancedReviewQuestions({
   required Iterable<HanCharacter> knownCharacters,
   required ReviewChallengeMode mode,
   Random? random,
+  int? throughLessonNumber,
+  Iterable<HanCharacter> encounteredContextualCharacters = const <HanCharacter>[],
 }) {
   if (characters.isEmpty) return <Question>[];
   final rng = random ?? Random();
@@ -1362,17 +1678,18 @@ List<Question> generateAdvancedReviewQuestions({
       prefix = 'Ôn tập';
       break;
     case ReviewChallengeMode.checkpoint:
-      translationLimit = 3;
-      sentenceTypingLimit = 9;
+      translationLimit = 4;
+      sentenceTypingLimit = 14;
       prefix = 'Tổng Ôn tập';
       break;
     case ReviewChallengeMode.jumpAhead:
-      translationLimit = 3;
-      sentenceTypingLimit = 16;
+      translationLimit = 4;
+      sentenceTypingLimit = 20;
       prefix = 'Học vượt';
       break;
   }
 
+  final contextualGlossesEnabled = mode != ReviewChallengeMode.jumpAhead;
   final questions = generateLessonPartQuestions(
     uniqueCharacters,
     part: 3,
@@ -1380,6 +1697,10 @@ List<Question> generateAdvancedReviewQuestions({
     random: rng,
     translationPhraseLimit: translationLimit,
     sentenceTypingLimit: 0,
+    lessonNumber: throughLessonNumber,
+    includeOlderLessonPhrases: true,
+    includeSupplementalPhrases: true,
+    allowContextualNewCharacters: contextualGlossesEnabled,
   );
   final usedPhrases = questions
       .where((question) => question.type == QuestionType.translateSentence ||
@@ -1391,8 +1712,24 @@ List<Question> generateAdvancedReviewQuestions({
     targetCharacters: uniqueCharacters,
     knownCharacters: knownCharacters,
     limit: sentenceTypingLimit,
-    sectionTitle: '$prefix · Gõ âm Hán-Việt câu văn',
+    sectionTitle: '$prefix · Gõ âm Hán-Việt thành ngữ',
     excludedHanTexts: usedPhrases,
+    random: rng,
+    lessonNumber: throughLessonNumber,
+    includeOlderLessonPhrases: true,
+    includeSupplemental: true,
+    allowContextualNewCharacters: contextualGlossesEnabled,
+  ));
+
+  final contextualCharacterReviewLimit = switch (mode) {
+    ReviewChallengeMode.dailyReview => 2,
+    ReviewChallengeMode.checkpoint => 4,
+    ReviewChallengeMode.jumpAhead => 4,
+  };
+  questions.addAll(generateContextualCharacterReviewQuestions(
+    encounteredCharacters: encounteredContextualCharacters,
+    limit: contextualCharacterReviewLimit,
+    sectionTitle: '$prefix · Ôn chữ đã gặp',
     random: rng,
   ));
 

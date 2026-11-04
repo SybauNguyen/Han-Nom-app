@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ import '../services/ad_service.dart';
 import '../state/app_state.dart';
 import '../widgets/fill_in_the_blank_widget.dart';
 import '../widgets/hanzi_canvas.dart';
+import '../widgets/interactive_sentence.dart';
 import '../widgets/introduce_word_widget.dart';
 import '../widgets/matching_pairs_widget.dart';
 import '../widgets/stats_widgets.dart';
@@ -148,12 +150,43 @@ class _LessonScreenState extends State<LessonScreen> {
       } else {
         questionPart = 1;
       }
-      _questions = generateLessonPartQuestions(
-        _characters,
-        knownCharacters: knownChars,
-        part: questionPart,
-        sectionLabel: _isActivePartLesson ? 'Phần $_lessonPart/5' : null,
-      );
+      if (widget.isJumpAhead) {
+        _questions = generateAdvancedReviewQuestions(
+          characters: _characters,
+          knownCharacters: knownChars,
+          mode: ReviewChallengeMode.jumpAhead,
+          throughLessonNumber: widget.targetIndex - 1,
+          encounteredContextualCharacters: _encounteredContextualCharactersForReview(),
+        );
+      } else if (widget.checkpointIndex != null) {
+        _questions = generateAdvancedReviewQuestions(
+          characters: _characters,
+          knownCharacters: knownChars,
+          mode: ReviewChallengeMode.checkpoint,
+          throughLessonNumber: widget.checkpointIndex! * hanLessonsPerCycle,
+          encounteredContextualCharacters: _encounteredContextualCharactersForReview(),
+        );
+      } else if (widget.reviewMode) {
+        final availableThrough = widget.appState.hanLessonsCompleted > widget.appState.unlockedHanThroughLesson
+            ? widget.appState.hanLessonsCompleted
+            : widget.appState.unlockedHanThroughLesson;
+        _questions = generateAdvancedReviewQuestions(
+          characters: _characters,
+          knownCharacters: knownChars,
+          mode: ReviewChallengeMode.dailyReview,
+          throughLessonNumber: availableThrough,
+          encounteredContextualCharacters: _encounteredContextualCharactersForReview(),
+        );
+      } else {
+        _questions = generateLessonPartQuestions(
+          _characters,
+          knownCharacters: knownChars,
+          part: questionPart,
+          sectionLabel: _isActivePartLesson ? 'Phần $_lessonPart/5' : null,
+          lessonNumber: widget.trackLessonNumber,
+          allowContextualNewCharacters: !widget.isJumpAhead,
+        );
+      }
     }
   }
 
@@ -180,17 +213,30 @@ class _LessonScreenState extends State<LessonScreen> {
     }
   }
 
+  List<HanCharacter> _encounteredContextualCharactersForReview() {
+    return widget.appState.encounteredContextualCharacters
+        .map(findCharacter)
+        .whereType<HanCharacter>()
+        .map((character) => character.copyWith(
+              mastery: widget.appState.masteryOf(character.character),
+            ))
+        .toList();
+  }
+
   List<HanCharacter> _knownCharactersForQuestionGeneration() {
     final knownBySymbol = <String, HanCharacter>{};
 
     void addSymbols(Iterable<String> symbols) {
       for (final symbol in symbols) {
         final character = findCharacter(symbol);
-        if (character != null && character.isHan) knownBySymbol[symbol] = character;
+        if (character != null && character.isHan) {
+          knownBySymbol[symbol] = character.copyWith(mastery: widget.appState.masteryOf(symbol));
+        }
       }
     }
 
-    if (widget.trackType == 'Hán' && widget.trackLessonNumber != null) {
+    if (!widget.isJumpAhead && widget.checkpointIndex == null && !widget.reviewMode &&
+        widget.trackType == 'Hán' && widget.trackLessonNumber != null) {
       final currentUnitIndex = (widget.trackLessonNumber! - 1).clamp(0, hanLessonUnits.length).toInt();
       addSymbols(hanLessonUnits.take(currentUnitIndex).expand((unit) => unit.characters));
       final partBeingStudied = _isActivePartLesson ? _lessonPart : 3;
@@ -205,8 +251,9 @@ class _LessonScreenState extends State<LessonScreen> {
           .take((widget.targetIndex - 1).clamp(0, hanLessonUnits.length).toInt())
           .expand((unit) => unit.characters));
     } else if (widget.checkpointIndex != null) {
-      final firstUnit = (widget.checkpointIndex! - 1) * hanLessonsPerCycle;
-      addSymbols(hanLessonUnits.skip(firstUnit).take(hanLessonsPerCycle).expand((unit) => unit.characters));
+      addSymbols(hanLessonUnits
+          .take((widget.checkpointIndex! * hanLessonsPerCycle).clamp(0, hanLessonUnits.length).toInt())
+          .expand((unit) => unit.characters));
     } else if (widget.reviewMode) {
       final count = widget.appState.hanLessonsCompleted > widget.appState.unlockedHanThroughLesson
           ? widget.appState.hanLessonsCompleted
@@ -219,6 +266,8 @@ class _LessonScreenState extends State<LessonScreen> {
     } else {
       addSymbols(_characters.map((character) => character.character));
     }
+
+    addSymbols(widget.appState.encounteredContextualCharacters);
 
     return knownBySymbol.values.toList();
   }
@@ -624,6 +673,7 @@ class _LessonScreenState extends State<LessonScreen> {
                       enabled: !_checked && _hasHeartsLeft,
                       supplementaryLanguage: widget.appState.supplementaryLanguage,
                       cjkCharacters: widget.appState.cjkCharacters,
+                      tapEnabled: !widget.isJumpAhead,
                       onSelected: (answer) {
                         if (!_checked) setState(() => _selectedOption = answer);
                       },
@@ -636,6 +686,9 @@ class _LessonScreenState extends State<LessonScreen> {
                       correctAnswer: question.correctAnswer,
                       checked: _checked,
                       isCorrect: _isCorrect,
+                      tapEnabled: !widget.isJumpAhead,
+                      phraseMeaning: question.mnemonic,
+                      onCharacterTapped: (character) => unawaited(widget.appState.markContextualCharacterEncountered(character)),
                       onSelected: (answer) { if (_hasHeartsLeft) setState(() => _selectedOption = answer); },
                     )
                   else if (question.type == QuestionType.matchingPairs)
@@ -652,6 +705,9 @@ class _LessonScreenState extends State<LessonScreen> {
                       key: ValueKey('translate-question-$_questionIndex'),
                       question: question,
                       reverseDirection: question.type == QuestionType.translateHanVietToCharacter,
+                      tapEnabled: !widget.isJumpAhead,
+                      phraseMeaning: question.mnemonic,
+                      onCharacterTapped: (character) => unawaited(widget.appState.markContextualCharacterEncountered(character)),
                       enabled: !_checked && _hasHeartsLeft,
                       onAnswerChanged: (answer) {
                         if (!_checked && _hasHeartsLeft) setState(() => _selectedOption = answer);
@@ -665,28 +721,37 @@ class _LessonScreenState extends State<LessonScreen> {
                       decoration: BoxDecoration(color: question.characterType == 'Nôm' ? kNomLight : kGreenLight, borderRadius: BorderRadius.circular(24)),
                       alignment: Alignment.center,
                       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                        Text(
-                          question.type == QuestionType.character
-                              ? (character?.meaning ?? '')
-                              : (question.type == QuestionType.typingSentenceMeaning ||
-                                      question.type == QuestionType.typingSentenceReading)
-                                  ? (question.sourceText ?? question.character)
-                                  : question.character,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: question.type == QuestionType.character
-                                ? 26
-                                : (question.type == QuestionType.typingSentenceMeaning ||
-                                        question.type == QuestionType.typingSentenceReading)
-                                    ? 44
-                                    : 82,
-                            height: (question.type == QuestionType.typingSentenceMeaning ||
-                                    question.type == QuestionType.typingSentenceReading) ? 1.45 : null,
-                            color: question.characterType == 'Nôm' ? kOrange : kGreen,
-                            fontWeight: FontWeight.w700,
-                            fontFamilyFallback: const ['NomNaTong', 'HanNomB'],
+                        if (question.type == QuestionType.typingSentenceReading &&
+                            question.sentenceTokens != null)
+                          InteractiveSentence(
+                            tokens: question.sentenceTokens!,
+                            supplementaryLanguage: widget.appState.supplementaryLanguage,
+                            cjkCharacters: widget.appState.cjkCharacters,
+                            tapEnabled: !widget.isJumpAhead,
+                            phraseMeaning: question.meaningExplanation,
+                            onCharacterTapped: (character) => unawaited(widget.appState.markContextualCharacterEncountered(character)),
+                            fontSize: 40,
+                          )
+                        else
+                          Text(
+                            question.type == QuestionType.character
+                                ? (character?.meaning ?? '')
+                                : question.type == QuestionType.typingSentenceMeaning
+                                    ? (question.sourceText ?? question.character)
+                                    : question.character,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: question.type == QuestionType.character
+                                  ? 26
+                                  : question.type == QuestionType.typingSentenceMeaning
+                                      ? 38
+                                      : 82,
+                              height: question.type == QuestionType.typingSentenceMeaning ? 1.45 : null,
+                              color: question.characterType == 'Nôm' ? kOrange : kGreen,
+                              fontWeight: FontWeight.w700,
+                              fontFamilyFallback: const ['NomNaTong', 'HanNomB'],
+                            ),
                           ),
-                        ),
                         if (question.type == QuestionType.radical) ...[
                           const SizedBox(height: 8),
                           Text(question.characterType == 'Nôm' ? 'Cách đọc: ${character?.hanVietReading ?? ''}' : 'Âm Hán-Việt: ${character?.hanVietReading ?? ''}', style: const TextStyle(color: kOrange, fontWeight: FontWeight.w800)),
@@ -697,7 +762,9 @@ class _LessonScreenState extends State<LessonScreen> {
                           const SizedBox(height: 8),
                           Text(
                             question.type == QuestionType.typingSentenceReading
-                                ? 'Tự gõ âm Hán-Việt; nghĩa tiếng Việt sẽ hiện sau khi kiểm tra'
+                                ? (widget.isJumpAhead
+                                    ? 'Tự gõ âm Hán-Việt, không có gợi ý nghĩa'
+                                    : 'Tự gõ âm Hán-Việt. Chạm vào từng chữ để xem nghĩa')
                                 : question.type == QuestionType.typingSentenceMeaning
                                     ? 'Tự dịch cả câu, không có gợi ý đáp án'
                                     : 'Hãy tự nhớ âm đọc hoặc nghĩa',
@@ -884,7 +951,7 @@ class _AnswerOption extends StatelessWidget {
     }
 
     return Padding(
-      padding: const EdgeInsets.only(bottom: 9),
+      padding: const EdgeInsets.only(bottom: 6),
       child: Material(
         color: background,
         borderRadius: BorderRadius.circular(16),
@@ -892,12 +959,12 @@ class _AnswerOption extends StatelessWidget {
           onTap: onTap,
           borderRadius: BorderRadius.circular(16),
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 13),
+            padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 9),
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(16), border: Border.all(color: border, width: selected || (checked && correct) ? 1.7 : 1)),
             child: Row(children: [
-              Container(width: 34, height: 34, alignment: Alignment.center, decoration: BoxDecoration(color: selected ? border.withOpacity(0.12) : const Color(0xFFF2F4F0), borderRadius: BorderRadius.circular(10)), child: Text(letter, style: TextStyle(fontWeight: FontWeight.w900, color: textColor))),
-              const SizedBox(width: 12),
-              Expanded(child: Text(label, style: TextStyle(fontWeight: FontWeight.w700, color: textColor, fontSize: 16, fontFamilyFallback: const ['NomNaTong', 'HanNomB']))),
+              Container(width: 28, height: 28, alignment: Alignment.center, decoration: BoxDecoration(color: selected ? border.withOpacity(0.12) : const Color(0xFFF2F4F0), borderRadius: BorderRadius.circular(10)), child: Text(letter, style: TextStyle(fontWeight: FontWeight.w900, color: textColor))),
+              const SizedBox(width: 9),
+              Expanded(child: Text(label, style: TextStyle(fontWeight: FontWeight.w700, color: textColor, fontSize: 14.5, fontFamilyFallback: const ['NomNaTong', 'HanNomB']))),
               if (checked && correct) const Icon(Icons.check_circle_rounded, color: kGreen),
             ]),
           ),
