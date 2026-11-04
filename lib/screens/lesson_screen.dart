@@ -654,6 +654,7 @@ class _LessonScreenState extends State<LessonScreen> {
                       enabled: !_checked && _hasHeartsLeft,
                       supplementaryLanguage: widget.appState.supplementaryLanguage,
                       cjkCharacters: widget.appState.cjkCharacters,
+                      tapEnabled: !widget.isJumpAhead,
                       onSelected: (answer) {
                         if (!_checked) setState(() => _selectedOption = answer);
                       },
@@ -666,6 +667,7 @@ class _LessonScreenState extends State<LessonScreen> {
                       correctAnswer: question.correctAnswer,
                       checked: _checked,
                       isCorrect: _isCorrect,
+                      tapEnabled: !widget.isJumpAhead,
                       onSelected: (answer) { if (_hasHeartsLeft) setState(() => _selectedOption = answer); },
                     )
                   else if (question.type == QuestionType.matchingPairs)
@@ -682,6 +684,7 @@ class _LessonScreenState extends State<LessonScreen> {
                       key: ValueKey('translate-question-$_questionIndex'),
                       question: question,
                       reverseDirection: question.type == QuestionType.translateHanVietToCharacter,
+                      tapEnabled: !widget.isJumpAhead,
                       enabled: !_checked && _hasHeartsLeft,
                       onAnswerChanged: (answer) {
                         if (!_checked && _hasHeartsLeft) setState(() => _selectedOption = answer);
