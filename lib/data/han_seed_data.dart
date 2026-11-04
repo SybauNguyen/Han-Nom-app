@@ -355,7 +355,6 @@ const List<HanCharacter> supplementaryPhraseCharacters = <HanCharacter>[
   HanCharacter(character: '師', hanVietReading: 'sư', meaning: 'thầy, người dạy', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
   HanCharacter(character: '言', hanVietReading: 'ngôn', meaning: 'lời nói', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
   HanCharacter(character: '鼎', hanVietReading: 'đỉnh', meaning: 'đỉnh ba chân; vạc', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
-  HanCharacter(character: '頂', hanVietReading: 'đỉnh', meaning: 'đỉnh, phần trên cùng', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
   HanCharacter(character: '驚', hanVietReading: 'kinh', meaning: 'kinh ngạc, hoảng sợ', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
   HanCharacter(character: '動', hanVietReading: 'động', meaning: 'chuyển động', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
   HanCharacter(character: '色', hanVietReading: 'sắc', meaning: 'màu sắc, sắc đẹp', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
@@ -382,7 +381,6 @@ const List<HanCharacter> supplementaryPhraseCharacters = <HanCharacter>[
   HanCharacter(character: '調', hanVietReading: 'điệu', meaning: 'điệu; điều chỉnh (âm đọc theo thành ngữ 調虎離山)', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
   HanCharacter(character: '離', hanVietReading: 'ly', meaning: 'rời xa, ly khai', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
   HanCharacter(character: '狐', hanVietReading: 'hồ', meaning: 'cáo', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
-  HanCharacter(character: '假', hanVietReading: 'giả', meaning: 'mượn; giả', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
   HanCharacter(character: '威', hanVietReading: 'uy', meaning: 'uy thế, quyền uy', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
   HanCharacter(character: '偕', hanVietReading: 'giai', meaning: 'cùng nhau', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
   HanCharacter(character: '老', hanVietReading: 'lão', meaning: 'già, lâu năm', radical: '—', structure: 'Bổ trợ ngữ cảnh', difficulty: 3, inCurriculum: false),
@@ -1113,6 +1111,9 @@ String _capitalizeReading(String value) => value.isEmpty
     ? value
     : '${value.substring(0, 1).toUpperCase()}${value.substring(1)}';
 
+String _normalizePhraseKey(String value) =>
+    value.replaceAll(RegExp(r'[\\s，、。；：！？!?.,;:…·「」『』]'), '');
+
 /// Sinh một cặp bài dịch thuận/ngược từ cùng một cụm đã duyệt.
 /// Thuận: chữ Hán -> xếp âm Hán-Việt. Ngược: âm Hán-Việt -> xếp chữ Hán.
 /// Không có fallback ghép nghĩa từng chữ nếu không tìm được phrase phù hợp.
@@ -1136,7 +1137,7 @@ List<Question> generateCuratedTranslationQuestions(
       if (character.isHan) character.character: character,
   };
   final exerciseSymbols = exerciseCharacters.map((c) => c.character).toSet();
-  final excluded = excludedHanTexts.map((text) => text.replaceAll(' ', '')).toSet();
+  final excluded = excludedHanTexts.map(_normalizePhraseKey).toSet();
 
   int unseenCount(CuratedHanVietPhrase phrase) =>
       phrase.symbols.where((symbol) => !knownBySymbol.containsKey(symbol)).length;
@@ -1159,9 +1160,10 @@ List<Question> generateCuratedTranslationQuestions(
     return symbols.length >= 2 &&
         (includeSupplemental || phrase.isCoreLessonContent) &&
         lessonAllowed(phrase) &&
-        !excluded.contains(phrase.hanText.replaceAll(' ', '')) &&
+        !excluded.contains(_normalizePhraseKey(phrase.hanText)) &&
         charactersAvailable(phrase) &&
-        symbols.any(exerciseSymbols.contains);
+        (symbols.any(exerciseSymbols.contains) ||
+            (lessonNumber != null && phrase.firstLessonNumber == lessonNumber));
   }).toList();
   if (eligible.isEmpty) return <Question>[];
 
