@@ -524,10 +524,17 @@ class AppState extends ChangeNotifier {
       unlockedHanThroughLesson = unlockedHanThroughLesson < unlockTargetLessonNumber
           ? unlockTargetLessonNumber
           : unlockedHanThroughLesson;
-      // Học vượt marks earlier Hán lessons as skipped/unlocked, but does NOT
-      // auto-complete a Boss checkpoint; therefore it cannot unlock Nôm by itself.
+      // Khi vượt qua bài thi Học vượt, mọi mốc Tổng Ôn tập nằm hoàn toàn
+      // trước bài mục tiêu được đánh dấu hoàn thành để người học không phải
+      // quay lại làm lại các mốc đã được bài thi này bao phủ.
       final beforeTarget = (unlockTargetLessonNumber - 1).clamp(0, hanCoreLessonCount).toInt();
       if (hanLessonsCompleted < beforeTarget) hanLessonsCompleted = beforeTarget;
+      final checkpointsBeforeTarget = (beforeTarget ~/ hanLessonsPerCycle)
+          .clamp(0, hanCoreLessonCount ~/ hanLessonsPerCycle)
+          .toInt();
+      if (completedHanReviewCheckpoints < checkpointsBeforeTarget) {
+        completedHanReviewCheckpoints = checkpointsBeforeTarget;
+      }
       currentLessonPart = 1;
     }
 
