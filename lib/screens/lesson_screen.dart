@@ -251,6 +251,8 @@ class _LessonScreenState extends State<LessonScreen> {
       addSymbols(_characters.map((character) => character.character));
     }
 
+    addSymbols(widget.appState.encounteredContextualCharacters);
+
     return knownBySymbol.values.toList();
   }
 
@@ -656,6 +658,8 @@ class _LessonScreenState extends State<LessonScreen> {
                       supplementaryLanguage: widget.appState.supplementaryLanguage,
                       cjkCharacters: widget.appState.cjkCharacters,
                       tapEnabled: !widget.isJumpAhead,
+                      phraseMeaning: question.mnemonic,
+                      onCharacterTapped: (character) => unawaited(widget.appState.markContextualCharacterEncountered(character)),
                       onSelected: (answer) {
                         if (!_checked) setState(() => _selectedOption = answer);
                       },
@@ -669,6 +673,8 @@ class _LessonScreenState extends State<LessonScreen> {
                       checked: _checked,
                       isCorrect: _isCorrect,
                       tapEnabled: !widget.isJumpAhead,
+                      phraseMeaning: question.mnemonic,
+                      onCharacterTapped: (character) => unawaited(widget.appState.markContextualCharacterEncountered(character)),
                       onSelected: (answer) { if (_hasHeartsLeft) setState(() => _selectedOption = answer); },
                     )
                   else if (question.type == QuestionType.matchingPairs)
@@ -686,6 +692,8 @@ class _LessonScreenState extends State<LessonScreen> {
                       question: question,
                       reverseDirection: question.type == QuestionType.translateHanVietToCharacter,
                       tapEnabled: !widget.isJumpAhead,
+                      phraseMeaning: question.mnemonic,
+                      onCharacterTapped: (character) => unawaited(widget.appState.markContextualCharacterEncountered(character)),
                       enabled: !_checked && _hasHeartsLeft,
                       onAnswerChanged: (answer) {
                         if (!_checked && _hasHeartsLeft) setState(() => _selectedOption = answer);
@@ -706,6 +714,8 @@ class _LessonScreenState extends State<LessonScreen> {
                             supplementaryLanguage: widget.appState.supplementaryLanguage,
                             cjkCharacters: widget.appState.cjkCharacters,
                             tapEnabled: !widget.isJumpAhead,
+                            phraseMeaning: question.meaningExplanation,
+                            onCharacterTapped: (character) => unawaited(widget.appState.markContextualCharacterEncountered(character)),
                             fontSize: 40,
                           )
                         else
