@@ -1067,7 +1067,7 @@ const List<CuratedHanVietPhrase> curatedHanVietPhrases = [
   CuratedHanVietPhrase(hanText: '病從口入，禍從口出', vietnameseGloss: 'bệnh từ miệng mà vào, họa từ miệng mà ra', firstLessonNumber: 9, contextualNewCharacterLimit: 2),
   CuratedHanVietPhrase(hanText: '入家隨俗', vietnameseGloss: 'nhập gia tùy tục', firstLessonNumber: 9, contextualNewCharacterLimit: 2),
   CuratedHanVietPhrase(hanText: '半信半疑', vietnameseGloss: 'bán tín bán nghi', firstLessonNumber: 10, contextualNewCharacterLimit: 2),
-  CuratedHanVietPhrase(hanText: '一字師，半字師', vietnameseGloss: 'nhất tự vi sư, bán tự vi sư', firstLessonNumber: 10, contextualNewCharacterLimit: 2),
+  CuratedHanVietPhrase(hanText: '一字師，半字師', vietnameseGloss: 'nhất tự vi sư, bán tự vi sư', firstLessonNumber: 10, contextualNewCharacterLimit: 3),
   CuratedHanVietPhrase(hanText: '一言九鼎', vietnameseGloss: 'nhất ngôn cửu đỉnh; lời nói có trọng lượng', firstLessonNumber: 10, contextualNewCharacterLimit: 2),
   CuratedHanVietPhrase(hanText: '頂天立地', vietnameseGloss: 'đội trời đạp đất', firstLessonNumber: 11, contextualNewCharacterLimit: 1),
   CuratedHanVietPhrase(hanText: '驚天動地', vietnameseGloss: 'kinh thiên động địa', firstLessonNumber: 11, contextualNewCharacterLimit: 2),
