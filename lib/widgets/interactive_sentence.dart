@@ -96,7 +96,7 @@ class InteractiveSentence extends StatelessWidget {
         if (!tapEnabled) return characterText;
         final contextualMeaning = (phraseMeaning ?? '')
             .trim()
-            .replaceFirst(RegExp(r'^Nghĩa cả cụm:\\s*'), '');
+            .replaceFirst(RegExp(r'^Nghĩa cả cụm:\s*'), '');
 
         return Tooltip(
           triggerMode: TooltipTriggerMode.tap,
