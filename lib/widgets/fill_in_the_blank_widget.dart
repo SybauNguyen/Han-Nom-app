@@ -16,6 +16,8 @@ class FillInTheBlankWidget extends StatelessWidget {
   final bool isCorrect;
   final ValueChanged<String> onSelected;
   final bool tapEnabled;
+  final String? phraseMeaning;
+  final ValueChanged<String>? onCharacterTapped;
 
   const FillInTheBlankWidget({
     super.key,
@@ -27,6 +29,8 @@ class FillInTheBlankWidget extends StatelessWidget {
     required this.isCorrect,
     required this.onSelected,
     this.tapEnabled = true,
+    this.phraseMeaning,
+    this.onCharacterTapped,
   });
 
   @override
@@ -50,7 +54,13 @@ class FillInTheBlankWidget extends StatelessWidget {
               )),
             ]),
             const SizedBox(height: 18),
-            InteractiveSentence(tokens: tokens, selectedAnswer: selectedAnswer, tapEnabled: tapEnabled),
+            InteractiveSentence(
+              tokens: tokens,
+              selectedAnswer: selectedAnswer,
+              tapEnabled: tapEnabled,
+              phraseMeaning: phraseMeaning,
+              onCharacterTapped: onCharacterTapped,
+            ),
           ]),
         ),
         const SizedBox(height: 20),
