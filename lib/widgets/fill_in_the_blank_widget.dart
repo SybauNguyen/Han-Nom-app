@@ -15,6 +15,7 @@ class FillInTheBlankWidget extends StatelessWidget {
   final bool checked;
   final bool isCorrect;
   final ValueChanged<String> onSelected;
+  final bool tapEnabled;
 
   const FillInTheBlankWidget({
     super.key,
@@ -25,6 +26,7 @@ class FillInTheBlankWidget extends StatelessWidget {
     required this.checked,
     required this.isCorrect,
     required this.onSelected,
+    this.tapEnabled = true,
   });
 
   @override
@@ -44,7 +46,7 @@ class FillInTheBlankWidget extends StatelessWidget {
               Flexible(child: Text('CHẠM VÀO CHỮ ĐỂ XEM NGHĨA', textAlign: TextAlign.center, style: TextStyle(fontSize: 10, letterSpacing: 0.7, color: _blankGreen, fontWeight: FontWeight.w900))),
             ]),
             const SizedBox(height: 18),
-            InteractiveSentence(tokens: tokens, selectedAnswer: selectedAnswer),
+            InteractiveSentence(tokens: tokens, selectedAnswer: selectedAnswer, tapEnabled: tapEnabled),
           ]),
         ),
         const SizedBox(height: 20),
