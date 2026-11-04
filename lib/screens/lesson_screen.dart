@@ -156,6 +156,7 @@ class _LessonScreenState extends State<LessonScreen> {
           knownCharacters: knownChars,
           mode: ReviewChallengeMode.jumpAhead,
           throughLessonNumber: widget.targetIndex - 1,
+          encounteredContextualCharacters: _encounteredContextualCharactersForReview(),
         );
       } else if (widget.checkpointIndex != null) {
         _questions = generateAdvancedReviewQuestions(
@@ -163,6 +164,7 @@ class _LessonScreenState extends State<LessonScreen> {
           knownCharacters: knownChars,
           mode: ReviewChallengeMode.checkpoint,
           throughLessonNumber: widget.checkpointIndex! * hanLessonsPerCycle,
+          encounteredContextualCharacters: _encounteredContextualCharactersForReview(),
         );
       } else if (widget.reviewMode) {
         final availableThrough = widget.appState.hanLessonsCompleted > widget.appState.unlockedHanThroughLesson
@@ -173,6 +175,7 @@ class _LessonScreenState extends State<LessonScreen> {
           knownCharacters: knownChars,
           mode: ReviewChallengeMode.dailyReview,
           throughLessonNumber: availableThrough,
+          encounteredContextualCharacters: _encounteredContextualCharactersForReview(),
         );
       } else {
         _questions = generateLessonPartQuestions(
@@ -208,6 +211,16 @@ class _LessonScreenState extends State<LessonScreen> {
     } else {
       Navigator.of(context).pop();
     }
+  }
+
+  List<HanCharacter> _encounteredContextualCharactersForReview() {
+    return widget.appState.encounteredContextualCharacters
+        .map(findCharacter)
+        .whereType<HanCharacter>()
+        .map((character) => character.copyWith(
+              mastery: widget.appState.masteryOf(character.character),
+            ))
+        .toList();
   }
 
   List<HanCharacter> _knownCharactersForQuestionGeneration() {
