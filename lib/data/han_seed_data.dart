@@ -1393,7 +1393,11 @@ List<Question> generateContextualCharacterReviewQuestions({
   ].take(limit);
 
   return selected.map((character) {
-    final meaningAnswer = character.meaning.split(RegExp(r'[,;]')).first.trim();
+    final meaningAnswers = character.meaning
+        .split(RegExp(r'[,;]'))
+        .map((meaning) => meaning.trim())
+        .where((meaning) => meaning.isNotEmpty)
+        .toSet();
     final reading = character.hanVietReading.trim();
     return Question(
       type: QuestionType.typing,
@@ -1401,7 +1405,7 @@ List<Question> generateContextualCharacterReviewQuestions({
       prompt: 'Gõ âm Hán-Việt hoặc nghĩa tiếng Việt của chữ đã gặp.',
       options: const <String>[],
       correctAnswer: reading,
-      acceptedAnswers: <String>[reading, meaningAnswer],
+      acceptedAnswers: <String>{reading, character.meaning.trim(), ...meaningAnswers}.toList(),
       associatedCharacter: character.character,
       mnemonic: 'Âm Hán-Việt: $reading · Nghĩa: ${character.meaning}',
       meaningExplanation: character.meaning,
