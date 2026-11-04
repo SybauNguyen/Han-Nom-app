@@ -675,7 +675,6 @@ class _LessonScreenState extends State<LessonScreen> {
                       cjkCharacters: widget.appState.cjkCharacters,
                       tapEnabled: !widget.isJumpAhead,
                       phraseMeaning: question.mnemonic,
-                      onCharacterTapped: (character) => unawaited(widget.appState.markContextualCharacterEncountered(character)),
                       onSelected: (answer) {
                         if (!_checked) setState(() => _selectedOption = answer);
                       },
