@@ -156,7 +156,9 @@ class _TranslateSentenceWidgetState extends State<TranslateSentenceWidget> {
                 Flexible(child: Text(
                   widget.reverseDirection
                       ? 'ĐỌC ÂM HÁN-VIỆT, GHÉP CÁC CHỮ HÁN TƯƠNG ỨNG'
-                      : 'CHẠM VÀO CHỮ ĐỂ XEM ÂM VÀ NGHĨA',
+                      : widget.tapEnabled
+                          ? 'CHẠM VÀO CHỮ ĐỂ XEM ÂM VÀ NGHĨA'
+                          : 'TỰ NHỚ ÂM HÁN-VIỆT, KHÔNG CÓ GỢI Ý',
                   textAlign: TextAlign.center,
                   style: const TextStyle(fontSize: 10, letterSpacing: 0.7, color: _translateGreen, fontWeight: FontWeight.w900),
                 )),
