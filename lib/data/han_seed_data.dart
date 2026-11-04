@@ -1361,6 +1361,55 @@ List<Question> generateSentenceReadingTypingQuestions({
 
 /// Xáo trộn câu hỏi nhưng cố gắng không để cùng một chữ hoặc cùng một dạng
 /// câu hỏi xuất hiện liên tiếp, giảm khả năng đoán theo vị trí.
+/// Tạo các câu hỏi ôn lại chữ bổ trợ mà người học đã chủ động chạm xem nghĩa.
+/// Chạm xem chỉ ghi nhận đã gặp; mastery chỉ tăng khi trả lời đúng câu hỏi này.
+List<Question> generateContextualCharacterReviewQuestions({
+  required Iterable<HanCharacter> encounteredCharacters,
+  required int limit,
+  required String sectionTitle,
+  Random? random,
+}) {
+  if (limit <= 0) return <Question>[];
+  final rng = random ?? Random();
+  final contextualSymbols = supplementaryPhraseCharacters
+      .map((character) => character.character)
+      .toSet();
+  final candidates = encounteredCharacters
+      .where((character) =>
+          contextualSymbols.contains(character.character) &&
+          character.mastery < 5 &&
+          character.hanVietReading.trim().isNotEmpty &&
+          character.meaning.trim().isNotEmpty)
+      .toList()
+    ..sort((a, b) => a.mastery.compareTo(b.mastery));
+
+  if (candidates.isEmpty) return <Question>[];
+  final lowestMastery = candidates.first.mastery;
+  final preferred = candidates.where((character) => character.mastery <= lowestMastery + 1).toList()
+    ..shuffle(rng);
+  final selected = <HanCharacter>[
+    ...preferred,
+    ...candidates.where((character) => !preferred.any((item) => item.character == character.character)),
+  ].take(limit);
+
+  return selected.map((character) {
+    final meaningAnswer = character.meaning.split(RegExp(r'[,;]')).first.trim();
+    final reading = character.hanVietReading.trim();
+    return Question(
+      type: QuestionType.typing,
+      sectionTitle: sectionTitle,
+      prompt: 'Gõ âm Hán-Việt hoặc nghĩa tiếng Việt của chữ đã gặp.',
+      options: const <String>[],
+      correctAnswer: reading,
+      acceptedAnswers: <String>[reading, meaningAnswer],
+      associatedCharacter: character.character,
+      mnemonic: 'Âm Hán-Việt: $reading · Nghĩa: ${character.meaning}',
+      meaningExplanation: character.meaning,
+      characterType: 'Hán',
+    );
+  }).toList();
+}
+
 List<Question> _shuffleQuestionsWithSeparation(List<Question> input, Random random) {
   final remaining = List<Question>.from(input)..shuffle(random);
   final result = <Question>[];
@@ -1668,6 +1717,18 @@ List<Question> generateAdvancedReviewQuestions({
     includeOlderLessonPhrases: true,
     includeSupplemental: true,
     allowContextualNewCharacters: contextualGlossesEnabled,
+  ));
+
+  final contextualCharacterReviewLimit = switch (mode) {
+    ReviewChallengeMode.dailyReview => 2,
+    ReviewChallengeMode.checkpoint => 4,
+    ReviewChallengeMode.jumpAhead => 4,
+  };
+  questions.addAll(generateContextualCharacterReviewQuestions(
+    encounteredCharacters: knownCharacters,
+    limit: contextualCharacterReviewLimit,
+    sectionTitle: '$prefix · Ôn chữ đã gặp',
+    random: rng,
   ));
 
   // Keep challenge interaction mixed rather than showing blocks of one type.
