@@ -216,7 +216,9 @@ class _LessonScreenState extends State<LessonScreen> {
     void addSymbols(Iterable<String> symbols) {
       for (final symbol in symbols) {
         final character = findCharacter(symbol);
-        if (character != null && character.isHan) knownBySymbol[symbol] = character;
+        if (character != null && character.isHan) {
+          knownBySymbol[symbol] = character.copyWith(mastery: widget.appState.masteryOf(symbol));
+        }
       }
     }
 
