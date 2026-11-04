@@ -14,6 +14,8 @@ class InteractiveSentence extends StatelessWidget {
   final List<CjkCharacter> cjkCharacters;
   final bool tapEnabled;
   final double fontSize;
+  final String? phraseMeaning;
+  final ValueChanged<String>? onCharacterTapped;
 
   const InteractiveSentence({
     super.key,
@@ -23,6 +25,8 @@ class InteractiveSentence extends StatelessWidget {
     this.cjkCharacters = const <CjkCharacter>[],
     this.tapEnabled = true,
     this.fontSize = 42,
+    this.phraseMeaning,
+    this.onCharacterTapped,
   });
 
   CjkCharacter? _findCjkRecord(String character) {
@@ -93,6 +97,7 @@ class InteractiveSentence extends StatelessWidget {
 
         return Tooltip(
           triggerMode: TooltipTriggerMode.tap,
+          onTriggered: () => onCharacterTapped?.call(token.text),
           showDuration: const Duration(seconds: 3),
           padding: const EdgeInsets.all(12),
           margin: const EdgeInsets.symmetric(horizontal: 22),
@@ -113,6 +118,11 @@ class InteractiveSentence extends StatelessWidget {
               text: token.meaning ?? '',
               style: const TextStyle(color: Colors.black87, fontSize: 14),
             ),
+            if ((phraseMeaning ?? '').trim().isNotEmpty)
+              TextSpan(
+                text: '\\nNghĩa cả cụm: ${phraseMeaning!.trim()}',
+                style: const TextStyle(color: _sentenceGreen, fontSize: 13, fontWeight: FontWeight.w700),
+              ),
             if (supplementaryReadings.isNotEmpty)
               TextSpan(
                 text: '\n${supplementaryLanguage.label}: ${supplementaryReadings.join(' · ')}',
