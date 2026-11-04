@@ -219,7 +219,8 @@ class _LessonScreenState extends State<LessonScreen> {
       }
     }
 
-    if (widget.trackType == 'Hán' && widget.trackLessonNumber != null) {
+    if (!widget.isJumpAhead && widget.checkpointIndex == null && !widget.reviewMode &&
+        widget.trackType == 'Hán' && widget.trackLessonNumber != null) {
       final currentUnitIndex = (widget.trackLessonNumber! - 1).clamp(0, hanLessonUnits.length).toInt();
       addSymbols(hanLessonUnits.take(currentUnitIndex).expand((unit) => unit.characters));
       final partBeingStudied = _isActivePartLesson ? _lessonPart : 3;
