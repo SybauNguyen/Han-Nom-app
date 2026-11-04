@@ -278,7 +278,7 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
                     left: (_strokeData!.medians[strokeIndex].first.x / 1024 * widget.size - 11)
                         .clamp(2.0, widget.size - 24).toDouble(),
                     top: (_strokeData!.medians[strokeIndex].first.y / 1024 * widget.size - 11)
-                        .clamp(2.0, widget.size - 24),
+                        .clamp(2.0, widget.size - 24).toDouble(),
                     child: IgnorePointer(
                       child: Container(
                         width: 22,
