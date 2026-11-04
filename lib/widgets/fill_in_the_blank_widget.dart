@@ -41,9 +41,13 @@ class FillInTheBlankWidget extends StatelessWidget {
           decoration: BoxDecoration(color: const Color(0xFFE4F1E8), borderRadius: BorderRadius.circular(22)),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Icon(Icons.touch_app_rounded, color: _blankGreen, size: 18),
-              SizedBox(width: 6),
-              Flexible(child: Text('CHẠM VÀO CHỮ ĐỂ XEM NGHĨA', textAlign: TextAlign.center, style: TextStyle(fontSize: 10, letterSpacing: 0.7, color: _blankGreen, fontWeight: FontWeight.w900))),
+              if (tapEnabled) const Icon(Icons.touch_app_rounded, color: _blankGreen, size: 18),
+              if (tapEnabled) const SizedBox(width: 6),
+              Flexible(child: Text(
+                tapEnabled ? 'CHẠM VÀO CHỮ ĐỂ XEM NGHĨA' : 'TỰ NHỚ NGHĨA, KHÔNG CÓ GỢI Ý',
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 10, letterSpacing: 0.7, color: _blankGreen, fontWeight: FontWeight.w900),
+              )),
             ]),
             const SizedBox(height: 18),
             InteractiveSentence(tokens: tokens, selectedAnswer: selectedAnswer, tapEnabled: tapEnabled),
