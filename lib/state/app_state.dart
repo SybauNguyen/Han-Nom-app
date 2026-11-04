@@ -65,6 +65,8 @@ class AppState extends ChangeNotifier {
   int unlockedHanThroughLesson = 0;
 
   Map<String, int> mastery = {};
+  /// Chữ bổ trợ người học đã chạm để xem nghĩa; không đồng nghĩa với đã thuần thục.
+  final Set<String> encounteredContextualCharacters = <String>{};
   final Map<String, CjkCharacter> _cjkCharacters = <String, CjkCharacter>{};
 
   List<CjkCharacter> get cjkCharacters => List<CjkCharacter>.unmodifiable(_cjkCharacters.values);
@@ -230,6 +232,9 @@ class AppState extends ChangeNotifier {
         streak = 0;
         await prefs.setInt('streak', streak);
       }
+      encounteredContextualCharacters
+        ..clear()
+        ..addAll(prefs.getStringList('encounteredContextualCharacters') ?? const <String>[]);
       final rawMastery = prefs.getString('mastery');
       if (rawMastery != null) {
         final decoded = jsonDecode(rawMastery) as Map<String, dynamic>;
@@ -345,6 +350,19 @@ class AppState extends ChangeNotifier {
     }
     if (xpEarned > 0) xp += xpEarned;
     if (gemsEarned > 0) gems += gemsEarned;
+    await _save();
+    notifyListeners();
+  }
+
+  /// Ghi nhận đã gặp chữ bổ trợ khi người học chủ động chạm xem nghĩa.
+  /// Không tăng mastery; chữ vẫn phải được ôn lại để trở thành thuần thục.
+  Future<void> markContextualCharacterEncountered(String character) async {
+    final value = character.trim();
+    if (value.isEmpty ||
+        !supplementaryPhraseCharacters.any((item) => item.character == value) ||
+        !encounteredContextualCharacters.add(value)) {
+      return;
+    }
     await _save();
     notifyListeners();
   }
@@ -580,6 +598,7 @@ class AppState extends ChangeNotifier {
         await prefs.setString('lastStudyDate', lastStudyDate!);
       }
       await prefs.setString('mastery', jsonEncode(mastery));
+      await prefs.setStringList('encounteredContextualCharacters', encounteredContextualCharacters.toList()..sort());
     } catch (_) {
       // Không làm gián đoạn vòng học nếu lưu trạng thái gặp lỗi tạm thời.
     }
