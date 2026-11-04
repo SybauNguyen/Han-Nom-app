@@ -94,6 +94,9 @@ class InteractiveSentence extends StatelessWidget {
           ),
         );
         if (!tapEnabled) return characterText;
+        final contextualMeaning = (phraseMeaning ?? '')
+            .trim()
+            .replaceFirst(RegExp(r'^Nghĩa cả cụm:\\s*'), '');
 
         return Tooltip(
           triggerMode: TooltipTriggerMode.tap,
@@ -118,9 +121,9 @@ class InteractiveSentence extends StatelessWidget {
               text: token.meaning ?? '',
               style: const TextStyle(color: Colors.black87, fontSize: 14),
             ),
-            if ((phraseMeaning ?? '').trim().isNotEmpty)
+            if (contextualMeaning.isNotEmpty)
               TextSpan(
-                text: '\nNghĩa cả cụm: ${phraseMeaning!.trim()}',
+                text: '\nNghĩa cả cụm: ${contextualMeaning}',
                 style: const TextStyle(color: _sentenceGreen, fontSize: 13, fontWeight: FontWeight.w700),
               ),
             if (supplementaryReadings.isNotEmpty)
