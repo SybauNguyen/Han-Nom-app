@@ -183,7 +183,7 @@ class HanziCanvasState extends State<HanziCanvas> with SingleTickerProviderState
           userPoints: userPoints,
           expectedPoints: expectedPoints,
           canvasSize: widget.size,
-          tolerance: widget.level == WritingPracticeLevel.review ? 0.38 : 0.40,
+          tolerance: widget.level == WritingPracticeLevel.review ? 0.30 : 0.33,
         );
       }),
     );
