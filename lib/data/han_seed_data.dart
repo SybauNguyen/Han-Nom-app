@@ -1299,7 +1299,11 @@ List<Question> generateSentenceReadingTypingQuestions({
   }
 
   final candidates = curatedHanVietPhrases.where((phrase) {
-    return phrase.isReviewTypingCandidate &&
+    final isReviewCandidate = phrase.kind == CuratedPhraseKind.fixedExpression ||
+        (phrase.kind == CuratedPhraseKind.exampleSentence &&
+            phrase.isFullSentence &&
+            (phrase.isCoreLessonContent || includeSupplemental));
+    return isReviewCandidate &&
         (includeSupplemental || phrase.isCoreLessonContent) &&
         lessonAllowed(phrase) &&
         phrase.symbols.length >= 4 &&
