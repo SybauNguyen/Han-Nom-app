@@ -674,7 +674,6 @@ class _LessonScreenState extends State<LessonScreen> {
                       supplementaryLanguage: widget.appState.supplementaryLanguage,
                       cjkCharacters: widget.appState.cjkCharacters,
                       tapEnabled: !widget.isJumpAhead,
-                      phraseMeaning: question.mnemonic,
                       onSelected: (answer) {
                         if (!_checked) setState(() => _selectedOption = answer);
                       },
