@@ -1371,12 +1371,9 @@ List<Question> generateContextualCharacterReviewQuestions({
 }) {
   if (limit <= 0) return <Question>[];
   final rng = random ?? Random();
-  final contextualSymbols = supplementaryPhraseCharacters
-      .map((character) => character.character)
-      .toSet();
   final candidates = encounteredCharacters
       .where((character) =>
-          contextualSymbols.contains(character.character) &&
+          character.isHan &&
           character.mastery < 5 &&
           character.hanVietReading.trim().isNotEmpty &&
           character.meaning.trim().isNotEmpty)
@@ -1661,6 +1658,7 @@ List<Question> generateAdvancedReviewQuestions({
   required ReviewChallengeMode mode,
   Random? random,
   int? throughLessonNumber,
+  Iterable<HanCharacter> encounteredContextualCharacters = const <HanCharacter>[],
 }) {
   if (characters.isEmpty) return <Question>[];
   final rng = random ?? Random();
@@ -1729,7 +1727,7 @@ List<Question> generateAdvancedReviewQuestions({
     ReviewChallengeMode.jumpAhead => 4,
   };
   questions.addAll(generateContextualCharacterReviewQuestions(
-    encounteredCharacters: knownCharacters,
+    encounteredCharacters: encounteredContextualCharacters,
     limit: contextualCharacterReviewLimit,
     sectionTitle: '$prefix · Ôn chữ đã gặp',
     random: rng,
