@@ -19,6 +19,7 @@ class IntroduceWordWidget extends StatefulWidget {
   final SupplementaryLanguage supplementaryLanguage;
   final List<CjkCharacter> cjkCharacters;
   final bool tapEnabled;
+  final ValueChanged<String>? onCharacterTapped;
 
   const IntroduceWordWidget({
     super.key,
@@ -29,6 +30,7 @@ class IntroduceWordWidget extends StatefulWidget {
     this.supplementaryLanguage = SupplementaryLanguage.none,
     this.cjkCharacters = const <CjkCharacter>[],
     this.tapEnabled = true,
+    this.onCharacterTapped,
   });
 
   @override
@@ -118,6 +120,8 @@ class _IntroduceWordWidgetState extends State<IntroduceWordWidget> {
                 supplementaryLanguage: widget.supplementaryLanguage,
                 cjkCharacters: widget.cjkCharacters,
                 tapEnabled: widget.tapEnabled,
+                phraseMeaning: widget.question.mnemonic,
+                onCharacterTapped: widget.onCharacterTapped,
               ),
               const SizedBox(height: 10),
               const Text(
